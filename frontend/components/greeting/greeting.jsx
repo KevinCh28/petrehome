@@ -3,14 +3,22 @@ import { Link } from "react-router-dom";
 
 const Greeting = props => {
   const loggedOutGreeting = () => (
-    <nav>
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Sign Up</Link>
-    </nav>
+    <div>
+      <div>
+        <Link to="/">LOGO</Link>
+      </div>
+      <nav>
+        <Link to="/login">Log In</Link>
+        <Link to="/signup">Sign Up</Link>
+      </nav>
+    </div>
+    
   )
   const loggedInGreeting = () => (
     <div>
-      <h3>Welcome, {props.currentUser.email}!</h3>
+      <div>
+        <Link to="/">LOGO</Link>
+      </div>
       <button onClick={props.logout}>Log Out</button>
     </div>
   )

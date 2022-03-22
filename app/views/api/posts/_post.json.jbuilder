@@ -1,0 +1,1 @@
+json.extract! post, :id, :pet_name, :pet_age, :pet_gender, :pet_breed, :type

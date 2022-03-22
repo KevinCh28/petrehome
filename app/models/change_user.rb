@@ -1,0 +1,2 @@
+class ChangeUser < ApplicationRecord
+end
