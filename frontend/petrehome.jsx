@@ -24,9 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
       session: { id: window.currentUser.id }
     };
     store = configureStore(preloadedState);
-    delete window.currentUser;
   } else {
     store = configureStore();
+
+    // testing start
+    window.login = login
+    window.signup = signup
+    window.logout = logout
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    // testing end
   }
 
   const root = document.getElementById('root');

@@ -1,0 +1,2 @@
+class Updatepost < ApplicationRecord
+end

@@ -30,7 +30,7 @@ class Api::PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:pet_name, :pet_age, :pet_gender, :pet_breed, :type)
+    params.require(:post).permit(:pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat)
   end
 
 end

@@ -25,8 +25,8 @@ const receivefollow = follow => {
   }
 }
 
-export const fetchPosts = filters => dispatch => (
-  APIUtil.fetchPosts(filters)
+export const fetchPosts = () => dispatch => (
+  APIUtil.fetchPosts()
     .then( posts => dispatch(receivePosts(posts)) )
 )
 

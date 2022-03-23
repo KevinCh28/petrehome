@@ -16,12 +16,12 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const nextState = Object.assign({}, this.state);
-    this.props.processForm(nextState);
+    const user = Object.assign({}, this.state);
+    this.props.processForm(user).then(this.props.closeModal);
   }
 
   update(field) {
-    return e => this.setState({ [field]: e.target.value });
+    return e => this.setState({ [field]: e.currentTarget.value });
   }
 
   renderErrors() {
@@ -45,10 +45,11 @@ class SessionForm extends React.Component {
 
     return (
       <div>
+        
         <form onSubmit={this.handleSubmit}>
-
           {formType === 'signup' ? (
             <div>
+              <div onClick={this.props.closeModal}>X</div>
               {this.renderErrors()}
               <h3>Sign up</h3>
               <label>First name
@@ -73,10 +74,11 @@ class SessionForm extends React.Component {
               <br />
               <input type="submit" value={formType}/>
               <br />
-              Already have an account? {navLink}
+              Already have an account? {this.props.otherForm}
             </div>
           ) : (
             <div>
+              <div onClick={this.props.closeModal}>X</div>
               {this.renderErrors()}
               <h3>Log in</h3>
               <label>Email
@@ -89,7 +91,7 @@ class SessionForm extends React.Component {
               <br />
               <input type="submit" value={formType}/>
               <br />
-              Need an account? {navLink}
+              Need an account? {this.props.otherForm}
             </div>
           )}
 
