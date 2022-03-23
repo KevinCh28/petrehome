@@ -14,6 +14,7 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.author_id = current_user.id
 
     if @post.save
       render :show
@@ -23,9 +24,6 @@ class Api::PostsController < ApplicationController
   end
 
   # def edit
-  # end
-
-  # def destroy
   # end
 
   private

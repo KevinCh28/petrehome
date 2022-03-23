@@ -13,7 +13,6 @@ class PostIndex extends React.Component {
   render () {
     return (
       <div>
-        Nothing yet!
         <ul>
           {
             this.props.posts.map(post => (

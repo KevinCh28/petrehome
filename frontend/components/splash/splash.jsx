@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import PostIndexContainer from "../posts/post_index_container"
+
 
 class Splash extends React.Component {
   constructor(props) {
@@ -12,9 +15,17 @@ class Splash extends React.Component {
           <h2>Find your new best friend</h2>
           <h4>Browse pets from our netowrk of over 11,500 shelters and rescues.</h4>
         </div>
+
         <div>
           <h2>Pets Available for Adoption Nearby</h2>
+          <div>
+            <PostIndexContainer />
+          </div>
+          <div>
+            <Link to="/posts">MORE PETS</Link>
+          </div>
         </div>
+
         <div>
           <h3>Planning to Adopt a Pet?</h3>
           <li>Checklist for New Adopter
@@ -27,6 +38,7 @@ class Splash extends React.Component {
             <p>Get answers to questions you haven't thought of.</p>
           </li>
         </div>
+
       </div>
     )
   }

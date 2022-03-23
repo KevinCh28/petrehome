@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class PostShow extends React.Component {
   constructor(props) {
     super(props)
@@ -11,6 +12,8 @@ class PostShow extends React.Component {
 
   render() {
     const { post } = this.props
+
+    if (!post) return null;
 
     return (
       <div>
