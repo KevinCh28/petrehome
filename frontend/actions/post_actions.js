@@ -18,12 +18,6 @@ const receivePost = post => {
   }
 }
 
-const receivefollow = follow => {
-  return {
-    type: RECEIVE_FOLLOW,
-    follow,
-  }
-}
 
 export const fetchPosts = () => dispatch => (
   APIUtil.fetchPosts()

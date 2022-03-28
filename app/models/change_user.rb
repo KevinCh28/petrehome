@@ -1,2 +1,0 @@
-class ChangeUser < ApplicationRecord
-end

@@ -9,12 +9,18 @@ class PostIndexItem extends React.Component {
   render() {
     return (
       <div>
-        <li>
+        <div>
           <Link to={`/posts/${this.props.post.id}`}>
-            {/* <img src={this.props.post.imageUrl}/> */}
-            <span>{this.props.post.pet_name}</span>
+            {this.props.post.petName}
           </Link>
-        </li>
+        </div>
+        <div>
+          <ul>
+            <li>{this.props.post.petAge}</li>
+            <li>{this.props.post.petBreed}</li>
+            <li>{this.props.post.petGender}</li>
+          </ul>
+        </div>
       </div>
     )
   }

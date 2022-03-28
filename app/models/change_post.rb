@@ -1,2 +1,0 @@
-class ChangePost < ApplicationRecord
-end

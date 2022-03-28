@@ -4,6 +4,7 @@ import Root from "./components/root";
 import configureStore from "./store/store";
 
 import { login, signup, logout } from './actions/session_actions'
+import { fetchFavorites } from './actions/favorite_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -26,15 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore(preloadedState);
   } else {
     store = configureStore();
-
-    // testing start
-    window.login = login
-    window.signup = signup
-    window.logout = logout
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
-    // testing end
   }
+
+  // testing start
+  window.login = login
+  window.signup = signup
+  window.logout = logout
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.fetchFavorites = fetchFavorites
+  // testing end
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root)

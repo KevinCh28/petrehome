@@ -17,10 +17,10 @@ class PostShow extends React.Component {
 
     return (
       <div>
-        <h2>{post.pet_name}</h2>
-        <li>Age: {post.pet_age}</li>
-        <li>Gender: {post.pet_gender}</li>
-        <li>Breed: {post.pet_breed}</li>
+        <h2>{post.petName}</h2>
+        <li>Age: {post.petAge}</li>
+        <li>Gender: {post.petGender}</li>
+        <li>Breed: {post.petBreed}</li>
       </div>
     )
   }

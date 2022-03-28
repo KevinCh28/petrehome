@@ -1,0 +1,68 @@
+.nav {
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0 50px;
+}
+
+.nav-login-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-login {
+  background-color: white;
+  border: none;
+  font-family: Nexa-Bold, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0 0 0 30px;
+  padding: 0;
+  text-align: center;
+  text-decoration: inherit;
+}
+
+.nav-signup {
+  background-color: white;
+  border: none;
+  font-family: Nexa-Bold, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0 0 0 30px;
+  padding: 0;
+  text-align: center;
+  text-decoration: inherit;
+}
+
+.nav-logout {
+  background-color: white;
+  border: none;
+  font-family: Nexa-Bold, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0 0 0 30px;
+  padding: 0;
+  text-align: center;
+  text-decoration: inherit;
+}
+
+.nav-logo-container {
+  margin-right: 50px;
+  display: inline-block;
+}
+
+.nav-logo {
+  object-fit: contain;
+}
+
+.nav-fav-button-container {
+  display: flex;
+  border-right: 1px solid #d2d1d3;
+  align-items: center;
+
+}
+
+.nav-fav-button {
+  background: none;
+  border: none;
+}

@@ -1,2 +1,0 @@
-class UpdatePost < ApplicationRecord
-end

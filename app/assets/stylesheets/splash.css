@@ -1,0 +1,223 @@
+/* .body {
+  display: block;
+  background-color: lightgray;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  border: 0;
+} */
+
+.splash-greeting {
+  position: relative;
+  /* max-width: 1220px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 15px; */
+}
+
+.splash-greeting-text1 {
+  top: 200px;
+  line-height: 54px;
+  font-size: 45px;
+  text-shadow: 0 1px 10px #4d4751, 0 0 4px #4d4751;
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Nexa-Bold", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.splash-greeting-text2 {
+  top: 250px;
+  line-height: 30px;
+  font-size: 19px;
+  font-family: "Nexa-Bold", "Nexa-Regular", Arial, Helvetica, sans-serif;
+  text-shadow: 0 1px 5px #4d4751, 0 0 2px #4d4751, 0 0 1px #4d4751;
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.splash-body {
+  display: block;
+  line-height: 1.6;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* vertical-align: baseline; */
+}
+
+.splash-body-text {
+  color: #6504b5;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 40px;
+  display: block;
+  font-family: Nexa-Regular, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* vertical-align: baseline; */
+  /* margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+}
+
+.splash-body-text2 {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-family: "Nexa-Regular", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  font-size: 30px;
+  font-weight: 400;
+  color: #4d4751;
+}
+
+.recommendations-body {
+  overflow-x: visible;
+}
+
+.recommendations-body-inner {
+  width: auto;
+}
+
+.recommendations-grid {
+  justify-content: center;
+  align-items: stretch;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.recommendations-grid-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.recommendations-post-spot {
+  min-height: 1px;
+  flex-grow: 0!important;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #0000001a;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  box-sizing: border-box;
+}
+
+.recommendations-post {
+  display: flex;
+  background-color: transparent;
+  color: inherit;
+  text-decoration: inherit;
+  line-height: 1.6;
+  font-family: "Nexa-Regular", Arial, Helvetica, sans-serif;
+}
+
+.recommendations-post-more {
+  background-color: #6504b5;
+  border-radius: 10px;
+  box-shadow: 0 1px 3p #4d475133;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-grow: 1;
+  min-height: 1px;
+  box-sizing: border-box;
+  line-height: 1.6;
+  font-family: "Nexa-Heavy", Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.splash-body-text2-content {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1320px;
+
+  display: block;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.splash-body-text2-content-field {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.field-item {
+  width: 33.33333%;
+}
+
+.field-item-wrapper {
+  padding: 0 10px 30px;
+}
+
+.field-item-name {
+  font-family: "Nexa-Bold", Arial, Helvetica, sans-serif;
+  padding: 0;
+  border: 0;
+  display: block;
+
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #004c81;
+  margin: 0 0 5px 0;
+}
+
+.field-item-body {
+  font-family: "Nexa-Reglar", Arial, Helvetica, sans-serif;
+  padding: 0;
+  border: 0;
+  display: block;
+  position: relative;
+
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4d4751;
+}
+
+.splash-img {
+  padding: 0;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}

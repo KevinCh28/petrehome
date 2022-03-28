@@ -14,7 +14,6 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.author_id = current_user.id
 
     if @post.save
       render :show
@@ -28,7 +27,7 @@ class Api::PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat)
+    params.require(:post).permit(:pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat, :author_id)
   end
 
 end

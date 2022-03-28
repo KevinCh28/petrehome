@@ -12,6 +12,14 @@ class User < ApplicationRecord
     foreign_key: :post_id,
     class_name: :Post
 
+  has_many :favorites,
+    foreign_key: :user_id,
+    class_name: :Favorite
+
+  has_many :favorite_post,
+    through: :favorites,
+    source: :Post
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user
