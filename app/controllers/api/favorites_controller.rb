@@ -21,7 +21,7 @@ class Api::FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.where(user_id: params[:user_id], post_id: params[:post_id])
 
-    if @favorite.user_id === current_user.id
+    if @favorite && @favorite.user_id === current_user.id
       Favorite.delete(@favorite)
     else
       render json: ["Not favorited"]

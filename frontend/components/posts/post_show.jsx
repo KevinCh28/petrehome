@@ -16,12 +16,26 @@ class PostShow extends React.Component {
     if (!post) return null;
 
     return (
-      <div>
-        <h2>{post.petName}</h2>
-        <li>Age: {post.petAge}</li>
-        <li>Gender: {post.petGender}</li>
-        <li>Breed: {post.petBreed}</li>
+      <div className="main">
+        <div className="pet-info-container">
+
+          <div className="pet-name">
+            <p>{post.petName}</p>
+          </div>
+          <div className="pet-about-container">
+            About
+            <div className="pet-about">
+              <p>{post.dogOrCat}</p>
+              <p>{post.petBreed}</p>
+              <p>{post.petAge}</p>
+              <p>{post.petGender}</p>
+            </div>
+            
+          </div>
+
+        </div>
       </div>
+      
     )
   }
 

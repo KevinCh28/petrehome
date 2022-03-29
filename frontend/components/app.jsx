@@ -22,7 +22,7 @@ const App = () => (
       <ProtectedRoute exact path="/posts/new" component={PostFormContainer}/>
       <Route exact path="/posts/:postId" component={PostShowContainer} />
       <Route exact path="/posts" component={PostIndexContainer} />
-      <Route exact path="/user" component={UserShowContainer}/>
+      <Route exact path="/user/favorites" component={UserShowContainer}/>
       <Route exact path="/" component={Splash} />
 
     </Switch>
