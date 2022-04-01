@@ -38,6 +38,7 @@ const Greeting = ({logout, openModal, currentUser}) => {
           </Link>
         </div>
         
+        <button onClick={() => openModal('createpost')} className='nav-login'>Rehome a pet</button>
         <button onClick={logout} className='nav-logout'>Log Out</button>
       </nav>
 

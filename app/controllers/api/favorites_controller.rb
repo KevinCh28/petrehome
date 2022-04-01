@@ -4,6 +4,7 @@ class Api::FavoritesController < ApplicationController
 
   def index
     @favorites = Favorite.where(user_id: params[:user_id])
+    # @posts = Post.all.includes(id: params[:post_id])
     render :index
   end
 
@@ -26,6 +27,11 @@ class Api::FavoritesController < ApplicationController
     else
       render json: ["Not favorited"]
     end
+  end
+
+  def show
+    @favorite = Favorite.find(params[:user_id])
+    render :show
   end
 
   private

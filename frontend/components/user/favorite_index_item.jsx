@@ -6,9 +6,10 @@ class FavoriteIndexItem extends React.Component {
   }
 
   render() {
+    
     return (
       <div>
-        {this.props.favorite.petName}
+        {this.props.favorite.id}
         {/* {this.props.post.petName} */}
       </div>
     )

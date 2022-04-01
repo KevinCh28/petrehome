@@ -6,7 +6,12 @@ class UserShow extends React.Component {
     super(props)
   }
 
+  // componentDidMount() {
+  //   this.props.fetchPosts()
+  // }
+
   render() {
+    // debugger
     return (
       <div>
         <FavPosts />

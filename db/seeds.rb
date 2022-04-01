@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 User.destroy_all
 Post.destroy_all
 Favorite.destroy_all
@@ -24,3 +26,16 @@ fav1 = Favorite.create({user_id: demo.id, post_id: post1.id});
 fav2 = Favorite.create({user_id: demo.id, post_id: post2.id});
 fav3 = Favorite.create({user_id: demo.id, post_id: post3.id});
 fav4 = Favorite.create({user_id: demo.id, post_id: post4.id});
+
+post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie01.png'), filename: 'yorkie01.png');
+post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie02.jpeg'), filename: 'yorkie02.jpeg');
+
+post2.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair01.jpg'), filename: 'britishshorthair01.jpg');
+post2.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair02.jpg'), filename: 'britishshorthair02.jpg');
+
+post3.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi01.jpg'), filename: 'corgi01.jpg');
+post3.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi02.jpg'), filename: 'corgi02.jpg');
+
+post4.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/pomsky01.png'), filename: 'pomsky01.png');
+post4.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/pomsky02.png'), filename: 'pomsky02.png');
+

@@ -1,8 +1,9 @@
 import { connect } from "react-redux";
 import FavoriteIndex from "./favorite_index"
-import { fetchFavorites, deleteFavorite } from "../../util/favorite_util";
+import { fetchFavorites, deleteFavorite } from "../../actions/favorite_actions";
 
 const mapStateToProps = state => {
+  
   return {
     userId: state.session.id,
     favorites: Object.values(state.entities.favorites),

@@ -8,7 +8,8 @@ class Api::PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    # @post = Post.find(params[:id])
+    @post = Post.with_attached_photos.find(params[:id])  #cut down on N+1 queries
     render "api/posts/show"
   end
 
@@ -27,7 +28,7 @@ class Api::PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat, :author_id)
+    params.require(:post).permit(:pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat, :author_id, photos: [])
   end
 
 end

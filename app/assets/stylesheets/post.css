@@ -34,3 +34,14 @@
 .pet-about {
   font-size: 14px;
 }
+
+.post-image-container {
+  display: flex;
+  height: 400px;
+  justify-content: center;
+}
+
+.post-image {
+  display: block;
+  width: 50%;
+}

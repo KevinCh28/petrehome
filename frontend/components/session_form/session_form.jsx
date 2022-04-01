@@ -4,10 +4,10 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: "",
-      lastName: "",
+      first_name: "",
+      last_name: "",
       email: "",
-      zipCode: "",
+      zip_code: "",
       password: ""
     };
 
@@ -64,12 +64,12 @@ class SessionForm extends React.Component {
               <div className="session-form">
                 <div className="session-form-field">
                   <label className="session-form-text">First name</label>
-                  <input className="session-form-input" type="text" value={this.state.firstName} onChange={this.update("firstName")}/>
+                  <input className="session-form-input" type="text" value={this.state.first_name} onChange={this.update("first_name")}/>
                 </div>
 
                 <div className="session-form-field">
                   <label className="session-form-text">Last name</label>
-                  <input className="session-form-input" type="text" value={this.state.lastName} onChange={this.update("lastName")}/>
+                  <input className="session-form-input" type="text" value={this.state.last_name} onChange={this.update("last_name")}/>
                 </div>
 
                 <div className="session-form-field">
@@ -79,7 +79,7 @@ class SessionForm extends React.Component {
 
                 <div className="session-form-field">
                   <label className="session-form-text">ZIP code</label>
-                  <input className="session-form-input" type="text" value={this.state.zipCode} onChange={this.update("zipCode")}/>
+                  <input className="session-form-input" type="text" value={this.state.zip_code} onChange={this.update("zip_code")}/>
                 </div>
 
                 <div className="session-form-field">
