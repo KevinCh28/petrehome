@@ -6,9 +6,18 @@ Welcome to Pet Rehome! Pet Rehome is a fullstack clone base on <a href="https://
 
 ## Key Features
 
-### Creating Posts
+### User Authenication
+* Users can securely signup and login.
+* Login modal prompted when trying to view user's favorites page while logged out.
+* Login modal prompted when adding to favorites while logged out.
 
-### Adding Favorites
+### Post
+* Users can view clickable posts, index page.
+* Users can view post's show page with pet information and add post to their favorites.
+* Users can create a post to rehome a pet.
+
+### User's Favorites
+* Users can view their favorited posts, clickable.
 
 ### Technologies Implemented
 * React, Redux for frontend.
@@ -20,6 +29,7 @@ Welcome to Pet Rehome! Pet Rehome is a fullstack clone base on <a href="https://
 * Users can edit their post.
 * Users can send messages to post creator.
 * Adopt function in post.
+* Filter options for post and location (Google Map).
 
 ### Credits
 * Images are property of Petfinder.
