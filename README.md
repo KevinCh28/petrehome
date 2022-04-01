@@ -1,24 +1,25 @@
-# README
+# Pet Rehome
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<a href="https://pet-rehome.herokuapp.com/#/">Pet Rehome Live</a>
 
-Things you may want to cover:
+Welcome to Pet Rehome! Pet Rehome is a fullstack clone base on <a href="https://www.petfinder.com/">Petfinder</a> website with a twist where users can make a post to rehome a pet.
 
-* Ruby version
+## Key Features
 
-* System dependencies
+### Creating Posts
 
-* Configuration
+### Adding Favorites
 
-* Database creation
+### Technologies Implemented
+* React, Redux for frontend.
+* Ruby on Rails for backend.
+* Amazon AWS for active storage of images.
+* Heroku for hosting.
 
-* Database initialization
+### Planned Features
+* Users can edit their post.
+* Users can send messages to post creator.
+* Adopt function in post.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Credits
+* Images are property of Petfinder.
