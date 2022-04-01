@@ -1,5 +1,6 @@
 import React from "react";
 import FavoriteIndexItem from "./favorite_index_item"
+import { Link } from "react-router-dom";
 
 class FavoriteIndex extends React.Component {
   constructor(props) {
@@ -35,7 +36,13 @@ class FavoriteIndex extends React.Component {
               When you find a pet you love, add it your favorites list by tapping the 
                 <img src={window.favURL} className="no-fav-hearticon"/>
             </p>
+              
+            <div>
+                <Link to="/posts" className="no-fav-more-pets">MORE PETS</Link>
+            </div>
+              
           </div>
+          
         )}
         
       </div>
