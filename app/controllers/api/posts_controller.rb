@@ -8,8 +8,8 @@ class Api::PostsController < ApplicationController
   end
 
   def show
-    # @post = Post.find(params[:id])
-    @post = Post.with_attached_photos.find(params[:id])  #cut down on N+1 queries
+    #cut down on N+1 queries
+    @post = Post.with_attached_photos.find(params[:id])
     render "api/posts/show"
   end
 

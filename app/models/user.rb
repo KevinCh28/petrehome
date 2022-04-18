@@ -12,9 +12,7 @@ class User < ApplicationRecord
     foreign_key: :post_id,
     class_name: :Post
 
-  has_many :favorites,
-    foreign_key: :user_id,
-    class_name: :Favorite
+  has_many :favorites
 
   has_many :favorite_post,
     through: :favorites,

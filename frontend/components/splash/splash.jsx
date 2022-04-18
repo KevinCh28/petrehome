@@ -36,7 +36,8 @@ class Splash extends React.Component {
 
                 <div className="recommendations-grid-column">
                   <div className="recommendations-post-spot">
-                    Random Pet Link
+                    {/* Random Pet Link */}
+                    <PostIndexContainer />
                   </div>
                 </div>
 

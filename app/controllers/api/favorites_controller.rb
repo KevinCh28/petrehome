@@ -3,8 +3,7 @@ class Api::FavoritesController < ApplicationController
   before_action :require_logged_in, only: [:create, :destroy]
 
   def index
-    @favorites = Favorite.where(user_id: params[:user_id])
-    # @posts = Post.all.includes(id: params[:post_id])
+    @favorites = Favorite.where(user_id: params[:user_id]).includes(:post)
     render :index
   end
 

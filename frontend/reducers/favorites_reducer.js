@@ -7,11 +7,8 @@ const favoritesReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_FAVORITES:
-      // return Object.assign({}, state, action.favorites)
-      return action.favorites
+      return action.payload.favorites
     case RECEIVE_FAVORITE:
-      // const newFav = { [action.favorite.id]: action.favorite };
-      // return Object.assign({}, state, newFav)
       newState[action.favorite.id] = action.favorite
       return newState
     case REMOVE_FAVORITE:

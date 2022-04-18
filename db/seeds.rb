@@ -25,7 +25,7 @@ post4 = Post.create({pet_name: "Coyote", pet_gender: "Female", pet_breed: "Pomsk
 fav1 = Favorite.create({user_id: demo.id, post_id: post1.id});
 fav2 = Favorite.create({user_id: demo.id, post_id: post2.id});
 fav3 = Favorite.create({user_id: demo.id, post_id: post3.id});
-fav4 = Favorite.create({user_id: demo.id, post_id: post4.id});
+fav4 = Favorite.create({user_id: user1.id, post_id: post4.id});
 
 post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie01.png'), filename: 'yorkie01.png');
 post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie02.jpeg'), filename: 'yorkie02.jpeg');
