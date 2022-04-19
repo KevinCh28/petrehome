@@ -10,6 +10,7 @@ class Api::PostsController < ApplicationController
   def show
     #cut down on N+1 queries
     @post = Post.with_attached_photos.find(params[:id])
+    @favorites = current_user.favorite_posts
     render "api/posts/show"
   end
 

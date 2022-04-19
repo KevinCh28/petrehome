@@ -21,3 +21,10 @@ export const createPost = post => {
     processData: false,
   })
 }
+
+export const userFavPosts = userId => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/users/${userId}/posts`
+  })
+}

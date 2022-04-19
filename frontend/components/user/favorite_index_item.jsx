@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class FavoriteIndexItem extends React.Component {
   constructor(props) {
@@ -6,11 +7,11 @@ class FavoriteIndexItem extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <div>
-        {this.props.favorite.postId}
-        {/* {this.props.post.petName} */}
+        <Link to={`/posts/${this.props.favorite.post_id}`} >{this.props.favorite.pet_name}</Link>
+        
       </div>
     )
   }

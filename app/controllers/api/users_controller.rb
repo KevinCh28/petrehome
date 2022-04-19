@@ -11,8 +11,9 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  def show
-  end
+  # def show
+  #   @favorites = current_user.favorites
+  # end
 
   private
   def user_params

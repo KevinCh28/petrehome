@@ -4,10 +4,10 @@ export const RECEIVE_FAVORITES = "RECEIVE_FAVORITES";
 export const RECEIVE_FAVORITE = "RECEIVE_FAVORITE";
 export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
 
-const receiveFavorites = payload => {
+const receiveFavorites = favorites => {
   return {
     type: RECEIVE_FAVORITES,
-    payload,
+    favorites,
   }
 }
 
@@ -27,15 +27,17 @@ const removeFavorite = favoriteId => {
 
 export const fetchFavorites = userId => dispatch => {
   return APIUtil.fetchFavorites(userId)
-    .then(payload => dispatch(receiveFavorites(payload)))
+    .then(favorites => dispatch(receiveFavorites(favorites)))
 }
 
-export const createFavorite = (userId, post) => dispatch => (
-  APIUtil.createFavorite(userId, post)
+export const createFavorite = (userId, postId) => dispatch => (
+  APIUtil.createFavorite(userId, postId)
     .then(favorite => dispatch(receiveFavorite(favorite)))
 )
 
-export const deleteFavorite = (userId, favoriteId) => dispatch => (
-  APIUtil.deleteFavorite(userId, favoriteId)
+export const deleteFavorite = (userId, favoriteId) => dispatch => {
+  // console.log(userId)
+  // console.log(favoriteId)
+  return APIUtil.deleteFavorite(userId, favoriteId)
     .then(() => dispatch(removeFavorite(favoriteId)))
-)
+}

@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { fetchPost } from "../../actions/post_actions";
 import PostShow from "./post_show";
-import { createFavorite, deleteFavorite } from "../../actions/favorite_actions";
+import { createFavorite, deleteFavorite, fetchFavorites } from "../../actions/favorite_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 
@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => {
     post: state.entities.posts[ownProps.match.params.postId],
     userId: state.session.id,
     currentUser: state.entities.users[state.session.id],
+    favorites: Object.values(state.entities.favorites),
   }
 }
 
@@ -19,6 +20,7 @@ const mapDispatchToProps = dispatch => {
     createFavorite: (userId, post) => dispatch(createFavorite(userId, post)),
     deleteFavorite: (userId, favoriteId) => dispatch(deleteFavorite(userId, favoriteId)),
     openModal: modal => dispatch(openModal(modal)),
+    fetchFavorites: (userId) => dispatch(fetchFavorites(userId)),
   }
 }
 

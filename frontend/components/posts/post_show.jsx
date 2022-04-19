@@ -9,47 +9,66 @@ class PostShow extends React.Component {
       favorited: false,
     }
 
-    this.handleFav = this.handleFav.bind(this);
-    this.favoriteShowButton = this.favoriteShowButton.bind(this);
+    this.favoriteButton = this.favoriteButton.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchPost(this.props.match.params.postId)
+      .then(payload => {
+        if (payload.post.favPosts) {
+          this.setState({ favorited: true })
+        }
+      })
+    this.props.fetchFavorites(this.props.currentUser.id)
   }
 
-  handleFav(e) {
-    e.preventDefault();
-
-    if (this.state.favorited) {
-      this.props.deleteFavorite(this.props.userId, this.props.post);
-      this.setState({ favorited: false });
-    } else {
-      this.props.createFavorite(this.props.userId, this.props.post);
-      this.setState({ favorited: true });
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.postId !== prevProps.match.params.postId) {
+      this.props.fetchPost(this.props.match.params.postId)
     }
   }
 
-  favoriteShowButton() {
-    const { currentUser } = this.props
-    let favButton
+  favoriteButton() {
+    let favButton;
+    const { currentUser, favorites } = this.props
+    console.log(favorites)
 
-    if (currentUser) {
+    if (currentUser && this.state.favorited) {
       favButton =
-      <div>
-        <button onClick={this.handleFav} className="nav-fav-button">
-          {this.state.favorited ? <img src={window.favURL} /> : <img src={window.unfavURL} />}
-        </button>
-      </div>
-    } else {
+        <div onClick={this.handleClick} >
+          <img src={window.favURL} />
+        </div>
+    } else if (!currentUser) {
       favButton =
-      <div>
-        <button onClick={() => this.props.openModal('login')} className="nav-fav-button">
+        <div onClick={() => this.props.openModal('login')} >
           <img src={window.unfavURL} />
-        </button>
-      </div>
+        </div>
+    } else {
+      favButton =
+        <div onClick={this.handleClick} >
+          <img src={window.unfavURL} />
+        </div>
     }
-
     return favButton;
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    const { favorites, deleteFavorite, createFavorite, userId, post } = this.props
+    if (this.state.favorited) {
+      for (let i = 0; i < favorites.length; i++) {
+        if (favorites[i].postId === post.id) {
+          let favoriteId = favorites[i].id
+          // console.log(favoriteId)
+          deleteFavorite(userId, favoriteId)
+          this.setState({ favorited: false })
+        }
+      }
+    } else {
+      createFavorite(userId, { post_id: post.id })
+      this.setState({ favorited: true })
+    }
   }
 
   render() {
@@ -84,9 +103,8 @@ class PostShow extends React.Component {
           </div>
         </div>
         
-        {this.favoriteShowButton()}
+        {this.favoriteButton()}
         
-
       </div>
       
     )

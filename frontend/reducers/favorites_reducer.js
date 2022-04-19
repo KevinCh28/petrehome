@@ -3,17 +3,18 @@ import { LOGOUT_CURRENT_USER } from "../actions/session_actions";
 
 const favoritesReducer = (state = {}, action) => {
   Object.freeze(state);
-  let newState = Object.assign({}, state)
+  let nextState = Object.assign({}, state)
 
   switch (action.type) {
     case RECEIVE_FAVORITES:
-      return action.payload.favorites
+      nextState = action.favorites
+      return nextState
     case RECEIVE_FAVORITE:
-      newState[action.favorite.id] = action.favorite
-      return newState
+      nextState[action.favorite.id] = action.favorite
+      return nextState
     case REMOVE_FAVORITE:
-      delete newState[action.favoriteId]
-      return newState
+      delete nextState[action.favoriteId]
+      return nextState
     case LOGOUT_CURRENT_USER:
       return {};
     default:
