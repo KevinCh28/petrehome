@@ -14,9 +14,9 @@ class User < ApplicationRecord
 
   has_many :favorites
 
-  has_many :favorite_post,
+  has_many :favorite_posts,
     through: :favorites,
-    source: :Post
+    source: :post
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)

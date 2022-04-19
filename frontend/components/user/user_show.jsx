@@ -6,9 +6,10 @@ class UserShow extends React.Component {
     super(props)
   }
 
-  // componentDidMount() {
-  //   this.props.fetchPosts()
-  // }
+  componentDidMount() {
+    this.props.fetchFavorites()
+    // this.props.userFavPosts(this.props.currentUser.id);
+  }
 
   render() {
     // debugger

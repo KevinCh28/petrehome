@@ -9,24 +9,22 @@ class FavoriteIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchFavorites(this.props.userId);
-    // this.props.fetchPosts();
   }
 
   render() {
-    // console.log(this.props.favorites)
     return (
       <div>
         {this.props.favorites.length > 0 ? (
           <ul>
             {
-              this.props.favorites.map(favorite => (
+              this.props.favorites.map(favorite => 
                 <FavoriteIndexItem
                   key={favorite.id}
                   favorite={favorite}
                   userId={this.props.userId}
                   deleteFavorite={this.props.deleteFavorite}
                 />
-              ))
+              )
             }
           </ul>
         ) : (

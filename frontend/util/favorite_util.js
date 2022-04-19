@@ -5,11 +5,11 @@ export const fetchFavorites = userId => {
   })
 }
 
-export const createFavorite = (userId, post) => {
+export const createFavorite = (userId, postId) => {
   return $.ajax({
     method: 'POST',
     url: `/api/users/${userId}/favorites`,
-    data: { post },
+    data: { favorite: postId },
   })
 }
 

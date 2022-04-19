@@ -14,7 +14,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchFavorites: userId => dispatch(fetchFavorites(userId)),
-    // fetchPosts : () => dispatch(fetchPosts()),
+    fetchPosts : () => dispatch(fetchPosts()),
     deleteFavorite: (userId, favoriteId) => dispatch(deleteFavorite(userId, favoriteId)),
   }
 }
