@@ -10,13 +10,13 @@ json.partial! "api/favorites/favorite", favorite: @favorite
 #   end
 # end
 
-json.posts do
-  favorite.posts.each do |post|
-    json.set! favorite.post.id do
-      json.extract! favorite.post, :id, :pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat
-    end
-  end
-end
+# json.posts do
+#   @favorite.posts.each do |post|
+#     json.set! favorite.post.id do
+#       json.extract! favorite.post, :id, :pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat
+#     end
+#   end
+# end
 
 # json.posts do
 #   @favorites.each do |favorite|

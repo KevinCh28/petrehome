@@ -19,7 +19,7 @@ class Api::FavoritesController < ApplicationController
   end
 
   def destroy
-    @favorite = Favorite.where(user_id: params[:user_id], post_id: params[:post_id])[0]
+    @favorite = Favorite.where(id: params[:id])[0]
 
     if @favorite && @favorite.user_id === current_user.id
       Favorite.delete(@favorite)
