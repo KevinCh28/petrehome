@@ -13,20 +13,20 @@ class FavoriteIndex extends React.Component {
   }
 
   render() {
-    const { favorites, userId, posts } = this.props
+    const { favorites, posts } = this.props
     // console.log(posts)
     return (
       <div>
         {favorites.length > 0 ? (
           <div>
             <p>My Favorites ({favorites.length})</p>
-            <ul>
+            <ul className="self-post-list">
               {favorites.map(favorite => 
                   <FavoriteIndexItem
                     key={favorite.id}
                     favorite={favorite}
-                    userId={userId}
                     post={posts[favorite.postId]}
+                    photoUrls={posts[favorite.postId].photoUrls}
                   />
               )}
             </ul>

@@ -1,0 +1,42 @@
+.self-post-list {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.post-index-item {
+  position: relative;
+  padding: 10px;
+}
+
+.index-show-link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.index-item-name {
+  font-size: 20px;
+  color: #6504b5;
+}
+
+.index-item-age, .index-item-gender,
+.index-item-breed {
+  color: #4d4751;
+  text-align: center;
+  display: inline-block;
+}
+
+.post-item {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-age-gender-container {
+  justify-content: space-between;
+}
+

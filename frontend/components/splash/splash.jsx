@@ -22,30 +22,21 @@ class Splash extends React.Component {
           <div className="recommendations-body">
             <div className="recommendations-body-inner">
               <div className="recommendations-grid"> 
-                <div className="recommendations-grid-column">
-                  <div className="recommendations-post-spot">
-                    Random Pet Link
-                  </div>
-                </div>
 
                 <div className="recommendations-grid-column">
                   <div className="recommendations-post-spot">
-                    Random Pet Link
-                  </div>
-                </div>
-
-                <div className="recommendations-grid-column">
-                  <div className="recommendations-post-spot">
-                    {/* Random Pet Link */}
                     <PostIndexContainer />
                   </div>
                 </div>
 
                 <div className="recommendations-grid-column">
                   <div className="recommendations-post-spot">
-                    <Link to="/posts" className="recommendations-post-more">MORE PETS</Link>
+                    <Link to="/posts" className="recommendations-post-more">
+                      MORE PETS
+                    </Link>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>

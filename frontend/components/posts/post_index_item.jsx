@@ -7,21 +7,26 @@ class PostIndexItem extends React.Component {
   }
 
   render() {
+    const { post } = this.props
+
     return (
-      <div>
-        <div>
-          <Link to={`/posts/${this.props.post.id}`}>
-            {this.props.post.petName}
-          </Link>
-        </div>
-        <div>
-          <ul>
-            <li>{this.props.post.petAge}</li>
-            <li>{this.props.post.petBreed}</li>
-            <li>{this.props.post.petGender}</li>
-          </ul>
-        </div>
-      </div>
+      <li className="post-index-item">
+        <Link
+          to={`/posts/${this.props.post.id}`}
+          className="index-show-link">
+          <div>
+            <img src={post.photoUrls[0]} height="250" width="220" />
+          </div>
+          <div className="post-item">
+            <h2 className="index-item-name">{post.petName}</h2>
+            <div className="post-age-gender-container">
+              <h3 className="index-item-age">{post.petAge === 1 ? "Baby" : post.petAge < 3 ? "Young" : "Adult"}</h3>
+              <h3 className="index-item-gender">{post.petGender}</h3>
+            </div>
+            <h3 className="index-item-breed">{post.petBreed}</h3>
+          </div>
+        </Link>
+      </li>
     )
   }
 
