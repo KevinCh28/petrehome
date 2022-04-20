@@ -8,13 +8,11 @@ class FavoriteIndex extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.fetchFavorites(this.props.userId);
     this.props.fetchPosts();
   }
 
   render() {
     const { favorites, posts } = this.props
-    // console.log(posts)
     return (
       <div>
         {favorites.length > 0 ? (

@@ -24,6 +24,16 @@ class Api::PostsController < ApplicationController
     end
   end
 
+  def update
+    @post = Post.with_attached_photos.find(params[:id])
+
+    if @post.update(post_params)
+      render :show
+    else
+      render json: @user.errors.full_messages, status: 422
+    end
+  end
+
   private
   def post_params
     params.require(:post).permit(:pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat, :author_id, photos: [])

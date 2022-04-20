@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import PostFormContainer from '../posts/post_form_container';
+import EditPostContainer from '../posts/edit_post_form_container';
 
 
 function Modal({modal, closeModal}) {
@@ -20,6 +21,9 @@ function Modal({modal, closeModal}) {
       break;
     case 'createpost':
       component = <PostFormContainer />;
+      break;
+    case 'editpost':
+      component = < EditPostContainer />;
       break;
     default:
       return null;

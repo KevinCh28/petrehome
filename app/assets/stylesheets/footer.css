@@ -1,0 +1,22 @@
+.footer-wrapper {
+  background-color: #6504b5;
+  width: 100%;
+}
+
+.footer-container {
+  padding: 20px;
+  margin: 0 auto;
+  height: 100px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fab {
+  color: white;
+}

@@ -4,6 +4,7 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 import Splash from "./splash/splash";
 import Modal from "./modal/modal";
+import Footer from "./footer/footer"
 
 import GreetingContainer from "./greeting/greeting_container";
 import PostIndexContainer from "./posts/post_index_container"
@@ -19,14 +20,14 @@ const App = () => (
     </header>
 
     <Switch>
-      <ProtectedRoute exact path="/posts/new" component={PostFormContainer}/>
+      <ProtectedRoute exact path="/posts/new" component={PostFormContainer} />
       <Route exact path="/posts/:postId" component={PostShowContainer} />
       <Route exact path="/posts" component={PostIndexContainer} />
-      <Route exact path="/user/favorites" component={UserShowContainer}/>
+      <Route exact path="/user/favorites" component={UserShowContainer} />
       <Route exact path="/" component={Splash} />
 
     </Switch>
-    
+    <Footer />
 
   </div>
 );

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 class PostShow extends React.Component {
   constructor(props) {
     super(props)
@@ -32,7 +31,6 @@ class PostShow extends React.Component {
   favoriteButton() {
     let favButton;
     const { currentUser, favorites } = this.props
-    console.log(favorites)
 
     if (currentUser && this.state.favorited) {
       favButton =
@@ -60,7 +58,6 @@ class PostShow extends React.Component {
       for (let i = 0; i < favorites.length; i++) {
         if (favorites[i].postId === post.id) {
           let favoriteId = favorites[i].id
-          // console.log(favoriteId)
           deleteFavorite(userId, favoriteId)
           this.setState({ favorited: false })
         }
@@ -72,7 +69,7 @@ class PostShow extends React.Component {
   }
 
   render() {
-    const { post } = this.props
+    const { post, userId, openModal } = this.props
 
     if (!post) return null;
     if (!post.photoUrls) return null;
@@ -104,7 +101,11 @@ class PostShow extends React.Component {
         </div>
         
         {this.favoriteButton()}
-        
+        {
+          post.authorId === userId
+            ? <button onClick={() => openModal('editpost')} >Edit Post</button>
+            : null
+        }
       </div>
       
     )

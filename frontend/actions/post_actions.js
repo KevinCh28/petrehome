@@ -32,3 +32,8 @@ export const createPost = postForm => dispatch => (
   APIUtil.createPost(postForm)
     .then( post => dispatch(receivePost(post)) )
 )
+
+export const editPost = (postId, data) => dispatch => (
+  APIUtil.editPost(postId, data)
+    .then(post => dispatch(receivePost(post)))
+)

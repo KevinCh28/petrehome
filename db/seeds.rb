@@ -20,8 +20,8 @@ user3 = User.create({email: "fluffylover@mail.com", password: "password", first_
 post1 = Post.create({pet_name: "Mango", pet_gender: "Male", pet_breed: "Yorkshire Terrier", pet_age: 9, dog_or_cat: "Dog", author_id: user1.id});
 post2 = Post.create({pet_name: "Mimi", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
 post3 = Post.create({pet_name: "Nugget", pet_gender: "Male", pet_breed: "Corgi", pet_age: 5, dog_or_cat: "Dog", author_id: user1.id});
-post4 = Post.create({pet_name: "Coyote", pet_gender: "Female", pet_breed: "Pomsky", pet_age: 2, dog_or_cat: "Dog", author_id: user1.id});
-post5 = Post.create({pet_name: "Drogo", pet_gender: "Male", pet_breed: "idk", pet_age: 2, dog_or_cat: "Cat", author_id: user2.id});
+post4 = Post.create({pet_name: "Coyote", pet_gender: "Female", pet_breed: "Pomsky", pet_age: 2, dog_or_cat: "Dog", author_id: demo.id});
+post5 = Post.create({pet_name: "Drogo", pet_gender: "Male", pet_breed: "idk", pet_age: 2, dog_or_cat: "Cat", author_id: demo.id});
 
 fav1 = Favorite.create({user_id: demo.id, post_id: post1.id});
 fav2 = Favorite.create({user_id: demo.id, post_id: post2.id});
