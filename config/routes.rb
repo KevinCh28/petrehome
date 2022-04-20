@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     end
 
     resources :posts, only: [:show, :index, :create]
+
   end
 
   root to: "static_pages#root"

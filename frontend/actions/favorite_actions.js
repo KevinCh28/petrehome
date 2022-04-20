@@ -36,8 +36,6 @@ export const createFavorite = (userId, postId) => dispatch => (
 )
 
 export const deleteFavorite = (userId, favoriteId) => dispatch => {
-  // console.log(userId)
-  // console.log(favoriteId)
   return APIUtil.deleteFavorite(userId, favoriteId)
     .then(() => dispatch(removeFavorite(favoriteId)))
 }

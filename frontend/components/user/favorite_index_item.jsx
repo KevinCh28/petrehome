@@ -7,11 +7,11 @@ class FavoriteIndexItem extends React.Component {
   }
 
   render() {
-    // console.log(this.props)
+    const { favorite, post } = this.props
+    console.log(post)
     return (
       <div>
-        <Link to={`/posts/${this.props.favorite.post_id}`} >{this.props.favorite.pet_name}</Link>
-        
+        <Link to={`/posts/${favorite.postId}`} >{post.petName}</Link>
       </div>
     )
   }

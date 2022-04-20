@@ -5,14 +5,14 @@ import { userFavPosts } from "../../actions/post_actions"
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.entities.users[state.session.id],
-    // userFavs: Object.values(state.entities.favorites.postId)
+    // currentUser: state.entities.users[state.session.id],
+    userId: state.session.id,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    // userFavPosts: (id) => dispatch(userFavPosts(id)),
+    userFavPosts: (userId) => dispatch(userFavPosts(userId)),
     fetchFavorites: (userId) => dispatch(fetchFavorites(userId)),
     fetchPost: postId => dispatch(fetchPost(postId)),
   }
