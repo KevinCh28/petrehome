@@ -2,12 +2,17 @@ class Api::MessagesController < ApplicationController
 
   before_action :require_logged_in, only: [:create, :destroy]
 
+  def index
+    @messages = Message.where(receiver_id: params[:user_id])
+    render :index
+  end
+
   def create
     @message = Message.new(message_params)
     @message.author_id = current_user.id
 
     if @message.save
-      render :show
+      render :index
     else
       render json: @message.errors.full_messages
     end
