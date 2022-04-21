@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'messages/create'
+  get 'messages/destroy'
   namespace :api, defaults: {format: :json} do
     resource :session, only: [:create, :destroy, :show]
     
