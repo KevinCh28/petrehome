@@ -5,7 +5,8 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import PostFormContainer from '../posts/post_form_container';
 import EditPostContainer from '../posts/edit_post_form_container';
-
+import ReplyMessageContainer from '../message_form/reply_form_container';
+import InquiryMessageContainer from '../message_form/inquiry_form_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -23,7 +24,13 @@ function Modal({modal, closeModal}) {
       component = <PostFormContainer />;
       break;
     case 'editpost':
-      component = < EditPostContainer />;
+      component = <EditPostContainer />;
+      break;
+    case 'reply':
+      component = <ReplyMessageContainer />;
+      break;
+    case 'inquiry':
+      component = <InquiryMessageContainer />;
       break;
     default:
       return null;
@@ -40,7 +47,7 @@ function Modal({modal, closeModal}) {
   );
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
     modal: state.ui.modal
   };

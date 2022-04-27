@@ -1,4 +1,5 @@
-import { RECEIVE_POSTS, RECEIVE_POST } from "../actions/post_actions"
+import { RECEIVE_POSTS, RECEIVE_POST } from "../actions/post_actions";
+import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 
 const postsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -9,7 +10,9 @@ const postsReducer = (state = {}, action) => {
       return Object.assign({}, state, action.posts)
     case RECEIVE_POST:
       const newPost = { [action.post.id]: action.post };
-      return Object.assign({}, state, newPost)
+      return Object.assign({}, newPost)
+    case RECEIVE_CURRENT_USER:
+      return {}
     default:
       return state;
   }

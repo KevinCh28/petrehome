@@ -1,5 +1,6 @@
 import React from "react";
-import FavPosts from "./favorite_index_container"
+import FavPosts from "./favorite_index_container";
+import UserMessages from "./message_index_container";
 
 class UserShow extends React.Component {
   constructor(props) {
@@ -7,15 +8,20 @@ class UserShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchFavorites(this.props.userId);
+    this.props.fetchUser(this.props.userId);
   }
 
   render() {
-    // debugger
     return (
       <div>
-        <FavPosts />
+        <div>
+          <FavPosts />
+        </div>
+        <div>
+          <UserMessages />
+        </div>
       </div>
+      
     )
   }
 

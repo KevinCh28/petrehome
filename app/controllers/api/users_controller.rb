@@ -11,9 +11,11 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # def show
-  #   @favorites = current_user.favorites
-  # end
+  def show
+    # @user = User.where(id: params[:id]).includes(:favorite_posts).includes(:messages)
+    @user = User.find_by(id: params[:id])
+    render :show
+  end
 
   private
   def user_params

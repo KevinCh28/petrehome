@@ -30,8 +30,8 @@ export const fetchMessages = userId => dispatch => {
     .then(messages => dispatch(receiveMessages(messages)))
 }
 
-export const createMessage = userId => dispatch => {
-  return APIUtil.createMessage(userId)
+export const createMessage = (message, userId) => dispatch => {
+  return APIUtil.createMessage(message, userId)
     .then(message => dispatch(receiveMessage(message)))
 }
 

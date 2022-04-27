@@ -5,10 +5,10 @@ export const fetchMessages = userId => {
   })
 }
 
-export const createMessage = (message, receiverId) => {
+export const createMessage = (message, userId) => {
   return $.ajax({
     method: 'POST',
-    url: `/api/users/${receiverId}/messages`,
+    url: `/api/users/${userId}/messages`,
     data: { message },
   })
 }

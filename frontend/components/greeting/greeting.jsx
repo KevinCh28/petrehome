@@ -33,7 +33,10 @@ const Greeting = ({logout, openModal, currentUser}) => {
       
       <nav className='nav-login-signup'>
         <div className='nav-fav-button-container'>
-          <Link to={`/user/favorites`} className='nav-fav-button'>
+          {/* <Link to={`/user/favorites`} className='nav-fav-button'>
+            <img src={window.favURL} />
+          </Link> */}
+          <Link to={`/user/profile`} className='nav-fav-button'>
             <img src={window.favURL} />
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import { RECEIVE_FAVORITES, RECEIVE_FAVORITE, REMOVE_FAVORITE } from "../actions/favorite_actions";
-import { LOGOUT_CURRENT_USER } from "../actions/session_actions";
+import { LOGOUT_CURRENT_USER, RECEIVE_CURRENT_USER } from "../actions/session_actions";
 
 const favoritesReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -17,6 +17,12 @@ const favoritesReducer = (state = {}, action) => {
       return nextState
     case LOGOUT_CURRENT_USER:
       return {};
+    case RECEIVE_CURRENT_USER:
+      nextState = {}
+      if (action.payload.favoritePosts) {
+        nextState = action.payload.favoritePosts
+      }
+      return nextState
     default:
       return state;
   }

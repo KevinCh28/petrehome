@@ -7,12 +7,9 @@ class FavoriteIndex extends React.Component {
     super(props)
   }
 
-  componentDidMount() {
-    this.props.fetchPosts();
-  }
-
   render() {
-    const { favorites, posts } = this.props
+    const { favorites } = this.props;
+
     return (
       <div>
         {favorites.length > 0 ? (
@@ -23,8 +20,6 @@ class FavoriteIndex extends React.Component {
                   <FavoriteIndexItem
                     key={favorite.id}
                     favorite={favorite}
-                    post={posts[favorite.postId]}
-                    photoUrls={posts[favorite.postId].photoUrls}
                   />
               )}
             </ul>

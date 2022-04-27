@@ -1,21 +1,11 @@
 import { connect } from "react-redux";
 import FavoriteIndex from "./favorite_index"
-import { fetchFavorites, deleteFavorite } from "../../actions/favorite_actions";
-import { fetchPosts, userFavPosts } from "../../actions/post_actions";
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
   return {
     userId: state.session.id,
-    favorites: Object.values(state.entities.favorites),
-    posts: state.entities.posts,
+    favorites: Object.values(state.entities.favorites) || []
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchPosts: () => dispatch(fetchPosts()),
-    // userFavPosts: (userId) => dispatch(userFavPosts(userId)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(FavoriteIndex);
+export default connect(mapStateToProps, null)(FavoriteIndex);

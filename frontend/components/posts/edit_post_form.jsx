@@ -12,12 +12,6 @@ class EditPostForm extends React.Component {
 
   componentDidMount() {
     this.props.fetchPost(this.props.post.id)
-      // .then(action => {
-      //   const post = action.post.data
-      //   this.props.ownerId === post.author_id
-      //     ? this.setState(post)
-      //     : this.props.history.replace("/posts")
-      // })
   }
 
 

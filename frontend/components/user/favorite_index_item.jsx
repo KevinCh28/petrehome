@@ -7,23 +7,25 @@ class FavoriteIndexItem extends React.Component {
   }
 
   render() {
-    const { favorite, post, photoUrls } = this.props
+    const { favorite } = this.props;
+
+    if (!favorite.photoUrls) return null;
 
     return (
       <li className="post-index-item">
         <Link 
-          to={`/posts/${favorite.postId}`}
+          to={`/posts/${favorite.id}`}
           className="index-show-link">
             <div>
-              <img src={photoUrls[0]} height="250" width="220" />
+            <img src={favorite.photoUrls[0]} height="250" width="220" />
             </div>
             <div className="post-item">
-              <h2 className="index-item-name">{post.petName}</h2>
+            <h2 className="index-item-name">{favorite.petName}</h2>
               <div className="post-age-gender-container">
-                <h3 className="index-item-age">{post.petAge === 1 ? "Baby" : post.petAge < 3 ? "Young" : "Adult"}</h3>
-                <h3 className="index-item-gender">{post.petGender}</h3>
+                <h3 className="index-item-age">{favorite.petAge === 1 ? "Baby" : favorite.petAge < 3 ? "Young" : "Adult"}</h3>
+                <h3 className="index-item-gender">{favorite.petGender}</h3>
               </div>
-            <h3 className="index-item-breed">{post.petBreed}</h3>
+            <h3 className="index-item-breed">{favorite.petBreed}</h3>
             </div>
         </Link>
       </li>
