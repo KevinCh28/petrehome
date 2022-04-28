@@ -80,7 +80,7 @@ class PostShow extends React.Component {
         <div className="post-image-container">
           {
             post.photoUrls.map(photo => (
-              <img src={`${photo}`} className="post-image"/>
+              <img src={`${photo}`} className="post-image" />
             ))
           }
         </div>

@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     deleteMessage: (userId, messageId) => dispatch(deleteMessage(userId, messageId)),
-    openModal: modal => dispatch(openModal(modal)),
+    openModal: payload => dispatch(openModal(payload)),
   }
 }
 
