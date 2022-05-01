@@ -18,8 +18,8 @@ const receivePost = post => {
   }
 }
 
-export const fetchPosts = () => dispatch => (
-  APIUtil.fetchPosts()
+export const fetchPosts = (data) => dispatch => (
+  APIUtil.fetchPosts(data)
     .then( posts => dispatch(receivePosts(posts)) )
 )
 

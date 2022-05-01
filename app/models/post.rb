@@ -10,62 +10,82 @@ class Post < ApplicationRecord
 
   has_many_attached :photos
 
-  def self.fetch(dogOrCat)
-    self.where("dog_or_cat LIKE ?", dogOrCat)
+
+  def self.fetchDogOrCat(searchDogOrCat)
+    Post.where("dog_or_cat LIKE ?", searchDogOrCat)
   end
 
-  # def self.fetchBreed(dogOrCat, petBreed)
-  #   self.where("dog_or_cat LIKE ?", dogOrCat)
-  #       AND ("pet_breed LIKE ?", petBreed)
-  # end
+  def self.fetchBreed(searchDogOrCat, petBreed)
+    self.where("pet_breed LIKE ?", petBreed)
+  end
 
-  # def self.fetchBreedAge(dogOrCat, petBreed, petAge)
-  #   self.where("dog_or_cat LIKE ?", dogOrCat)
-  #       AND ("pet_breed LIKE ?", petBreed)
-  #       AND ("pet_age LIKE ?", petAge)
-  # end
+  def self.fetchDogOrCatBreed(searchDogOrCat, petBreed)
+    self.where("dog_or_cat LIKE ?
+            AND pet_breed LIKE ?", searchDogOrCat, petBreed)
+  end
 
-  # def self.fetchBreedGender(dogOrCat, petBreed, petGender)
-  #   self.where("dog_or_cat LIKE ?", dogOrCat)
-  #       AND ("pet_breed LIKE ?", petBreed)
-  #       AND ("pet_gender LIKE ?", petGender)
-  # end
+  def self.fetchDogOrCatBreedAge(searchDogOrCat, petBreed, petAge)
+    self.where("dog_or_cat LIKE ?
+            AND pet_breed LIKE ?
+            AND pet_age LIKE ?", searchDogOrCat, petBreed, petAge)
+  end
 
-  # def self.fetchBreedAgeGender(dogOrCat, petBreed, petAge, petGender)
-  #   self.where("dog_or_cat LIKE ?", dogOrCat)
-  #       AND ("pet_breed LIKE ?", petBreed)
-  #       AND ("pet_age LIKE ?", petAge)
-  #       AND ("pet_gender LIKE ?", petGender)
-  # end
+  def self.fetchDogOrCatBreedGender(searchDogOrCat, petBreed, petGender)
+    self.where("dog_or_cat LIKE ?
+            AND pet_breed LIKE ?
+            AND pet_gender LIKE ?", searchDogOrCat, petBreed, petGender)
+  end
 
-  # def self.fetchAge(dogOrCat, petAge)
-  #   self.where("dog_or_cat LIKE ?", dogOrCat)
-  #       AND ("pet_age LIKE ?", petAge)
-  # end
+  def self.fetchDogOrCatBreedAgeGender(searchDogOrCat, petBreed, petAge, petGender)
+    self.where("dog_or_cat LIKE ?
+            AND pet_breed LIKE ?
+            AND pet_age LIKE ?
+            AND pet_gender LIKE ?", searchDogOrCat, petBreed, petAge, petGender)
+  end
 
-  # def self.fetchAgeGender(dogOrCat, petAge, petGender)
-  #   self.where("dog_or_cat LIKE ?", dogOrCat)
-  #       AND ("pet_age LIKE ?", petAge)
-  #       AND ("pet_gender LIKE ?", petGender)
-  # end
+  def self.fetchDogOrCatAgeGender(searchDogOrCat, petAge, petGender)
+    self.where("dog_or_cat LIKE ?
+            AND pet_age LIKE ?
+            AND pet_gender LIKE ?", searchDogOrCat, petAge, petGender)
+  end
 
-  # def self.fetchGender(dogOrCat, petGender)
-  #   self.where("dog_or_cat LIKE ?", dogOrCat)
-  #       AND ("pet_gender LIKE ?", petGender)
-  # end
+  def self.fetchDogOrCatGender(searchDogOrCat, petGender)
+    self.where("dog_or_cat LIKE ?
+            AND pet_gender LIKE ?", searchDogOrCat, petGender)
+  end
 
-  # def self.fetchWithFilters(searchStuff)
-  #   Post.where("dog_or_cat LIKE ?", searchStuff[:dogOrCat])
-  #       .and("pet_breed LIKE ?", searchStuff[:petBreed])
-  #       .and("pet_age LIKE ?", searchStuff[:petAge])
-  #       .and("pet_gender LIKE ?", searchStuff[:petGender])
-  # end
+  def self.fetchDogOrCatAge(searchDogOrCat, petAge)
+    # if petAge === "Baby"
+    #   petAge = 2
+    # elsif petAge === "Young"
+    #   petAge = 5
+    # end
 
-  # def self.fetchWithFilters(searchStuff)
-  #   Post.where("dog_or_cat IN ? 
-  #     AND pet_breed IN ?
-  #     AND pet_age IN ?
-  #     AND pet_gender IN ?", 
-  #     [searchStuff[:dogOrCat], searchStuff[:petBreed], searchStuff[:petAge], searchStuff[:petGender]])
-  # end
+    self.where("dog_or_cat LIKE ?
+            AND pet_age < ?", searchDogOrCat, petAge)
+  end
+
+  def self.fetchAge(petAge)
+    self.where("pet_age LIKE ?", petAge)
+  end
+
+  def self.fetchAgeGender(petAge, petGender)
+    self.where("pet_age LIKE ?
+            AND pet_gender LIKE ?", petAge, petGender)
+  end
+
+  def self.fetchAgeBreed(petAge, petBreed)
+    self.where("pet_age LIKE ?
+            AND pet_breed LIKE ?", petAge, petBreed)
+  end
+
+  def self.fetchGender(petGender)
+    self.where("pet_gender LIKE ?", petGender)
+  end
+
+  def self.fetchGenderBreed(petBreed, petGender)
+    self.where("pet_breed LIKE ?
+            AND pet_gender LIKE ?", petBreed, petGender)
+  end
+
 end

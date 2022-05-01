@@ -3,34 +3,48 @@ class Api::PostsController < ApplicationController
   before_action :require_logged_in, only: [:create]
 
   def index
-    # if dogOrCat && !petBreed && !petAge && !petGender
-    #   @posts = Post.fetch(dogOrCat)
-    # elsif dogOrCat && petBreed && !petAge && !petGender
-    #   @posts = Post.fetchBreed(dogOrCat, petBreed)
-    # elsif dogOrCat && petBreed && petAge && !petGender
-    #   @posts = Post.fetchBreedAge(dogOrCat, petBreed, petAge)
-    # elsif dogOrCat && petBreed && !petAge && petGender
-    #   @posts = Post.fetchBreedGender(dogOrCat, petBreed, petGender)
-    # elsif dogOrCat && petBreed && petAge && petGender
-    #   @posts = Post.fetchBreedAgeGender(dogOrCat, petBreed, petAge, petGender)
-    # elsif dogOrCat && !petBreed && petAge && !petGender
-    #   @posts = Post.fetchAge(dogOrCat, petAge)
-    # elsif dogOrCat && !petBreed && petAge && petGender
-    #   @posts = Post.fetchAgeGender(dogOrCat, petAge, petGender)
-    # elsif dogOrCat && !petBreed && !petAge && petGender
-    #   @posts = Post.fetchGender(dogOrCat, petGender)
-    # if searchStuff
-      @posts = Post.fetch(searchStuff)
-    # else
-    #   @posts = Post.all
-    # end
+    if searchDogOrCat === "" && petBreed === "" && petAge === "" && petGender === ""
+      @posts = Post.all
+    elsif searchDogOrCat && petBreed === "" && petAge === "" && petGender === ""
+      @posts = Post.fetchDogOrCat(searchDogOrCat)
+    elsif searchDogOrCat && petBreed && petAge === "" && petGender === ""
+      @posts = Post.fetchDogOrCatBreed(searchDogOrCat, petBreed)
+    elsif searchDogOrCat && petBreed && petAge && petGender === ""
+      @posts = Post.fetchDogOrCatBreedAge(searchDogOrCat, petBreed, petAge)
+    elsif searchDogOrCat && petBreed && petAge === "" && petGender
+      @posts = Post.fetchDogOrCatBreedGender(searchDogOrCat, petBreed, petGender)
+    elsif searchDogOrCat && petBreed && petAge && petGender
+      @posts = Post.fetchDogOrCatBreedAgeGender(searchDogOrCat, petBreed, petAge, petGender)
+    elsif searchDogOrCat && petBreed === "" && petAge && petGender === ""
+      @posts = Post.fetchDogOrCatAge(searchDogOrCat, petAge)
+    elsif searchDogOrCat && petBreed === "" && petAge && petGender
+      @posts = Post.fetchDogOrCatAgeGender(searchDogOrCat, petAge, petGender)
+    elsif searchDogOrCat && petBreed === "" && petAge === "" && petGender
+      @posts = Post.fetchDogOrCatGender(searchDogOrCat, petGender)
+    elsif searchDogOrCat === "" && petBreed && petAge === "" && petGender === ""
+      @post = Post.fetchBreed(petBreed)
+    elsif searchDogOrCat === "" && petBreed === "" && petAge && petGender === ""
+      @post = Post.fetchAge(petAge)
+    elsif searchDogOrCat === "" && petBreed === "" && petAge === "" && petGender
+      @post = Post.fetchGender(petGender)
+    elsif searchDogOrCat === "" && petBreed === "" && petAge && petGender
+      @post = Post.fetchAgeGender(petAge, petGender)
+    elsif searchDogOrCat === "" && petBreed === "" && petAge && petGender
+      @post = Post.fetchGenderBreed(petBreed, petGender)
+    elsif searchDogOrCat === "" && petBreed && petAge === "" && petGender
+      @post = Post.fetchAgeBreed(petAge, petBreed)
+    else
+      @posts = Post.all
+    end
 
     render "api/posts/index"
   end
 
   def show
     @post = Post.with_attached_photos.find(params[:id])
-    @favorites = current_user.favorite_posts
+    if current_user
+      @favorites = current_user.favorite_posts
+    end
     render "api/posts/show"
   end
 
@@ -59,23 +73,23 @@ class Api::PostsController < ApplicationController
     params.require(:post).permit(:pet_name, :pet_age, :pet_gender, :pet_breed, :dog_or_cat, :author_id, photos: [])
   end
 
-  # def dogOrCat
-  #   return params[:filters][:dogOrCat] if params[:filters]
-  # end
-
-  # def petBreed
-  #   return params[:filters][:petBreed] if params[:filters]
-  # end
-
-  # def petAge
-  #   return params[:filters][:petAge] if params[:filters]
-  # end
-  
-  # def petGender
-  #   return params[:filters][:petGender] if params[:filters]
-  # end
-
-  def searchStuff
+  def searchDogOrCat
     params[:dogOrCat]
   end
+
+  def petBreed
+    params[:petBreed]
+  end
+
+  def petAge
+    params[:petAge]
+  end
+  
+  def petGender
+    params[:petGender]
+  end
+
+  # def searchStuff
+  #   params[:filters]
+  # end
 end

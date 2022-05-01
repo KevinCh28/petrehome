@@ -33,10 +33,6 @@ class EditPostForm extends React.Component {
       photos: photoFiles,
     }
 
-    console.log(this.state)
-    console.log(post)
-    console.log(this.state.photoFiles)
-
     this.props.editPost(this.props.post.id, post)
   }
 

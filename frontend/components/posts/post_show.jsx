@@ -15,11 +15,13 @@ class PostShow extends React.Component {
   componentDidMount() {
     this.props.fetchPost(this.props.match.params.postId)
       .then(payload => {
-        if (payload.post.favPosts) {
+        if (this.props.currentUser && payload.post.favPosts) {
           this.setState({ favorited: true })
         }
       })
-    this.props.fetchFavorites(this.props.currentUser.id)
+    if (this.props.currentUser) {
+      this.props.fetchFavorites(this.props.currentUser.id)
+    }
   }
 
   componentDidUpdate(prevProps) {

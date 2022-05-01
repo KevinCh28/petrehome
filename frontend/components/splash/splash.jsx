@@ -23,11 +23,11 @@ class Splash extends React.Component {
             <div className="recommendations-body-inner">
               <div className="recommendations-grid"> 
 
-                <div className="recommendations-grid-column">
+                {/* <div className="recommendations-grid-column">
                   <div className="recommendations-post-spot">
                     <PostIndexContainer />
                   </div>
-                </div>
+                </div> */}
 
                 <div className="recommendations-grid-column">
                   <div className="recommendations-post-spot">
