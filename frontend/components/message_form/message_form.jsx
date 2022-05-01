@@ -6,17 +6,24 @@ class MessageForm extends React.Component {
     this.state = {
       receiver_id: this.props.authorId,
       author_id: this.props.userId,
-      body: ""
+      body: "",
+      author_name: this.props.authorName,
     }
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInquirySubmit = this.handleInquirySubmit.bind(this);
+    this.handleReplySubmit = this.handleReplySubmit.bind(this);
   }
 
-  handleSubmit(e) {
+  handleInquirySubmit(e) {
+    e.preventDefault();
+    this.props.createMessage(this.state ,this.state.receiver_id)
+      .then(this.props.closeModal)
+  }
+
+  handleReplySubmit(e) {
     e.preventDefault();
     const message = Object.assign({}, this.state);
-    const userId = this.props.authorId
-    this.props.createMessage(message ,userId)
+    this.props.createMessage(message, this.state.receiver_id)
       .then(this.props.closeModal)
   }
 
@@ -29,8 +36,8 @@ class MessageForm extends React.Component {
 
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          {formType === 'inquiry' ? (
+        {formType === 'inquiry' ? (
+          <form onSubmit={this.handleInquirySubmit}>
             <div className="session-container">
               <div onClick={this.props.closeModal} className="modal-x">X</div>
               <h3 className="session-header">START YOU INQUIRY</h3>
@@ -41,7 +48,9 @@ class MessageForm extends React.Component {
                 <input className="session-form-submit" type="submit" value="Send" />
               </div>
             </div>
-          ) : (
+          </form>
+        ) : (
+          <form onSubmit={this.handleReplySubmit}>
             <div className="session-container">
               <div onClick={this.props.closeModal} className="modal-x">X</div>
               <h3 className="session-header">REPLY</h3>
@@ -52,8 +61,8 @@ class MessageForm extends React.Component {
                 <input className="session-form-submit" type="submit" value="Send" />
               </div>
             </div>
-          )}
-        </form>
+          </form>
+        )}
       </div>
     )
   }

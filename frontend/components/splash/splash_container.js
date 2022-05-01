@@ -1,15 +1,16 @@
 import { connect } from "react-redux";
 import Splash from "./splash";
+// import { fetchPosts } from "../../actions/post_actions";
 
-const mapStateTopProps = ({ session, entities: {users} }) => {
+const mapStateTopProps = (state) => {
   return {
-    currentUser: users[session.id],
+    currentUser: state.entities.users[session.id],
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    // logout: () => dispatch(logout())
+    // fetchPosts: (filter) => dispatch(fetchPosts(filter)),
   }
 }
 

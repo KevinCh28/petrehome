@@ -6,8 +6,6 @@ import { openModal, closeModal } from "../../actions/modal_actions";
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state)
-  console.log(ownProps)
   return {
     post: state.entities.posts[ownProps.match.params.postId],
     userId: state.session.id,

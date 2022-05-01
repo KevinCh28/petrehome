@@ -10,6 +10,7 @@ class MessageIndexItem extends React.Component {
     return (
       <li>
         <div>
+          <h3>{message.authorName}</h3>
           <h3>{message.body}</h3>
           <button onClick={() => openModal('reply')}>
             reply

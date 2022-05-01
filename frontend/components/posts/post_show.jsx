@@ -101,9 +101,18 @@ class PostShow extends React.Component {
             </div>
           </div>
         </div>
-        <div onClick={() => openModal('inquiry')} >
-          START YOUR INQUIRY
-        </div>
+        {
+          this.props.currentUser ? (
+            <div onClick={() => openModal('inquiry')} >
+              START YOUR INQUIRY
+            </div>
+          ) : (
+            <div onClick={() => openModal('login')} >
+              START YOUR INQUIRY
+            </div>
+          )
+        }
+        
         {this.favoriteButton()}
         {
           post.authorId === userId

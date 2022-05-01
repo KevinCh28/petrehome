@@ -29,8 +29,8 @@ fav2 = Favorite.create({user_id: demo.id, post_id: post2.id});
 fav3 = Favorite.create({user_id: demo.id, post_id: post3.id});
 fav4 = Favorite.create({user_id: user1.id, post_id: post4.id});
 
-msg1 = Message.create({author_id: user1.id, receiver_id: demo.id, body: "Hello, I am interested in Coyote"})
-msg2 = Message.create({author_id: user2.id, receiver_id: demo.id, body: "Hello, I am interested in Drogo"})
+msg1 = Message.create({author_id: user1.id, receiver_id: demo.id, body: "Hello, I am interested in Coyote", author_name: demo.first_name})
+msg2 = Message.create({author_id: user2.id, receiver_id: demo.id, body: "Hello, I am interested in Drogo", author_name: demo.first_name})
 
 post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie01.png'), filename: 'yorkie01.png');
 post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie02.jpeg'), filename: 'yorkie02.jpeg');

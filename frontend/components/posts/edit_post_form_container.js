@@ -4,13 +4,9 @@ import { editPost, fetchPost } from "../../actions/post_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state.entities.posts.filter(obj => { return obj.author_id === state.session.id}))
-
   return {
     formType: "editpost",
     post: Object.values(state.entities.posts)[0],
-    // post: Object.values(state.entities.posts),
-    // post: state.entities.posts[ownProps.match.params.postId],
     ownerId: state.session.id,
   }
 }

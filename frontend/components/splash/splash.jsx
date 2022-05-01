@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PostIndexContainer from "../posts/post_index_container"
-
+import SplashPostIndexContainer from "./splash_post_index_container";
 
 class Splash extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render () {
@@ -23,17 +22,9 @@ class Splash extends React.Component {
             <div className="recommendations-body-inner">
               <div className="recommendations-grid"> 
 
-                {/* <div className="recommendations-grid-column">
-                  <div className="recommendations-post-spot">
-                    <PostIndexContainer />
-                  </div>
-                </div> */}
-
                 <div className="recommendations-grid-column">
                   <div className="recommendations-post-spot">
-                    <Link to="/posts" className="recommendations-post-more">
-                      MORE PETS
-                    </Link>
+                    <SplashPostIndexContainer />
                   </div>
                 </div>
 

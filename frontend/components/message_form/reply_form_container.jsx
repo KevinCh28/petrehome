@@ -7,6 +7,7 @@ const mapStateToProps = (state) => {
   return {
     formType: "reply",
     userId: state.session.id,
+    authorName: state.users[state.session.id].firstName,
   }
 }
 

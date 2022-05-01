@@ -8,6 +8,7 @@ const mapStateToProps = (state) => {
     formType: "inquiry",
     userId: state.session.id,
     authorId: Object.values(state.entities.posts)[0].authorId || "",
+    authorName: state.entities.users[state.session.id].firstName,
   }
 }
 

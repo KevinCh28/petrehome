@@ -20,6 +20,13 @@ export const fetchPost = postId => {
   })
 }
 
+export const fetchSplashPosts = () => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/posts',
+  })
+}
+
 export const createPost = post => {
   return $.ajax({
     method: 'POST',

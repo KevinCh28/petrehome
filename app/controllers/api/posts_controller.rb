@@ -36,7 +36,6 @@ class Api::PostsController < ApplicationController
     else
       @posts = Post.all
     end
-
     render "api/posts/index"
   end
 
