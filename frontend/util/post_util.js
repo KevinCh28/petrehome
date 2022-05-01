@@ -32,6 +32,7 @@ export const createPost = post => {
     method: 'POST',
     url: '/api/posts',
     data: post,
+    // data: { post: post },
     contentType: false,
     processData: false,
   })

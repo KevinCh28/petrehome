@@ -37,18 +37,18 @@ class EditPostForm extends React.Component {
   renderBreedOptions() {
     if (this.state.dogOrCat === "Dog") {
       return (
-        DOGBREEDS.map(breed => <option value={breed}>{breed}</option>))
+        DOGBREEDS.map(breed => <option value={breed} key={breed}>{breed}</option>))
     } else if (this.state.dogOrCat === "") {
       return <option value="">Any</option>
     } else {
       return (
-        CATBREEDS.map(breed => <option value={breed}>{breed}</option>))
+        CATBREEDS.map(breed => <option value={breed} key={breed}>{breed}</option>))
     }
   }
 
   renderAgeOptions() {
     let ages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-    return (ages.map(age => <option value={age}>{age}</option>))
+    return (ages.map(age => <option value={age} key={age}>{age}</option>))
   }
 
   render() {

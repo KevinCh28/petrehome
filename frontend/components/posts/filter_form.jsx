@@ -34,16 +34,16 @@ class FilterForm extends React.Component {
   renderBreedOptions() {
     if (this.state.dogOrCat === "Dog") {
       return (
-        DOGBREEDS.map(breed => <option value={breed}>{breed}</option>))
+        DOGBREEDS.map(breed => <option value={breed} key={breed}>{breed}</option>))
     } else if (this.state.dogOrCat === "") {
       return <option value="">Any</option>
     } else {
       return (
-        CATBREEDS.map(breed => <option value={breed}>{breed}</option>))}
+        CATBREEDS.map(breed => <option value={breed} key={breed}>{breed}</option>))}
   }
 
   renderAgeOptions() {
-    return (DOGAGES.map(age => <option value={age}>{age}</option>))
+    return (DOGAGES.map(age => <option value={age} key={age}>{age}</option>))
   }
 
   render() {

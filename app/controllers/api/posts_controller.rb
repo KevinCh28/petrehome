@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
 
-  before_action :require_logged_in, only: [:create]
+  before_action :require_logged_in, only: [:create, :update]
 
   def index
     if searchDogOrCat === "" && petBreed === "" && petAge === "" && petGender === ""
@@ -49,7 +49,8 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-
+    @favorites = current_user.favorite_posts
+    
     if @post.save
       render :show
     else
@@ -59,6 +60,7 @@ class Api::PostsController < ApplicationController
 
   def update
     @post = Post.with_attached_photos.find(params[:id])
+    @favorites = current_user.favorite_posts
 
     if @post.update(post_params)
       render :show
