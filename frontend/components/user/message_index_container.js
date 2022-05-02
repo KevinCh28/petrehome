@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { createMessage, deleteMessage } from "../../actions/message_action"
 import MeesageIndex from "./message_index";
-import { openModal } from "../../actions/modal_actions";
+import { openModal, openMessageModal } from "../../actions/modal_actions";
 
 const mapStateToProps = state => {
   return {
@@ -13,7 +13,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     deleteMessage: (userId, messageId) => dispatch(deleteMessage(userId, messageId)),
-    openModal: payload => dispatch(openModal(payload)),
+    openModal: () => dispatch(openModal()),
+    openMessageModal: (payload) => dispatch(openMessageModal(payload)),
   }
 }
 

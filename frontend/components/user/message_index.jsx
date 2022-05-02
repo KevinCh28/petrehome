@@ -7,7 +7,7 @@ class MeesageIndex extends React.Component {
   }
 
   render() {
-    const { messages, deleteMessage, openModal } = this.props;
+    const { messages, deleteMessage, openMessageModal } = this.props;
 
     return (
       <div>
@@ -19,7 +19,7 @@ class MeesageIndex extends React.Component {
                   key={message.id}
                   message={message}
                   deleteMessage={deleteMessage}
-                  openModal={openModal}
+                  openMessageModal={openMessageModal}
                 />
               )}
             </ul>

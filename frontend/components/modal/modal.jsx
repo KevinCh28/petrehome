@@ -13,27 +13,37 @@ function Modal({modal, closeModal}) {
     return null;
   }
   let component;
-  switch (modal) {
-    case 'login':
-      component = <LoginFormContainer />;
-      break;
-    case 'signup':
-      component = <SignupFormContainer />;
-      break;
-    case 'createpost':
-      component = <PostFormContainer />;
-      break;
-    case 'editpost':
-      component = <EditPostContainer />;
-      break;
-    case 'reply':
-      component = <ReplyMessageContainer />;
-      break;
-    case 'inquiry':
-      component = <InquiryMessageContainer />;
-      break;
-    default:
-      return null;
+  if (modal.length === 2) {
+    switch (modal[0]) {
+      case 'reply':
+        component = <ReplyMessageContainer message={modal[1]}/>;
+        break;
+      default:
+        return null;
+    }
+  } else {
+    switch (modal) {
+      case 'login':
+        component = <LoginFormContainer />;
+        break;
+      case 'signup':
+        component = <SignupFormContainer />;
+        break;
+      case 'createpost':
+        component = <PostFormContainer />;
+        break;
+      case 'editpost':
+        component = <EditPostContainer />;
+        break;
+      // case 'reply':
+      //   component = <ReplyMessageContainer />;
+      //   break;
+      case 'inquiry':
+        component = <InquiryMessageContainer />;
+        break;
+      default:
+        return null;
+    }
   }
   return (
     <div className="modal-main">
@@ -49,8 +59,8 @@ function Modal({modal, closeModal}) {
 
 const mapStateToProps = (state) => {
   return {
-    modal: state.ui.modal
-  };
+    modal: state.ui.modal,
+  }
 };
 
 const mapDispatchToProps = dispatch => {

@@ -22,8 +22,13 @@ class MessageForm extends React.Component {
 
   handleReplySubmit(e) {
     e.preventDefault();
-    const message = Object.assign({}, this.state);
-    this.props.createMessage(message, this.state.receiver_id)
+    const message = {
+      receiver_id: this.props.message.authorId,
+      author_id: this.props.userId,
+      body: this.state.body,
+      author_name: this.props.authorName}
+      
+    this.props.createMessage(message, this.props.message.authorId)
       .then(this.props.closeModal)
   }
 
