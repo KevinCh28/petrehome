@@ -8,7 +8,13 @@ class SplashPostIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchSplashPosts();
+    const filter = {
+      dogOrCat: "",
+      petAge: "",
+      petBreed: "",
+      petGender: "",
+    }
+    this.props.fetchPosts(filter);
   }
 
   render() {

@@ -1,5 +1,4 @@
 import { RECEIVE_POSTS, RECEIVE_POST } from "../actions/post_actions";
-import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 
 const postsReducer = (state = {}, action) => {
   Object.freeze(state);

@@ -10,12 +10,11 @@ class Post < ApplicationRecord
 
   has_many_attached :photos
 
-
   def self.fetchDogOrCat(searchDogOrCat)
     Post.where("dog_or_cat LIKE ?", searchDogOrCat)
   end
 
-  def self.fetchBreed(searchDogOrCat, petBreed)
+  def self.fetchBreed(petBreed)
     self.where("pet_breed LIKE ?", petBreed)
   end
 
@@ -27,7 +26,7 @@ class Post < ApplicationRecord
   def self.fetchDogOrCatBreedAge(searchDogOrCat, petBreed, petAge)
     self.where("dog_or_cat LIKE ?
             AND pet_breed LIKE ?
-            AND pet_age LIKE ?", searchDogOrCat, petBreed, petAge)
+            AND pet_age IN (?)", searchDogOrCat, petBreed, petAge)
   end
 
   def self.fetchDogOrCatBreedGender(searchDogOrCat, petBreed, petGender)
@@ -39,13 +38,13 @@ class Post < ApplicationRecord
   def self.fetchDogOrCatBreedAgeGender(searchDogOrCat, petBreed, petAge, petGender)
     self.where("dog_or_cat LIKE ?
             AND pet_breed LIKE ?
-            AND pet_age LIKE ?
+            AND pet_age IN (?)
             AND pet_gender LIKE ?", searchDogOrCat, petBreed, petAge, petGender)
   end
 
   def self.fetchDogOrCatAgeGender(searchDogOrCat, petAge, petGender)
     self.where("dog_or_cat LIKE ?
-            AND pet_age LIKE ?
+            AND pet_age IN (?)
             AND pet_gender LIKE ?", searchDogOrCat, petAge, petGender)
   end
 
@@ -55,27 +54,21 @@ class Post < ApplicationRecord
   end
 
   def self.fetchDogOrCatAge(searchDogOrCat, petAge)
-    # if petAge === "Baby"
-    #   petAge = 2
-    # elsif petAge === "Young"
-    #   petAge = 5
-    # end
-
     self.where("dog_or_cat LIKE ?
-            AND pet_age < ?", searchDogOrCat, petAge)
+            AND pet_age IN (?)", searchDogOrCat, petAge)
   end
 
   def self.fetchAge(petAge)
-    self.where("pet_age LIKE ?", petAge)
+    self.where("pet_age IN (?)", petAge)
   end
 
   def self.fetchAgeGender(petAge, petGender)
-    self.where("pet_age LIKE ?
+    self.where("pet_age IN (?)
             AND pet_gender LIKE ?", petAge, petGender)
   end
 
   def self.fetchAgeBreed(petAge, petBreed)
-    self.where("pet_age LIKE ?
+    self.where("pet_age IN (?)
             AND pet_breed LIKE ?", petAge, petBreed)
   end
 

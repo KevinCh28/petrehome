@@ -43,7 +43,7 @@ class PostForm extends React.Component {
       }
     }
     this.props.createPost(post)
-      .then(this.props.closeModal);
+      .then(this.props.closeModal)
   }
 
   // handleSubmit(e) {

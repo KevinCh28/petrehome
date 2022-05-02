@@ -37,17 +37,17 @@ class PostShow extends React.Component {
     if (currentUser && this.state.favorited) {
       favButton =
         <div onClick={this.handleClick} >
-          <img src={window.favURL} />
+          <img src={window.favURL} key={"faved"}/>
         </div>
     } else if (!currentUser) {
       favButton =
         <div onClick={() => this.props.openModal('login')} >
-          <img src={window.unfavURL} />
+          <img src={window.unfavURL} key={"unfaved"}/>
         </div>
     } else {
       favButton =
         <div onClick={this.handleClick} >
-          <img src={window.unfavURL} />
+          <img src={window.unfavURL} key={"unfaved"}/>
         </div>
     }
     return favButton;
@@ -82,7 +82,7 @@ class PostShow extends React.Component {
         <div className="post-image-container">
           {
             post.photoUrls.map(photo => (
-              <img src={`${photo}`} className="post-image" />
+              <img src={`${photo}`} className="post-image" key={photo}/>
             ))
           }
         </div>

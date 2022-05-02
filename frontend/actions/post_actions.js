@@ -28,14 +28,9 @@ export const fetchPost = postId => dispatch => (
     .then( post => dispatch(receivePost(post)) )
 )
 
-export const fetchSplashPosts = () => dispatch => (
-  APIUtil.fetchSplashPosts()
-    .then(posts => dispatch(receivePosts(posts)))
-)
-
 export const createPost = postForm => dispatch => (
   APIUtil.createPost(postForm)
-    .then( post => dispatch(receivePost(post)) )
+    // .then( post => dispatch(receivePost(post)) )
 )
 
 export const editPost = (postId, data) => dispatch => (

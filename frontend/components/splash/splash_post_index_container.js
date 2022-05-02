@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import SplashPostIndex from "./splash_post_index";
-import { fetchPosts, fetchSplashPosts } from "../../actions/post_actions";
+import { fetchPosts } from "../../actions/post_actions";
 
 const mapStateToProps = state => {
   let temptPosts = Object.values(state.entities.posts)
@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchSplashPosts: () => dispatch(fetchSplashPosts()),
+    fetchPosts: (filter) => dispatch(fetchPosts(filter)),
   }
 }
 
