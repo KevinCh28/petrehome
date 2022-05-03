@@ -12,21 +12,20 @@ class MeesageIndex extends React.Component {
     return (
       <div>
         {messages.length > 0 ? (
-          <div>Messages:
-            <ul>
-              {messages.map(message =>
-                <MessageIndexItem
-                  key={message.id}
-                  message={message}
-                  deleteMessage={deleteMessage}
-                  openMessageModal={openMessageModal}
-                />
-              )}
-            </ul>
+          <div className="messages-container">
+            <h3>Messages:</h3>
+            {messages.map(message =>
+              <MessageIndexItem
+                key={message.id}
+                message={message}
+                deleteMessage={deleteMessage}
+                openMessageModal={openMessageModal}
+              />
+            )}
           </div>
         ) : (
           <div>
-            No new messages
+            No messages
           </div>
         )}
       </div>

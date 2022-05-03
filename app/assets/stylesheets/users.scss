@@ -1,3 +1,31 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.user-show-container {
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.messages-container-wrap {
+  width: 30%;
+}
+
+.messages-container {
+  padding: 5px;
+}
+
+.favorite-posts-container-wrap {
+  width: 70%;
+}
+
+.favorite-posts-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5px;
+}
+
+.favorite-posts-amount {
+  padding-left: 15px;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: Nexa Regular, Arial, Helvetica, sans-serif;
+  color: #4d4751;
+}

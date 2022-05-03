@@ -14,15 +14,23 @@ class FavoriteIndex extends React.Component {
       <div>
         {favorites.length > 0 ? (
           <div>
-            <p>My Favorites ({favorites.length})</p>
-            <ul className="self-post-list">
+            <p className="favorite-posts-amount">My Favorites ({favorites.length})</p>
+            {/* <ul className="self-post-list">
               {favorites.map(favorite => 
                   <FavoriteIndexItem
                     key={favorite.id}
                     favorite={favorite}
                   />
               )}
-            </ul>
+            </ul> */}
+            <div className="favorite-posts-container">
+              {favorites.map(favorite =>
+                <FavoriteIndexItem
+                  key={favorite.id}
+                  favorite={favorite}
+                />
+              )}
+            </div>
           </div>
         ) : (
           <div className="no-favs-container">

@@ -13,12 +13,12 @@ class UserShow extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <FavPosts />
-        </div>
-        <div>
+      <div className="user-show-container">
+        <div className="messages-container-wrap">
           <UserMessages />
+        </div>
+        <div className="favorite-posts-container-wrap">
+          <FavPosts />
         </div>
       </div>
       

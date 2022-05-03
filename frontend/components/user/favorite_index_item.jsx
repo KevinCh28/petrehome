@@ -12,12 +12,13 @@ class FavoriteIndexItem extends React.Component {
     if (!favorite.photoUrls) return null;
 
     return (
-      <li className="post-index-item">
+      <div className="post-index-item">
         <Link 
           to={`/posts/${favorite.id}`}
           className="index-show-link">
             <div>
-            <img src={favorite.photoUrls[0]} height="250" width="220" />
+            {/* <img src={favorite.photoUrls[0]} height="250" width="220" /> */}
+            <img src={favorite.photoUrls[0]} className="post-index-item-img" />
             </div>
             <div className="post-item">
             <h2 className="index-item-name">{favorite.petName}</h2>
@@ -28,7 +29,7 @@ class FavoriteIndexItem extends React.Component {
             <h3 className="index-item-breed">{favorite.petBreed}</h3>
             </div>
         </Link>
-      </li>
+      </div>
     )
   }
 }
