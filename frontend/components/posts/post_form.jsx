@@ -46,16 +46,9 @@ class PostForm extends React.Component {
       .then(this.props.closeModal)
   }
 
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   this.props.createPost(this.state)
-  //     .then(this.props.closeModal);
-  // }
-
   handleFile(e) {
     e.preventDefault();
     this.setState({ photoFiles: e.currentTarget.files });
-    // this.setState({ photos: e.currentTarget.files });
   }
 
   renderBreedOptions() {

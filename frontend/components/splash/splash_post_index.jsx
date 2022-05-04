@@ -18,22 +18,20 @@ class SplashPostIndex extends React.Component {
   }
 
   render() {
+    const { posts } = this.props;
+
     return (
       <div>
-        <div>
-          <ul className="self-post-list">
-            {
-              this.props.posts.map(post => (
-                <SplashPostIndexItem
-                  key={post.id}
-                  post={post}
-                />
-              ))
-            }
-            < Link to="/posts" className="recommendations-post-more">
-              MORE PETS
-            </Link>
-          </ul>
+        <div className="recommendations-posts-container">
+          {posts.map(post => 
+            <SplashPostIndexItem
+              key={post.id}
+              post={post}
+            />
+          )}
+          < Link to="/posts" className="recommendations-post-more">
+            MORE PETS
+          </Link>
         </div>
       </div>
     )

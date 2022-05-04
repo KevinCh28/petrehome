@@ -12,27 +12,28 @@ class PostIndex extends React.Component {
   }
 
   render () {
+    const { posts } = this.props;
+
     return (
-      <div>
-        <div>
-          <ul className="self-post-list">
-            {
-              this.props.posts.map(post => (
-                <PostIndexItem
-                  key={post.id}
-                  post={post}
-                />
-              ))
-            }
-          </ul>
-        </div>
-        
-        <div>
-          <FilterForm 
+      <div className="user-show-container">
+        <div className="messages-container-wrap">
+          <FilterForm
             filters={this.props.filters}
-            updateFilter= {this.props.updateFilter}
+            updateFilter={this.props.updateFilter}
           />
         </div>
+
+        <div className="favorite-posts-container-wrap">
+          <div className="favorite-posts-container">
+            {posts.map(post =>
+              <PostIndexItem
+                key={post.id}
+                post={post}
+              />
+            )}
+          </div>
+        </div>
+
       </div>
     )
   }

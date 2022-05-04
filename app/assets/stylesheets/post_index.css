@@ -1,15 +1,9 @@
-.self-post-list {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
 .post-index-item {
   position: relative;
   background-color: white;
   border-radius: 10px;
   width: 230px;
+  margin-bottom: 15px;
 }
 
 .post-index-item-img {
@@ -28,23 +22,34 @@
 .index-item-name {
   font-size: 20px;
   color: #6504b5;
+  margin-bottom: 5px;
 }
 
 .index-item-age, .index-item-gender,
 .index-item-breed {
   color: #4d4751;
   text-align: center;
-  display: inline-block;
+  color: #2e0152;
+  font-size: 14px;
+  margin-bottom: 5px;
+} 
+
+.index-item-spacing {
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .post-item {
   height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .post-age-gender-container {
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 

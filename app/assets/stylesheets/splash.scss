@@ -55,7 +55,6 @@
   margin: 0;
   padding: 0;
   border: 0;
-  /* vertical-align: baseline; */
 }
 
 .splash-body-text {
@@ -95,6 +94,24 @@
 
 .recommendations-body-inner {
   width: auto;
+}
+
+.recommendations-posts-container-wrap {
+  width: 90%;
+}
+
+.recommendations-posts-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 5px;
+}
+
+.recommendations-post-index-item {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  width: 230px;
+  margin: 15px;
 }
 
 .recommendations-grid {
@@ -138,16 +155,12 @@
 }
 
 .recommendations-post-more {
-  background-color: #6504b5;
-  border-radius: 10px;
-  box-shadow: 0 1px 3p #4d475133;
-  display: flex;
-  flex-direction: column;
   position: relative;
-  flex-grow: 1;
-  min-height: 1px;
-  box-sizing: border-box;
-  line-height: 1.6;
+  border-radius: 10px;
+  background-color: #6504b5;
+  width: 230px;
+  height: 340px;
+  margin: 15px;
   font-family: "Nexa-Heavy", Arial, Helvetica, sans-serif;
   vertical-align: middle;
   text-align: center;

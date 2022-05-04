@@ -17,8 +17,7 @@ class FavoriteIndexItem extends React.Component {
           to={`/posts/${favorite.id}`}
           className="index-show-link">
             <div>
-            {/* <img src={favorite.photoUrls[0]} height="250" width="220" /> */}
-            <img src={favorite.photoUrls[0]} className="post-index-item-img" />
+              <img src={favorite.photoUrls[0]} className="post-index-item-img" />
             </div>
             <div className="post-item">
             <h2 className="index-item-name">{favorite.petName}</h2>

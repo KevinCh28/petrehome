@@ -47,42 +47,53 @@ class FilterForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-        <div>
-          <span>Dog or Cat</span>
-          <select value={this.state.dogOrCat} onChange={this.update('dogOrCat')} >
+      <div className="filters-container">
+
+        <div className="filters-item">
+          <span className="filters-item-title">Dog or Cat</span>
+            <select value={this.state.dogOrCat}
+              onChange={this.update('dogOrCat')}
+              className="filters-item-options-button">
             <><option value="" >Any</option>
               <option value="Dog" >Dog</option>
               <option value="Cat" >Cat</option></>
           </select>
         </div>
           
-        <div>
-          <span>GENDER</span>
-          <select value={this.state.petGender} onChange={this.update('petGender')}>
-            <><option value="">Any</option>
+        <div className="filters-item">
+          <span className="filters-item-title">GENDER</span>
+          <select value={this.state.petGender}
+            onChange={this.update('petGender')}
+            className="filters-item-options-button">
+          <><option value="">Any</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option></>
           </select>
         </div>
 
-        <div>
-          <span>AGE</span>
-          <select value={this.state.petAge} onChange={this.update('petAge')}>
+        <div className="filters-item">
+          <span className="filters-item-title">AGE</span>
+            <select value={this.state.petAge}
+              onChange={this.update('petAge')}
+              className="filters-item-options-button">
             <><option value="">Any</option>
             {this.renderAgeOptions()}</>
           </select>
         </div>
 
-        <div>
-          <span>BREED</span>
-          <select value={this.state.petBreed} onChange={this.update('petBreed')}>
-            {this.state.dogOrCat === "" ? <option value="">Any</option> : <>{this.renderBreedOptions()}</>}
+        <div className="filters-item">
+          <span className="filters-item-title">BREED</span>
+          <select value={this.state.petBreed}
+            onChange={this.update('petBreed')}
+            className="filters-item-options-button">
+          {this.state.dogOrCat === "" ? <option value="">Any</option> : <>{this.renderBreedOptions()}</>}
           </select>
         </div>
-          <input type="submit" value="Apply" />
-        </form>
+
+        <div onClick={this.handleSubmit} className="filters-submit-button">
+          APPLY
+        </div>
+
       </div>
     )
   }

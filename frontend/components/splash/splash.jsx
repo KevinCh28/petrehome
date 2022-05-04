@@ -20,15 +20,15 @@ class Splash extends React.Component {
           <h2 className="splash-body-text">Pets Available for Adoption Nearby</h2>
           <div className="recommendations-body">
             <div className="recommendations-body-inner">
-              <div className="recommendations-grid"> 
 
+              <div className="recommendations-grid"> 
                 <div className="recommendations-grid-column">
-                  <div className="recommendations-post-spot">
+                  <div className="recommendations-posts-container-wrap">
                     <SplashPostIndexContainer />
                   </div>
                 </div>
-
               </div>
+              
             </div>
           </div>
         </div>
