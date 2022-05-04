@@ -20,7 +20,7 @@ class FilterForm extends React.Component {
     this.renderBreedOptions = this.renderBreedOptions.bind(this);
     this.renderAgeOptions = this.renderAgeOptions.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.update = this.update.bind(this)
+    this.updateDogOrCat = this.updateDogOrCat.bind(this)
   }
 
   handleSubmit(e) {
@@ -30,6 +30,13 @@ class FilterForm extends React.Component {
 
   update(field) {
     return e => this.setState({ [field]: e.target.value })
+  }
+
+  updateDogOrCat(e) {
+    return (
+      this.setState({ dogOrCat: e.target.value }),
+      this.setState({ petBreed: "" })
+    )
   }
 
   renderBreedOptions() {
@@ -52,7 +59,7 @@ class FilterForm extends React.Component {
         <div className="filters-item">
           <span className="filters-item-title">Dog or Cat</span>
             <select value={this.state.dogOrCat}
-              onChange={this.update('dogOrCat')}
+              onChange={this.updateDogOrCat}
               className="filters-item-options-button">
             <><option value="" >Any</option>
               <option value="Dog" >Dog</option>
@@ -86,7 +93,7 @@ class FilterForm extends React.Component {
           <select value={this.state.petBreed}
             onChange={this.update('petBreed')}
             className="filters-item-options-button">
-          {this.state.dogOrCat === "" ? <option value="">Any</option> : <>{this.renderBreedOptions()}</>}
+            {this.state.dogOrCat === "" ? <option value="">Any</option> : <><option value="">Any</option>{this.renderBreedOptions()}</>}
           </select>
         </div>
 
