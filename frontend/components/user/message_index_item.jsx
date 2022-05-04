@@ -8,15 +8,20 @@ class MessageIndexItem extends React.Component {
   render() {
     const { message, deleteMessage, openMessageModal } = this.props;
     return (
-      <div>
-        <h3>{message.authorName}</h3>
-        <h3>{message.body}</h3>
-        <button onClick={() => openMessageModal(['reply', message])}>
-          reply
-        </button>
-        <button onClick={() => deleteMessage(message.receiverId, message.id)}>
-          delete
-        </button>
+      <div className="messages-item-container">
+        <div className="message-item-header">
+          <h3 className="message-author-name">{message.authorName}</h3>
+          <div>
+            <button onClick={() => openMessageModal(['reply', message])}>
+              Reply
+            </button>
+            <button onClick={() => deleteMessage(message.receiverId, message.id)}>
+              Delete
+            </button>
+          </div>
+        </div>
+        
+        <div className="message-body">{message.body}</div>
       </div>
     )
   }

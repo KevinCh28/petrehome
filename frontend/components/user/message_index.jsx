@@ -13,7 +13,9 @@ class MeesageIndex extends React.Component {
       <div>
         {messages.length > 0 ? (
           <div className="messages-container">
-            <h3>Messages:</h3>
+            <div className="message-amount">
+              Messages ({messages.length})
+            </div>
             {messages.map(message =>
               <MessageIndexItem
                 key={message.id}
@@ -24,9 +26,9 @@ class MeesageIndex extends React.Component {
             )}
           </div>
         ) : (
-          <div>
-            No messages
-          </div>
+            <div className="message-amount">
+              No messages
+            </div>
         )}
       </div>
     )

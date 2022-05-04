@@ -36,18 +36,22 @@ class PostShow extends React.Component {
 
     if (currentUser && this.state.favorited) {
       favButton =
-        <div onClick={this.handleClick} >
+        <div onClick={this.handleClick} className="post-fav-button">
           <img src={window.favURL} key={"faved"}/>
+          <span>FAVORITE</span>
         </div>
     } else if (!currentUser) {
       favButton =
-        <div onClick={() => this.props.openModal('login')} >
+        <div onClick={() => this.props.openModal('login')} 
+        className="post-fav-button">
           <img src={window.unfavURL} key={"unfaved"}/>
+          <span>FAVORITE</span>
         </div>
     } else {
       favButton =
-        <div onClick={this.handleClick} >
+        <div onClick={this.handleClick} className="post-fav-button">
           <img src={window.unfavURL} key={"unfaved"}/>
+          <span>FAVORITE</span>
         </div>
     }
     return favButton;
@@ -86,39 +90,47 @@ class PostShow extends React.Component {
             ))
           }
         </div>
+          <div className="pet-info-container">
+            <div className="pet-decription-container">
+              <div className="pet-name">
+                <p>{post.petName}</p>
+              </div>
 
-        <div className="pet-info-container">
-          <div className="pet-name">
-            <p>{post.petName}</p>
-          </div>
-          <div className="pet-about-container">
-            About
-            <div className="pet-about">
-              <p>{post.dogOrCat}</p>
-              <p>{post.petBreed}</p>
-              <p>{post.petAge}</p>
-              <p>{post.petGender}</p>
+              <div className="pet-about-container">
+                About
+                <div className="pet-about">
+                  <p>{post.dogOrCat}</p>
+                  <p>{post.petBreed}</p>
+                  <p>{post.petAge}</p>
+                  <p>{post.petGender}</p>
+                </div>
+              </div>
+
             </div>
+
+            <div className="pet-buttons-container">
+              <span className="pet-buttons-container-message">
+                Considering {post.petName} for adoption?
+              </span>
+              {this.props.currentUser ? (
+              <div onClick={() => openModal('inquiry')} className="post-form-submit-button">
+                START YOUR INQUIRY
+              </div>
+            ) : (
+              <div onClick={() => openModal('login')} className="post-form-submit-button">
+                START YOUR INQUIRY
+              </div>
+            )}
+
+            {this.favoriteButton()}
+            {post.authorId === userId
+              ? <div onClick={() => openModal('editpost')} className="post-form-submit-button">
+                  EDIT POST
+                </div>
+              : null
+            }
           </div>
         </div>
-        {
-          this.props.currentUser ? (
-            <div onClick={() => openModal('inquiry')} >
-              START YOUR INQUIRY
-            </div>
-          ) : (
-            <div onClick={() => openModal('login')} >
-              START YOUR INQUIRY
-            </div>
-          )
-        }
-        
-        {this.favoriteButton()}
-        {
-          post.authorId === userId
-            ? <button onClick={() => openModal('editpost')} >Edit Post</button>
-            : null
-        }
       </div>
       
     )

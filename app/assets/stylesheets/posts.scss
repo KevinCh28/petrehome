@@ -7,10 +7,15 @@
 }
 
 .pet-info-container {
-  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.pet-decription-container {
+  border: 1px;
   border-radius: 10px;
-  /* background: lightgray; */
-  width: 66.66666%;
+  background-color: #fff;
+  width: 40%;
   margin-top: 20px;
   margin-left: 20px;
   padding: 30px 30px 20px;
@@ -44,4 +49,14 @@
 .post-image {
   display: block;
   width: 50%;
+}
+
+.pet-buttons-container {
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 20%;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 30px 30px 20px;
 }
