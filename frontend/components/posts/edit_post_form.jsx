@@ -55,49 +55,62 @@ class EditPostForm extends React.Component {
     return (
       <div>
         <div>
-          <h3>Edit Post</h3>
+          <h3 className="post-form-title">Edit Post</h3>
+          <div onClick={this.props.closeModal} className="modal-x">X</div>
 
-          <form onSubmit={this.handleSubmit}>
-            <div onClick={this.props.closeModal} className="modal-x">X</div>
-            <div>
-              <label>Name
+          <div className="post-form-item">
+            <label className="post-form-item-title">Pet's Name
                 <input 
                 type="text" 
                 value={this.state.petName} 
-                onChange={this.update('petName')} />
+                onChange={this.update('petName')}
+                className="post-form-item-options-button"/>
               </label>
             </div>
+
+          <div className="post-form-item">
+            <span className="post-form-item-title">Type</span>
+            <select value={this.state.dogOrCat}
+              onChange={this.update('dogOrCat')}
+              className="post-form-item-options-button">
+              <><option value="Dog" >Dog</option>
+                <option value="Cat" >Cat</option></>
+            </select>
+          </div>
             
-            <div>
-              <span>Age</span>
-              <select value={this.state.petAge} onChange={this.update('petAge')} >
+          <div className="post-form-item">
+            <span className="post-form-item-title">Age</span>
+              <select value={this.state.petAge}
+              onChange={this.update('petAge')}
+              className="post-form-item-options-button">
                 <>{this.renderAgeOptions()}</>
               </select>
             </div>
 
-            <span>Breed</span>
-            <select value={this.state.petBreed} onChange={this.update('petBreed')} >
+          <div className="post-form-item">
+            <span className="post-form-item-title">Breed</span>
+            <select value={this.state.petBreed}
+              onChange={this.update('petBreed')}
+              className="post-form-item-options-button">
               <>{this.renderBreedOptions()}</>
             </select>
+          </div>
+            
 
-            <div>
-              <span>GENDER</span>
-              <select value={this.state.petGender} onChange={this.update('petGender')}>
+          <div className="post-form-item">
+            <span className="post-form-item-title">GENDER</span>
+              <select value={this.state.petGender}
+              onChange={this.update('petGender')}
+              className="post-form-item-options-button">
                 <><option value="Male">Male</option>
                   <option value="Female">Female</option></>
               </select>
             </div>
 
-            <div>
-              <span>Type</span>
-              <select value={this.state.dogOrCat} onChange={this.update('dogOrCat')} >
-                <><option value="Dog" >Dog</option>
-                  <option value="Cat" >Cat</option></>
-              </select>
+            <div onClick={this.handleSubmit} className="post-form-submit-button">
+              Edit Post
             </div>
 
-            <input type="submit" value="Edit Post" />
-          </form>
         </div>
       </div>
     )
