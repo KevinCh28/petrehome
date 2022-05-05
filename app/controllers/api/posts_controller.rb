@@ -51,7 +51,7 @@ class Api::PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if !@post.save
-      render json: ["Missing pet name"], status: 401
+      render json: ["Pet's name can't be empty"], status: 401
     end
   end
 
@@ -62,7 +62,7 @@ class Api::PostsController < ApplicationController
     if @post.update(post_params)
       render :show
     else
-      render json: @user.errors.full_messages, status: 422
+      render json: ["Pet's name can't be empty"], status: 401
     end
   end
 

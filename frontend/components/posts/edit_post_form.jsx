@@ -51,13 +51,30 @@ class EditPostForm extends React.Component {
     return (ages.map(age => <option value={age} key={age}>{age}</option>))
   }
 
+  renderErrors() {
+    debugger
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li>
+            {error}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  componentWillUnmount() {
+    this.props.removeErrors()
+  }
+
   render() {
     return (
       <div>
         <div>
           <h3 className="post-form-title">Edit Post</h3>
           <div onClick={this.props.closeModal} className="modal-x">X</div>
-
+          {this.renderErrors()}
           <div className="post-form-item">
             <label className="post-form-item-title">Pet's Name
                 <input 

@@ -5,7 +5,6 @@ const sessionErrorsReducer = (state = [], action) => {
 
   switch (action.type) {
     case RECEIVE_CREATE_POST:
-      debugger
       return [];
     case RECEIVE_POST_ERRORS:
       debugger
