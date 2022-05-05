@@ -36,6 +36,22 @@ class MessageForm extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li>
+            {error}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  componentWillUnmount() {
+    this.props.removeErrors()
+  }
+
   render() {
     const { formType } = this.props
 
@@ -51,6 +67,7 @@ class MessageForm extends React.Component {
                   <input className="session-form-input" type="text" value={this.state.body} onChange={this.update("body")} />
                 </div>
                 <input className="session-form-submit" type="submit" value="Send" />
+                {this.renderErrors()}
               </div>
             </div>
           </form>
@@ -64,6 +81,7 @@ class MessageForm extends React.Component {
                   <input className="session-form-input" type="text" value={this.state.body} onChange={this.update("body")} />
                 </div>
                 <input className="session-form-submit" type="submit" value="Send" />
+                  {this.renderErrors()}
               </div>
             </div>
           </form>

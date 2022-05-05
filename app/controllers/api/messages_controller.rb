@@ -11,7 +11,7 @@ class Api::MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if !@message.save
-      render json: @message.errors.full_messages
+      render json: ["Message minimum length 10"], status: 401
     end
   end
 
