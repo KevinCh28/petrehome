@@ -10,6 +10,7 @@ class PostShow extends React.Component {
 
     this.favoriteButton = this.favoriteButton.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.inquiryOrEditButton = this.inquiryOrEditButton.bind(this);
   }
 
   componentDidMount() {
@@ -74,8 +75,31 @@ class PostShow extends React.Component {
     }
   }
 
+  inquiryOrEditButton() {
+    const { post, userId, currentUser, openModal } = this.props;
+    let returnButton;
+
+    if (post.authorId === userId) {
+      returnButton =
+      <div onClick={() => openModal('editpost')} className="post-form-submit-button">
+        EDIT POST
+      </div>
+    } else if (!currentUser) {
+      returnButton =
+      <div onClick={() => openModal('login')} className="post-form-submit-button">
+        START YOUR INQUIRY
+      </div>
+    } else {
+      returnButton =
+      <div onClick={() => openModal('inquiry')} className="post-form-submit-button">
+        START YOUR INQUIRY
+      </div>
+    }
+    return returnButton;
+  }
+
   render() {
-    const { post, userId, openModal } = this.props
+    const { post } = this.props
 
     if (!post) return null;
     if (!post.photoUrls) return null;
@@ -111,23 +135,8 @@ class PostShow extends React.Component {
               <span className="pet-buttons-container-message">
                 Considering {post.petName} for adoption?
               </span>
-              {this.props.currentUser ? (
-              <div onClick={() => openModal('inquiry')} className="post-form-submit-button">
-                START YOUR INQUIRY
-              </div>
-            ) : (
-              <div onClick={() => openModal('login')} className="post-form-submit-button">
-                START YOUR INQUIRY
-              </div>
-            )}
-
-            {this.favoriteButton()}
-            {post.authorId === userId
-              ? <div onClick={() => openModal('editpost')} className="post-form-submit-button">
-                  EDIT POST
-                </div>
-              : null
-            }
+              {this.inquiryOrEditButton()}
+              {this.favoriteButton()}
           </div>
         </div>
       </div>
