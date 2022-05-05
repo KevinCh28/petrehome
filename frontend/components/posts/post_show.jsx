@@ -99,10 +99,9 @@ class PostShow extends React.Component {
               <div className="pet-about-container">
                 About
                 <div className="pet-about">
-                  <p>{post.dogOrCat}</p>
-                  <p>{post.petBreed}</p>
-                  <p>{post.petAge}</p>
-                  <p>{post.petGender}</p>
+                  <p>Age: {post.petAge}</p>
+                  <p>Breed: {post.petBreed}</p>
+                  <p>Gender: {post.petGender}</p>
                 </div>
               </div>
 

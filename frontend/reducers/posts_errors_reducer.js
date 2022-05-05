@@ -1,15 +1,16 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_SESSION_ERRORS, REMOVE_SESSION_ERRORS } from "../actions/session_actions";
+import { RECEIVE_CREATE_POST, RECEIVE_POST_ERRORS, REMOVE_POST_ERRORS } from "../actions/post_actions";
 
 const sessionErrorsReducer = (state = [], action) => {
   Object.freeze(state);
 
   switch (action.type) {
-    case RECEIVE_CURRENT_USER:
+    case RECEIVE_CREATE_POST:
+      debugger
       return [];
-    case RECEIVE_SESSION_ERRORS:
+    case RECEIVE_POST_ERRORS:
       debugger
       return action.errors;
-    case REMOVE_SESSION_ERRORS:
+    case REMOVE_POST_ERRORS:
       return [];
     default:
       return state;

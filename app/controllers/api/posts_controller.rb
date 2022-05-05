@@ -51,7 +51,7 @@ class Api::PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if !@post.save
-      render json: @post.errors.full_messages, status: 422
+      render json: ["Missing pet name"], status: 401
     end
   end
 

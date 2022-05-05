@@ -74,13 +74,29 @@ class PostForm extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li>
+            {error}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  componentWillUnmount() {
+    this.props.removeErrors()
+  }
+
   render() {
     return (
       <div>
         <div>
           <h3 className="post-form-title">Rehome a Pet</h3>
           <div onClick={this.props.closeModal} className="modal-x">X</div>
-
+          {this.renderErrors()}
           <div className="post-form-item">
             <label className="post-form-item-title">Pet's Name
               <input type="text"
