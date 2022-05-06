@@ -59,8 +59,21 @@ post38 = Post.create({pet_name: "Ninja", pet_gender: "Male", pet_breed: "America
 post39 = Post.create({pet_name: "Spencer", pet_gender: "Male", pet_breed: "American Shorthair", pet_age: 6, dog_or_cat: "Cat", author_id: user1.id});
 post40 = Post.create({pet_name: "Earnest", pet_gender: "Male", pet_breed: "American Shorthair", pet_age: 16, dog_or_cat: "Cat", author_id: user1.id});
 post41 = Post.create({pet_name: "Refrigerator", pet_gender: "Male", pet_breed: "American Shorthair", pet_age: 10, dog_or_cat: "Cat", author_id: user1.id});
-
-
+post42 = Post.create({pet_name: "Peach Fuzz", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 1, dog_or_cat: "Cat", author_id: user1.id});
+post43 = Post.create({pet_name: "Bindi", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 6, dog_or_cat: "Cat", author_id: user1.id});
+post44 = Post.create({pet_name: "Molly", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
+post45 = Post.create({pet_name: "Mark", pet_gender: "Male", pet_breed: "Abyssinian", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
+post46 = Post.create({pet_name: "Kid", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 6, dog_or_cat: "Cat", author_id: user1.id});
+post47 = Post.create({pet_name: "Iris", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 7, dog_or_cat: "Cat", author_id: user1.id});
+post48 = Post.create({pet_name: "Remy", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
+post49 = Post.create({pet_name: "Cabbage", pet_gender: "Male", pet_breed: "British Shorthair", pet_age: 3, dog_or_cat: "Cat", author_id: user1.id});
+post50 = Post.create({pet_name: "Lily", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
+post51 = Post.create({pet_name: "Tigger", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 9, dog_or_cat: "Cat", author_id: user1.id});
+post52 = Post.create({pet_name: "GERALT", pet_gender: "Male", pet_breed: "British Shorthair", pet_age: 1, dog_or_cat: "Cat", author_id: user1.id});
+post53 = Post.create({pet_name: "Dante", pet_gender: "Male", pet_breed: "British Shorthair", pet_age: 8, dog_or_cat: "Cat", author_id: user1.id});
+post54 = Post.create({pet_name: "Griffin [Snaggletooth ^.^]", pet_gender: "Male", pet_breed: "British Shorthair", pet_age: 3, dog_or_cat: "Cat", author_id: user1.id});
+post55 = Post.create({pet_name: "June Bug", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
+post56 = Post.create({pet_name: "Hunter", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 12, dog_or_cat: "Cat", author_id: user1.id});
 
 fav1 = Favorite.create({user_id: demo.id, post_id: post1.id});
 fav2 = Favorite.create({user_id: demo.id, post_id: post2.id});
@@ -222,3 +235,52 @@ post40.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.co
 post41.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/americanshorthair+refrigerator+01.jpeg'), filename: 'americanshorthair refrigerator 01.jpeg');
 post41.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/americanshorthair+refrigerator+02.jpeg'), filename: 'americanshorthair refrigerator 02.jpeg');
 post41.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/americanshorthair+refrigerator+03.jpeg'), filename: 'americanshorthair refrigerator 03.jpeg');
+
+post42.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+peach+01.jpeg'), filename: 'abyssinian peach 01.jpeg');
+
+post43.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+bindi+01.jpeg'), filename: 'abyssinian bindi 01.jpeg');
+post43.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+bindi+02.jpeg'), filename: 'abyssinian bindi 02.jpeg');
+
+post44.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+clover+01.jpeg'), filename: 'abyssinian clover 01.jpeg');
+post44.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+clover+02.jpeg'), filename: 'abyssinian clover 02.jpeg');
+post44.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+clover+03.jpeg'), filename: 'abyssinian clover 03.jpeg');
+
+post45.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+mark+01.jpeg'), filename: 'abyssinian mark 01.jpeg');
+post45.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+mark+02.jpeg'), filename: 'abyssinian mark 02.jpeg');
+post45.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+mark+03.jpeg'), filename: 'abyssinian mark 03.jpeg');
+
+post46.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+kid+01.jpeg'), filename: 'abyssinian kid 01.jpeg');
+post46.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+kid+02.jpeg'), filename: 'abyssinian kid 02.jpeg');
+post46.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/abyssinian+kid+03.jpeg'), filename: 'abyssinian kid 03.jpeg');
+
+post47.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+iris+01.jpeg'), filename: 'britishshorthair iris 01.jpeg');
+post47.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+iris+02.jpeg'), filename: 'britishshorthair iris 02.jpeg');
+post47.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+iris+03.jpeg'), filename: 'britishshorthair iris 03.jpeg');
+post47.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+iris+04.jpeg'), filename: 'britishshorthair iris 04.jpeg');
+post47.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+iris+05.jpeg'), filename: 'britishshorthair iris 05.jpeg');
+
+post48.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+remy+01.jpeg'), filename: 'britishshorthair remy 01.jpeg');
+post48.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+remy+02.jpeg'), filename: 'britishshorthair remy 02.jpeg');
+post48.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+remy+03.jpeg'), filename: 'britishshorthair remy 03.jpeg');
+
+post49.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+cabbage+01.jpeg'), filename: 'britishshorthair cabbage 01.jpeg');
+post49.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+cabbage+02.jpeg'), filename: 'britishshorthair cabbage 02.jpeg');
+post49.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+cabbage+03.jpeg'), filename: 'britishshorthair cabbage 03.jpeg');
+
+post50.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+lily+01.jpeg'), filename: 'britishshorthair lily 01.jpeg');
+
+post51.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+tigger+01.jpeg'), filename: 'britishshorthair tigger 01.jpeg');
+
+post52.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+geralt+01.jpeg'), filename: 'britishshorthair geralt 01.jpeg');
+
+post53.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+dante+01.jpeg'), filename: 'britishshorthair dante 01.jpeg');
+post53.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+dante+02.jpeg'), filename: 'britishshorthair dante 02.jpeg');
+post53.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+dante+03.jpeg'), filename: 'britishshorthair dante 03.jpeg');
+
+post54.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+griffin+01.jpeg'), filename: 'britishshorthair griffin 01.jpeg');
+
+post55.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+june+01.jpeg'), filename: 'britishshorthair june 01.jpeg');
+
+post56.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+hunter+01.jpeg'), filename: 'britishshorthair hunter 01.jpeg');
+post56.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+hunter+02.jpeg'), filename: 'britishshorthair hunter 02.jpeg');
+post56.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/britishshorthair+hunter+03.jpeg'), filename: 'britishshorthair hunter 03.jpeg');
