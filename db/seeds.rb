@@ -22,7 +22,36 @@ post1 = Post.create({pet_name: "Mango", pet_gender: "Male", pet_breed: "Yorkshir
 post2 = Post.create({pet_name: "Mimi", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
 post3 = Post.create({pet_name: "Nugget", pet_gender: "Male", pet_breed: "Corgi", pet_age: 5, dog_or_cat: "Dog", author_id: user1.id});
 post4 = Post.create({pet_name: "Coyote", pet_gender: "Female", pet_breed: "Pomsky", pet_age: 2, dog_or_cat: "Dog", author_id: demo.id});
-post5 = Post.create({pet_name: "Drogo", pet_gender: "Male", pet_breed: "American Shorthair", pet_age: 2, dog_or_cat: "Cat", author_id: demo.id});
+post5 = Post.create({pet_name: "Lily", pet_gender: "Female", pet_breed: "Corgi", pet_age: 11, dog_or_cat: "Dog", author_id: user3.id});
+post6 = Post.create({pet_name: "Wade Wilson", pet_gender: "Male", pet_breed: "Corgi", pet_age: 6, dog_or_cat: "Dog", author_id: user3.id});
+post7 = Post.create({pet_name: "Ein", pet_gender: "Male", pet_breed: "Corgi", pet_age: 7, dog_or_cat: "Dog", author_id: user3.id});
+post8 = Post.create({pet_name: "Daisy", pet_gender: "Female", pet_breed: "Corgi", pet_age: 6, dog_or_cat: "Dog", author_id: user3.id});
+post9 = Post.create({pet_name: "Scooby", pet_gender: "Male", pet_breed: "Corgi", pet_age: 2, dog_or_cat: "Dog", author_id: user3.id});
+post10 = Post.create({pet_name: "Yoshi", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 6, dog_or_cat: "Dog", author_id: user1.id});
+post11 = Post.create({pet_name: "Cooper", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 3, dog_or_cat: "Dog", author_id: user1.id});
+post12 = Post.create({pet_name: "Elon", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 2, dog_or_cat: "Dog", author_id: user1.id});
+post13 = Post.create({pet_name: "Granger", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 1, dog_or_cat: "Dog", author_id: user1.id});
+post14 = Post.create({pet_name: "Hetty", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 3, dog_or_cat: "Dog", author_id: user1.id});
+post15 = Post.create({pet_name: "Lily", pet_gender: "Female", pet_breed: "Shiba Inu", pet_age: 12, dog_or_cat: "Dog", author_id: user1.id});
+post16 = Post.create({pet_name: "Sammy", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 1, dog_or_cat: "Dog", author_id: user1.id});
+post17 = Post.create({pet_name: "Max", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 1, dog_or_cat: "Dog", author_id: user2.id});
+post18 = Post.create({pet_name: "Munson", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 1, dog_or_cat: "Dog", author_id: user2.id});
+post19 = Post.create({pet_name: "Bella", pet_gender: "Female", pet_breed: "Border Collie", pet_age: 2, dog_or_cat: "Dog", author_id: user2.id});
+post20 = Post.create({pet_name: "Indy", pet_gender: "Female", pet_breed: "Border Collie", pet_age: 3, dog_or_cat: "Dog", author_id: user2.id});
+post21 = Post.create({pet_name: "Ariel", pet_gender: "Female", pet_breed: "Border Collie", pet_age: 2, dog_or_cat: "Dog", author_id: user2.id});
+post22 = Post.create({pet_name: "Charles", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 3, dog_or_cat: "Dog", author_id: user2.id});
+post23 = Post.create({pet_name: "Chance", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 5, dog_or_cat: "Dog", author_id: user2.id});
+post24 = Post.create({pet_name: "Max", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 10, dog_or_cat: "Dog", author_id: user2.id});
+post25 = Post.create({pet_name: "Buddy", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 11, dog_or_cat: "Dog", author_id: user2.id});
+post26 = Post.create({pet_name: "Clara", pet_gender: "Female", pet_breed: "German Shepherd", pet_age: 1, dog_or_cat: "Dog", author_id: user2.id});
+post27 = Post.create({pet_name: "Mutti", pet_gender: "Female", pet_breed: "German Shepherd", pet_age: 2, dog_or_cat: "Dog", author_id: user2.id});
+post28 = Post.create({pet_name: "Madeline", pet_gender: "Female", pet_breed: "German Shepherd", pet_age: 3, dog_or_cat: "Dog", author_id: user2.id});
+post29 = Post.create({pet_name: "Bebe", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 6, dog_or_cat: "Dog", author_id: user2.id});
+post30 = Post.create({pet_name: "John John", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 7, dog_or_cat: "Dog", author_id: user2.id});
+post31 = Post.create({pet_name: "Shocka", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 11, dog_or_cat: "Dog", author_id: user2.id});
+post32 = Post.create({pet_name: "Bear", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 12, dog_or_cat: "Dog", author_id: user2.id});
+post33 = Post.create({pet_name: "Cowboy", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 1, dog_or_cat: "Dog", author_id: user2.id});
+
 
 fav1 = Favorite.create({user_id: demo.id, post_id: post1.id});
 fav2 = Favorite.create({user_id: demo.id, post_id: post2.id});
@@ -44,3 +73,108 @@ post3.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com
 post4.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/pomsky01.png'), filename: 'pomsky01.png');
 post4.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/pomsky02.png'), filename: 'pomsky02.png');
 
+post5.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+lily+01.jpeg'), filename: 'corgi lily 01.jpeg');
+post5.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+lily+02.jpeg'), filename: 'corgi lily 02.jpeg');
+post5.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+lily+03.jpeg'), filename: 'corgi lily 03.jpeg');
+
+post6.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+wade+wilson+01.jpeg'), filename: 'corgi wade wilson 03.jpeg');
+post6.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+wade+wilson+02.jpeg'), filename: 'corgi wade wilson 03.jpeg');
+post6.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+wade+wilson+03.jpeg'), filename: 'corgi wade wilson 03.jpeg');
+post6.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+wade+wilson+04.jpeg'), filename: 'corgi wade wilson 03.jpeg');
+post6.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+wade+wilson+05.jpeg'), filename: 'corgi wade wilson 03.jpeg');
+post6.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+wade+wilson+06.jpeg'), filename: 'corgi wade wilson 03.jpeg');
+
+post7.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+ein+01.jpeg'), filename: 'corgi ein 01.jpeg');
+post7.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+ein+02.jpeg'), filename: 'corgi ein 02.jpeg');
+
+post8.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+daisy+01.jpeg'), filename: 'corgi daisy 01.jpeg');
+post8.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+daisy+02.jpeg'), filename: 'corgi daisy 02.jpeg');
+
+post9.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+ein+01.jpeg'), filename: 'corgi ein 01.jpeg');
+post9.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/corgi+ein+02.jpeg'), filename: 'corgi ein 02.jpeg');
+
+post10.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+yoshi+01.jpeg'), filename: 'shiba yoshi 01.jpeg');
+post10.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+yoshi+02.jpeg'), filename: 'shiba yoshi 02.jpeg');
+post10.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+yoshi+03.jpeg'), filename: 'shiba yoshi 03.jpeg');
+
+post11.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+cooper+01.jpeg'), filename: 'shiba cooper 01.jpeg');
+post11.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+cooper+02.jpeg'), filename: 'shiba cooper 02.jpeg');
+
+post12.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+elon+01.jpeg'), filename: 'shiba elon 01.jpeg');
+post12.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+elon+02.jpeg'), filename: 'shiba elon 02.jpeg');
+post12.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+elon+03.jpeg'), filename: 'shiba elon 03.jpeg');
+post12.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+elon+04.jpeg'), filename: 'shiba elon 04.jpeg');
+post12.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+elon+05.jpeg'), filename: 'shiba elon 05.jpeg');
+
+post13.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+granger+01.jpeg'), filename: 'shiba granger 01.jpeg');
+
+post14.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+hetty+01.jpeg'), filename: 'shiba hetty 01.jpeg');
+post14.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+hetty+02.jpeg'), filename: 'shiba hetty 02.jpeg');
+post14.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+hetty+03.jpeg'), filename: 'shiba hetty 03.jpeg');
+
+post15.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+lily+01.jpeg'), filename: 'shiba lily 01.jpeg');
+post15.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+lily+02.jpeg'), filename: 'shiba lily 02.jpeg');
+post15.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+lily+03.jpeg'), filename: 'shiba lily 03.jpeg');
+
+post16.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+sammy+01.jpeg'), filename: 'shiba sammy 01.jpeg');
+post16.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+sammy+02.jpeg'), filename: 'shiba sammy 02.jpeg');
+post16.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/shiba+sammy+03.jpeg'), filename: 'shiba sammy 03.jpeg');
+
+post17.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+max+01.jpeg'), filename: 'bordercollie max 01.jpeg');
+post17.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+max+02.jpeg'), filename: 'bordercollie max 02.jpeg');
+
+post18.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+munson+01.jpeg'), filename: 'bordercollie munson 01.jpeg');
+
+post19.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+bella+01.jpeg'), filename: 'bordercollie bella 01.jpeg');
+post19.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+bella+02.jpeg'), filename: 'bordercollie bella 02.jpeg');
+post19.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+bella+03.jpeg'), filename: 'bordercollie bella 03.jpeg');
+
+post20.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+indy+01.jpeg'), filename: 'bordercollie indy 01.jpeg');
+post20.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+indy+02.jpeg'), filename: 'bordercollie indy 02.jpeg');
+post20.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+indy+03.jpeg'), filename: 'bordercollie indy 03.jpeg');
+
+post21.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+ariel+01.jpeg'), filename: 'bordercollie ariel 01.jpeg');
+post21.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+ariel+02.jpeg'), filename: 'bordercollie ariel 02.jpeg');
+post21.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+ariel+03.jpeg'), filename: 'bordercollie ariel 03.jpeg');
+
+post22.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+charles+01.jpeg'), filename: 'bordercollie charles 01.jpeg');
+post22.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+charles+02.jpeg'), filename: 'bordercollie charles 02.jpeg');
+post22.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+charles+02.jpeg'), filename: 'bordercollie charles 02.jpeg');
+
+post23.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+chance+01.jpeg'), filename: 'bordercollie chance 01.jpeg');
+post23.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+chance+02.jpeg'), filename: 'bordercollie chance 02.jpeg');
+
+post24.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+max2+01.jpeg'), filename: 'bordercollie max2 01.jpeg');
+post24.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+max2+02.jpeg'), filename: 'bordercollie max2 02.jpeg');
+post24.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+max2+03.jpeg'), filename: 'bordercollie max2 03.jpeg');
+
+post25.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+buddy+01.jpeg'), filename: 'bordercollie buddy 01.jpeg');
+post25.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+buddy+02.jpeg'), filename: 'bordercollie buddy 02.jpeg');
+post25.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/bordercollie+buddy+03.jpeg'), filename: 'bordercollie buddy 03.jpeg');
+
+post26.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+clara+01.jpeg'), filename: 'german clara 01.jpeg');
+post26.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+clara+02.jpeg'), filename: 'german clara 02.jpeg');
+
+post27.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+mutti+01.jpeg'), filename: 'german mutti 01.jpeg');
+post27.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+mutti+02.jpeg'), filename: 'german mutti 02.jpeg');
+post27.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+mutti+03.jpeg'), filename: 'german mutti 03.jpeg');
+
+post28.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+madeline+01.jpeg'), filename: 'german madeline 01.jpeg');
+post28.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+madeline+02.jpeg'), filename: 'german madeline 02.jpeg');
+
+post29.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+bebe+01.jpeg'), filename: 'german bebe 01.jpeg');
+post29.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+bebe+02.jpeg'), filename: 'german bebe 02.jpeg');
+post29.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+bebe+03.jpeg'), filename: 'german bebe 03.jpeg');
+
+post30.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+john+01.jpeg'), filename: 'german john 01.jpeg');
+post30.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+john+02.jpeg'), filename: 'german john 02.jpeg');
+post30.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+john+03.jpeg'), filename: 'german john 03.jpeg');
+
+post31.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+shocka+01.jpeg'), filename: 'german shocka 01.jpeg');
+post31.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+shocka+02.jpeg'), filename: 'german shocka 02.jpeg');
+post31.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+shocka+03.jpeg'), filename: 'german shocka 03.jpeg');
+
+post32.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+bear+01.jpeg'), filename: 'german bear 01.jpeg');
+post32.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+bear+02.jpeg'), filename: 'german bear 02.jpeg');
+
+post33.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/german+cowboy+01.jpeg'), filename: 'german cowboy 01.jpeg');

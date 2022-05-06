@@ -1,6 +1,6 @@
 import React from "react";
 
-const DOGBREEDS = ['Beagle', 'Corgi', 'German Shepherd', 'Pit Bull', 'Poodle', 'Pomsky',
+const DOGBREEDS = ['Beagle', 'Border Collie', 'Corgi', 'German Shepherd', 'Pit Bull', 'Poodle', 'Pomsky',
   'Retriever', 'Rottweiler', 'Shiba Inu', 'Yorkshire Terrier'];
 const CATBREEDS = ['American Shorthair', 'Abyssinian', 'British Shorthair',
   'Devon Rex', 'Maine Coon', 'Perssian', 'Ragdoll', 'Scottish Fold', 'Shorthair', 'Sphynx'];
@@ -55,7 +55,7 @@ class EditPostForm extends React.Component {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li>
+          <li key={i}>
             {error}
           </li>
         ))}
