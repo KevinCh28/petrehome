@@ -30,7 +30,13 @@ class SplashPostIndex extends React.Component {
             />
           )}
           < Link to="/posts" className="recommendations-post-more">
-            MORE PETS
+            <div>
+              <img src={window.pawPrint} key={"pawPrint"} className="paw-print"/>
+            </div>
+            <div>Many more pets</div>
+            <div>available on PetRehome</div>
+            <div className="meet-them-line"></div>
+            <div className="meet-them">MEET THEM</div>
           </Link>
         </div>
       </div>

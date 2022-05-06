@@ -3,7 +3,7 @@ import React from "react";
 const DOGBREEDS = ['Beagle', 'Border Collie', 'Corgi', 'German Shepherd', 'Pit Bull', 'Poodle', 'Pomsky',
   'Retriever', 'Rottweiler', 'Shiba Inu', 'Yorkshire Terrier'];
 const CATBREEDS = ['American Shorthair', 'Abyssinian', 'British Shorthair',
-  'Devon Rex', 'Maine Coon', 'Perssian', 'Ragdoll', 'Scottish Fold', 'Shorthair', 'Sphynx'];
+  'Devon Rex', 'Maine Coon', 'Perssian', 'Ragdoll', 'Scottish Fold', 'Sphynx'];
 
 class PostForm extends React.Component {
   constructor(props) {

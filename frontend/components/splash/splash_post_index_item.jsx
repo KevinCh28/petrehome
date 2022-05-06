@@ -21,6 +21,7 @@ class SplashPostIndexItem extends React.Component {
             <h2 className="index-item-name">{post.petName}</h2>
             <div className="post-age-gender-container">
               <h3 className="index-item-age">{post.petAge === 1 ? "Baby" : post.petAge < 3 ? "Young" : "Adult"}</h3>
+              <h3 className="index-item-spacing"> • </h3>
               <h3 className="index-item-gender">{post.petGender}</h3>
             </div>
             <h3 className="index-item-breed">{post.petBreed}</h3>
