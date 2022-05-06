@@ -5,14 +5,45 @@ import FilterForm from "./filter_form";
 class PostIndex extends React.Component {
   constructor(props) {
     super(props)
+    // this.maxPost = 0;
+    this.state = {
+      show_more: true,
+      maxPost: 16
+    };
+    this.showMore = this.showMore.bind(this)
+    this.showMoreButton = this.showMoreButton.bind(this)
   }
 
   componentDidMount() {
     this.props.fetchPosts(this.props.filters);
+    // this.maxPost += 16;
+  }
+
+  showMore() {
+    if (this.state.maxPost + 16 >= this.props.posts.length) {
+      this.setState({ show_more: false })
+      this.setState({ maxPost: this.state.maxPost += 16 })
+    } else {
+      this.setState({ maxPost: this.state.maxPost += 16 })
+    }
+  }
+
+  showMoreButton() {
+    let returnButton; 
+    if (this.state.show_more) {
+      returnButton =
+      <div onClick={this.showMore} className="post-show-more-button">
+        <span>SHOW MORE!</span>
+      </div>
+    } else {
+      returnButton = null
+    }
+    return returnButton;
   }
 
   render () {
     const { posts } = this.props;
+    const currentPosts = posts.slice(0, this.state.maxPost);
 
     return (
       <div className="user-show-container">
@@ -25,13 +56,14 @@ class PostIndex extends React.Component {
 
         <div className="favorite-posts-container-wrap">
           <div className="favorite-posts-container">
-            {posts.map(post =>
+            {currentPosts.map(post =>
               <PostIndexItem
                 key={post.id}
                 post={post}
               />
             )}
           </div>
+          {this.showMoreButton()}
         </div>
 
       </div>
