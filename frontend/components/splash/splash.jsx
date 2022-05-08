@@ -1,5 +1,6 @@
 import React from "react";
 import SplashPostIndexContainer from "./splash_post_index_container";
+import { Link } from "react-router-dom";
 
 class Splash extends React.Component {
   constructor(props) {
@@ -13,7 +14,16 @@ class Splash extends React.Component {
         <div className="splash-greeting-container">
           <div className="splash-greeting-image">
             <img className="splash-img" src={window.splashURL} />
-            <div className="splash-greeting-top"></div>
+            <div className="splash-greeting-top">
+              <div className="pet-care-link-container">
+                <Link to="/dogs">
+                  <div className="pet-care-link-text">DOG CARE</div>
+                </Link>
+                <Link to="/cats">
+                  <div className="pet-care-link-text">CAT CARE</div>
+                </Link>
+              </div>
+            </div>
             <div className="splash-greeting-bottom"></div>
           </div>
           <div className="splash-greeting-text-container">

@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import Splash from "./splash";
-// import { fetchPosts } from "../../actions/post_actions";
 
 const mapStateTopProps = (state) => {
   return {

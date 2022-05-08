@@ -40,15 +40,47 @@
   font-size: 14px;
 }
 
-.post-image-container {
+.post-image-container-wrap {
   display: flex;
-  height: 400px;
   justify-content: center;
 }
 
+.post-image-container {
+  display: flex;
+  width: 100%;
+}
+
 .post-image {
-  display: block;
-  width: 50%;
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  aspect-ratio: 16 / 14;
+}
+
+.post-image-side {
+  flex: 0 0 23.3333%;
+  max-width: 23.3333%;
+  aspect-ratio: 16 / 14;
+}
+
+.post-image-left {
+  flex: 0 0 10%;
+  max-width: 10%;
+  aspect-ratio: 16 / 14;
+  background-color: black;
+}
+
+.post-image-right {
+  flex: 0 0 13.3333%;
+  max-width: 33.3333%;
+  aspect-ratio: 16 / 14;
+  background-color: black;
+}
+
+.post-image-empty {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  aspect-ratio: 16 / 14;
+  background-color: black;
 }
 
 .pet-buttons-container {

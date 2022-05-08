@@ -58,6 +58,20 @@
   background-color: #6504b5;
 }
 
+.pet-care-link-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.pet-care-link-text {
+  color: #ecd7fd;
+  text-decoration-line: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
 .splash-greeting-bottom {
   display: block;
   position: inherit;

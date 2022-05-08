@@ -1,12 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Footer extends React.Component {
   render() {
     return (
       <div className="footer-wrapper">
         <div className="footer-container">
-          <div>
-            PET CARE TOPICS
+          <div className="pet-care-link-container">
+            <Link to="/dogs">
+              <div className="pet-care-link-text">DOG CARE</div>
+            </Link>
+            <Link to="/cats">
+              <div className="pet-care-link-text">CAT CARE</div>
+            </Link>
           </div>
           <div className="footer-links-container">
             <a href="http://github.com/KevinCh28" target="_blank">

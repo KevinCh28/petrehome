@@ -11,6 +11,7 @@ class PostShow extends React.Component {
     this.favoriteButton = this.favoriteButton.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.inquiryOrEditButton = this.inquiryOrEditButton.bind(this);
+    this.renderImages = this.renderImages.bind(this);
   }
 
   componentDidMount() {
@@ -98,6 +99,50 @@ class PostShow extends React.Component {
     return returnButton;
   }
 
+  renderImages() {
+    const { post } = this.props;
+
+    if (post.photoUrls.length === 2) {
+      return (
+        <div className="post-image-container">
+          <img src={`${post.photoUrls[1]}`} className="post-image" key={post.photoUrls[1]} />
+          <img src={`${post.photoUrls[0]}`} className="post-image" key={post.photoUrls[0]} />
+          <img src={`${post.photoUrls[1]}`} className="post-image" key={post.photoUrls[1]} />
+        </div>
+      )
+    } else if (post.photoUrls.length === 1) {
+      return (
+        <div className="post-image-container">
+          <div className="post-image-empty"></div>
+          <img src={`${post.photoUrls[0]}`} className="post-image" key={post.photoUrls[0]} />
+          <div className="post-image-empty"></div>
+        </div>
+      )
+    } else {
+      return (
+        <div className="post-image-container">
+          <img src={post.photoUrls[0]} className="post-image" key={post.photoUrls[0]} />
+          <img src={post.photoUrls[1]} className="post-image" key={post.photoUrls[1]} />
+          <img src={post.photoUrls[2]} className="post-image" key={post.photoUrls[2]} />
+        </div>
+        // <div className="post-image-container">
+        //   {
+        //     post.photoUrls.map(photo => (
+        //       <img src={`${photo}`} className="post-image" key={photo} />
+        //     ))
+        //   }
+        // </div>
+        // <div className="post-image-container">
+        //   <div className="post-image-left"></div>
+        //   <img src={post.photoUrls[0]} className="post-image-side" key={post.photoUrls[0]} />
+        //   <img src={post.photoUrls[1]} className="post-image" key={post.photoUrls[1]} />
+        //   <img src={post.photoUrls[2]} className="post-image-side" key={post.photoUrls[2]} />
+        //   <div className="post-image-right"></div>
+        // </div>
+      )
+    }
+  }
+
   render() {
     const { post } = this.props
 
@@ -107,12 +152,8 @@ class PostShow extends React.Component {
     return (
       <div>
 
-        <div className="post-image-container">
-          {
-            post.photoUrls.map(photo => (
-              <img src={`${photo}`} className="post-image" key={photo}/>
-            ))
-          }
+        <div className="post-image-container-wrap">
+          {this.renderImages()}
         </div>
           <div className="pet-info-container">
             <div className="pet-decription-container">
