@@ -48,10 +48,15 @@ class Splash extends React.Component {
               
               <div className="field-item">
                 <div className="field-item-wrapper">
-                  <div className="field-item-name">Checklist for New Adopter</div>
-                  <div className="field-item-body">
-                  Help make the transition, as smooth as possible.
+                  <div className="field-item-name">
+                    Checklist for New Adopter
                   </div>
+                  <div className="field-item-body">
+                    Help make the transition, as smooth as possible.
+                  </div>
+                  <Link to="/checklist" className="learn-more-button">
+                    LEARN MORE
+                  </Link>
                 </div>
               </div>
 
