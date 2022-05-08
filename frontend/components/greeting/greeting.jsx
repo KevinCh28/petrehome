@@ -11,6 +11,9 @@ const Greeting = ({logout, openModal, currentUser}) => {
       </div>
       
       <div className='nav-right'>
+        <Link to="/posts">
+          <img src={window.searchIcon} className="nav-search-icon"/>
+        </Link>
         <div className='nav-fav-button-container'>
           <button onClick={() => openModal('login')} className='nav-fav-button'>
             <img src={window.favURL} />
@@ -37,6 +40,9 @@ const Greeting = ({logout, openModal, currentUser}) => {
       </div>
       
       <div className='nav-right'>
+        <Link to="/posts">
+          <img src={window.searchIcon} className="nav-search-icon"/>
+        </Link>
         <div className='nav-fav-button-container'>
           <Link to={`/user/profile`} className='nav-fav-button'>
             <img src={window.favURL} />
