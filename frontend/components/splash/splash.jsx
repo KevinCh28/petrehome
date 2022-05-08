@@ -9,11 +9,15 @@ class Splash extends React.Component {
 
   render () {
     return (
-      <div className="body">
-        <div className="splash-greeting">
-          <img className="splash-img" src={window.splashURL} />
-          <h2 className="splash-greeting-text1">Find your new best friend</h2>
-          <h4 className="splash-greeting-text2">Browse pets from our network of over 11,500 shelters and rescues.</h4>
+      <div className="splash-page-container">
+        <div className="splash-greeting-container">
+          <div className="splash-greeting-image">
+            <img className="splash-img" src={window.splashURL} />
+          </div>
+          <div className="splash-greeting-text-container">
+            <h2 className="splash-greeting-text1">Find your new best friend</h2>
+            <h4 className="splash-greeting-text2">Browse pets from our network of over 11,500 shelters and rescues.</h4>
+          </div>
         </div>
 
         <div className="splash-body">
