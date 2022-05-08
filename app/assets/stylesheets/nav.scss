@@ -1,22 +1,24 @@
-.nav {
+.nav-container {
   display: flex;
   height: 70px;
   justify-content: space-between;
   align-items: center;
   background: white;
   padding: 0 50px;
+  // border-bottom: 1px solid #2e0152;
 }
 
-.nav-login-signup {
+.nav-right {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .nav-login {
   background-color: white;
   border: none;
-  font-family: Nexa-Bold, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   margin: 0 0 0 30px;
   padding: 0;
@@ -48,21 +50,22 @@
 
 .nav-logo-container {
   margin-right: 50px;
-  display: inline-block;
+  height: 100%;
 }
 
 .nav-logo {
-  object-fit: contain;
+  height: 100%;
 }
 
 .nav-fav-button-container {
   display: flex;
+  height: 100%;
   border-right: 1px solid #d2d1d3;
   align-items: center;
-
 }
 
 .nav-fav-button {
   background: none;
   border: none;
+  margin-right: 10px;
 }

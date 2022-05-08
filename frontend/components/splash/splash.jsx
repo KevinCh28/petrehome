@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import SplashPostIndexContainer from "./splash_post_index_container";
 
 class Splash extends React.Component {
@@ -10,35 +9,30 @@ class Splash extends React.Component {
   render () {
     return (
       <div className="splash-page-container">
+
         <div className="splash-greeting-container">
           <div className="splash-greeting-image">
             <img className="splash-img" src={window.splashURL} />
+            <div className="splash-greeting-top"></div>
+            <div className="splash-greeting-bottom"></div>
           </div>
           <div className="splash-greeting-text-container">
-            <h2 className="splash-greeting-text1">Find your new best friend</h2>
-            <h4 className="splash-greeting-text2">Browse pets from our network of over 11,500 shelters and rescues.</h4>
+            <div className="splash-greeting-text1">Find your new best friend</div>
+            <div className="splash-greeting-text2">Browse pets from our network of over 11,500 shelters and rescues.</div>
           </div>
         </div>
 
         <div className="splash-body">
-          <h2 className="splash-body-text">Pets Available for Adoption Nearby</h2>
-          <div className="recommendations-body">
-            <div className="recommendations-body-inner">
-
-              <div className="recommendations-grid"> 
-                <div className="recommendations-grid-column">
-                  <div className="recommendations-posts-container-wrap">
-                    <SplashPostIndexContainer />
-                  </div>
-                </div>
-              </div>
-              
-            </div>
+          <div className="splash-body-text">
+            Pets Available for Adoption Nearby
           </div>
+          <SplashPostIndexContainer />
         </div>
 
-        <div className="splash-body">
-          <h3 className="splash-body-text2">Planning to Adopt a Pet?</h3>
+        <div className="splash-body-2">
+          <div className="splash-body-text2">
+            Planning to Adopt a Pet?
+          </div>
           <div className="splash-body-text2-content">
             <div className="splash-body-text2-content-field">
               

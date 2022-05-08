@@ -44,8 +44,9 @@
 
 .favorite-posts-container {
   display: grid;
+  gap: 15px;
   grid-template-columns: auto auto auto auto;
-  padding: 5px;
+  // padding: 5px;
 }
 
 .favorite-posts-amount {

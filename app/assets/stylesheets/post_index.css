@@ -3,7 +3,7 @@
   background-color: white;
   border-radius: 10px;
   width: 230px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .post-index-item-img {
@@ -69,4 +69,5 @@
   color: #fff;
   cursor: pointer;
   margin-left: 35%;
+  margin-top: 15px;
 }
