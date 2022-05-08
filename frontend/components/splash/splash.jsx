@@ -66,6 +66,9 @@ class Splash extends React.Component {
                   <div className="field-item-body">
                     Get the latest on adoption processes, learn how local shelters and rescue groups are adopting and find out what you can do to help dogs and cats in need right now.
                   </div>
+                  <Link to="/covid-19" className="learn-more-button">
+                    LEARN MORE
+                  </Link>
                 </div>
               </div>
 
@@ -75,6 +78,9 @@ class Splash extends React.Component {
                   <div className="field-item-body">
                     Get answers to questions you haven't thought of.
                   </div>
+                  <Link to="/pet-adoption-faqs" className="learn-more-button">
+                    LEARN MORE
+                  </Link>
                 </div>
               </div>
 

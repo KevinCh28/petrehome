@@ -7,6 +7,8 @@ import Modal from "./modal/modal";
 import Footer from "./footer/footer"
 
 import Checklist from "./articles/checklist";
+import Covid19 from "./articles/covid_19";
+import PetAdoptionFaqs from "./articles/pet_adoption_faqs";
 import Dogs from "./articles/dogs"
 import DogsNutrition from "./articles/dogs_nutrition"
 import DogsAge from "./articles/dogs_age"
@@ -41,6 +43,8 @@ const App = () => (
       <Route exact path="/cats/cats-spay-neuter" component={CatsSpayNeuter} />
       <Route exact path="/cats" component={Cats} />
       <Route exact path="/checklist" component={Checklist} />
+      <Route exact path="/covid-19" component={Covid19} />
+      <Route exact path="/pet-adoption-faqs" component={PetAdoptionFaqs} />
       <Route exact path="/" component={Splash} />
 
     </Switch>
