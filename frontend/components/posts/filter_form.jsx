@@ -11,10 +11,10 @@ class FilterForm extends React.Component {
     super(props)
 
     this.state = {
-      dogOrCat: this.props.filters.dogOrCat,
-      petAge: this.props.filters.petAge,
-      petBreed: this.props.filters.petBreed,
-      petGender: this.props.filters.petGender,
+      dogOrCat: "",
+      petAge: "",
+      petBreed: "",
+      petGender: "",
     }
 
     this.renderBreedOptions = this.renderBreedOptions.bind(this);
@@ -50,6 +50,10 @@ class FilterForm extends React.Component {
 
   renderAgeOptions() {
     return (DOGAGES.map(age => <option value={age} key={age}>{age}</option>))
+  }
+
+  componentDidMount() {
+    this.props.updateFilter(this.state);
   }
 
   render() {

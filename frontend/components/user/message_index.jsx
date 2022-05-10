@@ -14,7 +14,7 @@ class MeesageIndex extends React.Component {
         {messages.length > 0 ? (
           <div className="messages-container">
             <div className="message-amount">
-              Messages ({messages.length})
+              Received messages ({messages.length})
             </div>
             {messages.map(message =>
               <MessageIndexItem

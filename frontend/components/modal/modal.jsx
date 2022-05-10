@@ -35,9 +35,6 @@ function Modal({modal, closeModal}) {
       case 'editpost':
         component = <EditPostContainer />;
         break;
-      // case 'reply':
-      //   component = <ReplyMessageContainer />;
-      //   break;
       case 'inquiry':
         component = <InquiryMessageContainer />;
         break;

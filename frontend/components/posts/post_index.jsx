@@ -54,7 +54,24 @@ class PostIndex extends React.Component {
           />
         </div>
 
-        <div className="favorite-posts-container-wrap">
+        {currentPosts.length === 0 ? 
+        <div className="no-pets-found">
+          No pets found, please try other search criterias
+        </div>
+        :
+          <div className="favorite-posts-container-wrap">
+            <div className="favorite-posts-container">
+              {currentPosts.map(post =>
+                <PostIndexItem
+                  key={post.id}
+                  post={post}
+                />
+              )}
+            </div>
+            {this.showMoreButton()}
+          </div>
+        }
+        {/* <div className="favorite-posts-container-wrap">
           <div className="favorite-posts-container">
             {currentPosts.map(post =>
               <PostIndexItem
@@ -64,7 +81,7 @@ class PostIndex extends React.Component {
             )}
           </div>
           {this.showMoreButton()}
-        </div>
+        </div> */}
 
       </div>
     )

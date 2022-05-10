@@ -91,8 +91,8 @@ class SessionForm extends React.Component {
               </div>
 
               <div className="session-form-redirect">
-                Already have an account?  {this.props.otherForm}
-                {/* <a href={this.props.otherForm} className="session-form-redirect-link">Log in</a> */}
+                <div>Already have an account?</div>
+                {this.props.otherForm}
               </div>
 
             </div>
@@ -116,11 +116,14 @@ class SessionForm extends React.Component {
               </div>
               
               <div className="session-form-redirect">
-                  Need an account?  {this.props.otherForm} 
-                  {/* <a href={this.props.otherForm} className="session-form-redirect-link">Sign up</a> */}
+                <div>Too lazy?</div>
+                <div className="session-form-redirect-link" onClick={this.handleDemo}>Demo</div>
               </div>
-
-              <button className="login-form-demo" onClick={this.handleDemo}>DEMO</button>
+              
+              <div className="session-form-redirect">
+                <div>Need an account?</div>
+                {this.props.otherForm} 
+              </div>
             </div>
           )}
 

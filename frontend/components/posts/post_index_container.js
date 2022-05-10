@@ -12,7 +12,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    // fetchPosts: () => dispatch(fetchPosts()),
     fetchPosts: (filter) => dispatch(fetchPosts(filter)),
     updateFilter: (filter) => dispatch(updateFilter(filter)),
   }

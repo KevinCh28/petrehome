@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .modal-background {
@@ -133,23 +134,25 @@
   display: block;
   width: 100%;
 
-  font-family: Nexa Heavy, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
-  
 }
 
 .session-form-redirect {
+  display: flex;
   text-align: center;
+  justify-content: center;
+  gap: 3px;
   font-size: 16px;
-  font-family: Nexa Heavy, Arial, Helvetica, sans-serif;
-  
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4d4751;
+  margin-bottom: 5px;
 }
 
 .session-form-redirect-link {
-  border: none;
-  background: none;
   color: #6504b5;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .login-form-demo {
