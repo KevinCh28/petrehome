@@ -20,7 +20,8 @@ class FilterForm extends React.Component {
     this.renderBreedOptions = this.renderBreedOptions.bind(this);
     this.renderAgeOptions = this.renderAgeOptions.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.updateDogOrCat = this.updateDogOrCat.bind(this)
+    this.updateDogOrCat = this.updateDogOrCat.bind(this);
+    this.clearAllFilter = this.clearAllFilter.bind(this);
   }
 
   handleSubmit(e) {
@@ -54,6 +55,20 @@ class FilterForm extends React.Component {
 
   componentDidMount() {
     this.props.updateFilter(this.state);
+  }
+
+  clearAllFilter() {
+    const clearFilter = {
+      dogOrCat: "",
+      petAge: "",
+      petBreed: "",
+      petGender: "",
+    }
+    this.setState({ dogOrCat: "" })
+    this.setState({ petBreed: "" })
+    this.setState({ petAge: "" })
+    this.setState({ petGender: "" })
+    this.props.updateFilter(clearFilter)
   }
 
   render() {
@@ -101,6 +116,9 @@ class FilterForm extends React.Component {
           </select>
         </div>
 
+        <div onClick={this.clearAllFilter} className="filter-clear-all">
+          Clear All
+        </div>
         <div onClick={this.handleSubmit} className="filters-submit-button">
           APPLY
         </div>
