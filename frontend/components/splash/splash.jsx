@@ -15,7 +15,7 @@ class Splash extends React.Component {
           <div className="splash-greeting-image">
             <img className="splash-img" src={window.splashURL} />
             <div className="splash-greeting-top">
-              <div className="pet-care-link-container">
+              <div className="splash-pet-care-link-container">
                 <Link to="/dogs">
                   <div className="pet-care-link-text">DOG CARE</div>
                 </Link>
