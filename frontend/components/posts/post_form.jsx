@@ -92,21 +92,19 @@ class PostForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <h3 className="post-form-title">Rehome a Pet</h3>
-          <div onClick={this.props.closeModal} className="modal-x">X</div>
-          {this.renderErrors()}
-          <div className="post-form-item">
-            <label className="post-form-item-title">Pet's Name
-              <input type="text"
-                value={this.state.pet_name}
-                onChange={this.update('pet_name')}
-                className="post-form-name-textbox"/>
-            </label>
-          </div>
-
-          <div className="post-form-item">
+      <div className="post-form-container">
+        
+        <div className="post-form-title">REHOME A PET</div>
+        <div onClick={this.props.closeModal} className="modal-x">X</div>
+        {this.renderErrors()}
+        <div className="post-form-item">
+          <label className="post-form-item-title">Pet's Name
+            <input type="text"
+              value={this.state.pet_name}
+              onChange={this.update('pet_name')}
+              className="post-form-name-textbox"/>
+          </label>
+          
             <span className="post-form-item-title">Type</span>
             <select value={this.state.dog_or_cat}
             onChange={this.update('dog_or_cat')} 
@@ -114,18 +112,18 @@ class PostForm extends React.Component {
               <><option value="Dog" >Dog</option>
                 <option value="Cat" >Cat</option></>
             </select>
-          </div>
+          
 
-          <div className="post-form-item">
+          
             <span className="post-form-item-title">Age</span>
               <select value={this.state.pet_age}
               onChange={this.update('pet_age')}
               className="post-form-item-options-button">
                 <>{this.renderAgeOptions()}</>
               </select>
-            </div>
+            
 
-          <div className="post-form-item">
+          
             <span className="post-form-item-title">Breed</span>
               <select value={this.state.pet_breed}
               onChange={this.update('pet_breed')}
@@ -133,9 +131,9 @@ class PostForm extends React.Component {
                 <><option value="Unknown" >Unknown</option>
                 {this.renderBreedOptions()}</>
               </select>
-            </div>
             
-          <div className="post-form-item">
+            
+          
             <span className="post-form-item-title">GENDER</span>
               <select value={this.state.pet_gender}
               onChange={this.update('pet_gender')}
@@ -143,7 +141,7 @@ class PostForm extends React.Component {
                 <><option value="Dog">Male</option>
                   <option value="Female">Female</option></>
               </select>
-            </div>
+            
 
             <label>
               <input type="file" onChange={this.handleFile} multiple/>
