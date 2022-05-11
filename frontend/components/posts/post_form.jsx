@@ -98,52 +98,55 @@ class PostForm extends React.Component {
         <div onClick={this.props.closeModal} className="modal-x">X</div>
         {this.renderErrors()}
         <div className="post-form-item">
-          <label className="post-form-item-title">Pet's Name
+          <div className="session-form-field">
+            <label className="session-form-text">Pet's Name</label>
             <input type="text"
               value={this.state.pet_name}
               onChange={this.update('pet_name')}
-              className="post-form-name-textbox"/>
-          </label>
-          
-            <span className="post-form-item-title">Type</span>
+              className="session-form-input" />
+          </div>
+
+          <div className="session-form-field">
+            <label className="session-form-text">Type</label>
             <select value={this.state.dog_or_cat}
-            onChange={this.update('dog_or_cat')} 
-            className="post-form-item-options-button">
-              <><option value="Dog" >Dog</option>
-                <option value="Cat" >Cat</option></>
+              onChange={this.update('dog_or_cat')}
+              className="session-form-input">
+              <><option value="Dog">Dog</option>
+                <option value="Cat">Cat</option></>
             </select>
-          
+          </div>
 
-          
-            <span className="post-form-item-title">Age</span>
-              <select value={this.state.pet_age}
+          <div className="session-form-field">
+            <label className="session-form-text">Age</label>
+            <select value={this.state.pet_age}
               onChange={this.update('pet_age')}
-              className="post-form-item-options-button">
-                <>{this.renderAgeOptions()}</>
-              </select>
-            
+              className="session-form-input">
+              <>{this.renderAgeOptions()}</>
+            </select>
+          </div>
 
-          
-            <span className="post-form-item-title">Breed</span>
-              <select value={this.state.pet_breed}
+          <div className="session-form-field">
+            <label className="session-form-text">Breed</label>
+            <select value={this.state.pet_breed}
               onChange={this.update('pet_breed')}
-              className="post-form-item-options-button">
-                <><option value="Unknown" >Unknown</option>
-                {this.renderBreedOptions()}</>
-              </select>
-            
-            
+              className="session-form-input">
+              <><option value="Unknown" >Unknown</option>
+              {this.renderBreedOptions()}</>
+            </select>
+          </div>
           
-            <span className="post-form-item-title">GENDER</span>
-              <select value={this.state.pet_gender}
+          <div className="session-form-field">
+            <label className="session-form-text">Gender</label>
+            <select value={this.state.pet_gender}
               onChange={this.update('pet_gender')}
-              className="post-form-item-options-button">
-                <><option value="Dog">Male</option>
-                  <option value="Female">Female</option></>
-              </select>
+              className="session-form-input">
+              <><option value="Dog">Male</option>
+                <option value="Female">Female</option></>
+            </select>
+          </div>
             
-
-            <label>
+            <label className="add-images-container">
+              <div className="add-images-text">Add pictures:</div>
               <input type="file" onChange={this.handleFile} multiple/>
             </label>
 

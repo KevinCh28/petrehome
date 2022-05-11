@@ -103,15 +103,12 @@ class SessionForm extends React.Component {
               <h3 className="session-header">Log in</h3>
               <div className="session-form">
                 <div className="session-form-field">
-                  <div className="session-form-text">
-                    <label>Email</label>
-                  </div>
+                  <div className="session-form-text">Email</div>
                   <input className="session-form-input" type="email" value={this.state.email} onChange={this.update("email")} />
                 </div>
                 
-
                 <div className="session-form-field">
-                  <label className="session-form-text">Password</label>
+                  <div className="session-form-text">Password</div>
                   <input className="session-form-input" type="password" value={this.state.password} onChange={this.update("password")}/>
                 </div>
                 
