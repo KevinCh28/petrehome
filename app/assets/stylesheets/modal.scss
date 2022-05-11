@@ -78,7 +78,7 @@
 }
 
 .session-form {
-  display: block;
+  // display: block;
   width: 100%;
   max-width: 340px;
   margin: auto;
@@ -91,15 +91,16 @@
 
 .session-form-text {
   display: inline-block;
-  /* position: absolute; */
+  position: absolute;
   top: 7px;
   left: 15px;
   pointer-events: none;
+  color: rgb(77, 71, 81);
+  font-size: 14px;
 }
 
 .session-form-input {
-  position: relative;
-  
+  // position: relative;
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -107,10 +108,7 @@
   padding: 22px 15px 2px;
   border: 1px solid #d2d1d3;
   border-radius: 5px;
-  appearance: none;
   font-size: 16px;
-  line-height: normal;
-  transition: border-color .15s;
   background-color: rgb(232, 240, 254);
   margin-bottom: 20px;
 }
@@ -167,3 +165,12 @@
   background: none;
 }
 
+.session-input-field {
+  display: block;
+  position: relative;
+}
+
+.session-input-field-title {
+  display: inline-block;
+  position: absolute;
+}
