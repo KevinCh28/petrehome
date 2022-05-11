@@ -10,7 +10,7 @@ class MessageIndexItem extends React.Component {
     return (
       <div className="messages-item-container">
         <div className="message-item-header">
-          <h3 className="message-author-name">{message.authorName}</h3>
+          <h3 className="message-author-name">From: {message.authorName}</h3>
           <div>
             <button onClick={() => openMessageModal(['reply', message])}>
               Reply

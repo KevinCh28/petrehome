@@ -19,25 +19,56 @@ class FilterForm extends React.Component {
 
     this.renderBreedOptions = this.renderBreedOptions.bind(this);
     this.renderAgeOptions = this.renderAgeOptions.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.updateDogOrCat = this.updateDogOrCat.bind(this);
+    this.updateAge = this.updateAge.bind(this);
+    this.updateGender = this.updateGender.bind(this);
+    this.updateBreed = this.updateBreed.bind(this);
     this.clearAllFilter = this.clearAllFilter.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.updateFilter(this.state)
-  }
-
-  update(field) {
-    return e => this.setState({ [field]: e.target.value })
-  }
-
   updateDogOrCat(e) {
-    return (
-      this.setState({ dogOrCat: e.target.value }),
-      this.setState({ petBreed: "" })
-    )
+    const newFilter = {
+      dogOrCat: e.target.value,
+      petAge: this.state.petAge,
+      petBreed: "",
+      petGender: this.state.petGender,
+    }
+    this.setState({ dogOrCat: e.target.value }),
+    this.setState({ petBreed: "" })
+    this.props.updateFilter(newFilter)
+  }
+
+  updateAge(e) {
+    const newFilter = {
+      dogOrCat: this.state.dogOrCat,
+      petAge: e.target.value,
+      petBreed: this.state.petBreed,
+      petGender: this.state.petGender,
+    }
+    this.setState({ petAge: e.target.value }),
+    this.props.updateFilter(newFilter)
+  }
+
+  updateGender(e) {
+    const newFilter = {
+      dogOrCat: this.state.dogOrCat,
+      petAge: this.state.petAge,
+      petBreed: this.state.petBreed,
+      petGender: e.target.value,
+    }
+    this.setState({ petGender: e.target.value }),
+      this.props.updateFilter(newFilter)
+  }
+
+  updateBreed(e) {
+    const newFilter = {
+      dogOrCat: this.state.dogOrCat,
+      petAge: this.state.petAge,
+      petBreed: e.target.value,
+      petGender: this.state.petGender,
+    }
+    this.setState({ petBreed: e.target.value }),
+      this.props.updateFilter(newFilter)
   }
 
   renderBreedOptions() {
@@ -89,7 +120,7 @@ class FilterForm extends React.Component {
         <div className="filters-item">
           <span className="filters-item-title">GENDER</span>
           <select value={this.state.petGender}
-            onChange={this.update('petGender')}
+            onChange={this.updateGender}
             className="filters-item-options-button">
           <><option value="">Any</option>
             <option value="Male">Male</option>
@@ -100,7 +131,7 @@ class FilterForm extends React.Component {
         <div className="filters-item">
           <span className="filters-item-title">AGE</span>
             <select value={this.state.petAge}
-              onChange={this.update('petAge')}
+              onChange={this.updateAge}
               className="filters-item-options-button">
             <><option value="">Any</option>
             {this.renderAgeOptions()}</>
@@ -110,7 +141,7 @@ class FilterForm extends React.Component {
         <div className="filters-item">
           <span className="filters-item-title">BREED</span>
           <select value={this.state.petBreed}
-            onChange={this.update('petBreed')}
+            onChange={this.updateBreed}
             className="filters-item-options-button">
             {this.state.dogOrCat === "" ? <option value="">Any</option> : <><option value="">Any</option>{this.renderBreedOptions()}</>}
           </select>
@@ -118,9 +149,6 @@ class FilterForm extends React.Component {
 
         <div onClick={this.clearAllFilter} className="filter-clear-all">
           Clear All
-        </div>
-        <div onClick={this.handleSubmit} className="filters-submit-button">
-          APPLY
         </div>
 
       </div>
