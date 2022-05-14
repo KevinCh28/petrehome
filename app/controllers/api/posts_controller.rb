@@ -49,7 +49,11 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    # @favorites = current_user.favorite_posts
 
+    # if @post.save
+    #   render "api/posts/show"
+    # else
     if !@post.save
       render json: ["Pet's name can't be empty"], status: 401
     end

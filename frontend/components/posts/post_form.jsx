@@ -76,13 +76,13 @@ class PostForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <div className="session-error-messages">
         {this.props.errors.map((error, i) => (
-          <li>
+          <div>
             {error}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     )
   }
 
@@ -96,7 +96,6 @@ class PostForm extends React.Component {
         
         <div className="post-form-title">REHOME A PET</div>
         <div onClick={this.props.closeModal} className="modal-x">X</div>
-        {this.renderErrors()}
         <div className="post-form-item">
           <div className="session-form-field">
             <label className="session-form-text">Pet's Name</label>
@@ -153,6 +152,7 @@ class PostForm extends React.Component {
           <div onClick={this.handleSubmit} className="post-form-submit-button">
             Create Post
           </div>
+          {this.renderErrors()}
 
         </div>
       </div>

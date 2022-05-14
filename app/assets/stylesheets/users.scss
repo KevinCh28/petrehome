@@ -34,6 +34,20 @@
   font-weight: 700;
 }
 
+.message-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.message-reply-delete:hover i {
+  color: #6504b5;
+}
+
+.message-reply-delete {
+  color: #314758;
+  cursor: pointer;
+}
+
 .message-body {
   color: #314758;
   font-size: 14px;

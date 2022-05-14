@@ -7,7 +7,7 @@ class SessionForm extends React.Component {
       first_name: "",
       last_name: "",
       email: "",
-      zip_code: "",
+      zip_code: 10001,
       password: ""
     };
 
@@ -35,13 +35,13 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <div className="session-error-messages">
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <div key={`error-${i}`}>
             {error}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     )
   }
 
@@ -59,7 +59,6 @@ class SessionForm extends React.Component {
           {formType === 'signup' ? (
             <div className="session-container">
               <div onClick={this.props.closeModal} className="modal-x">X</div>
-              {this.renderErrors()}
               <h3 className="session-header">Sign up</h3>
               <div className="session-form">
                 <div className="session-form-field">
@@ -77,10 +76,10 @@ class SessionForm extends React.Component {
                   <input className="session-form-input" type="text" value={this.state.email} onChange={this.update("email")}/>
                 </div>
 
-                <div className="session-form-field">
+                {/* <div className="session-form-field">
                   <label className="session-form-text">ZIP code</label>
                   <input className="session-form-input" type="text" value={this.state.zip_code} onChange={this.update("zip_code")}/>
-                </div>
+                </div> */}
 
                 <div className="session-form-field">
                   <label className="session-form-text">Password</label>
@@ -89,17 +88,19 @@ class SessionForm extends React.Component {
 
                 <input className="session-form-submit" type="submit" value="SIGN UP"/>
               </div>
+              {this.renderErrors()}
 
               <div className="session-form-redirect">
                 <div>Already have an account?</div>
-                {this.props.otherForm}
+                <div className="session-form-redirect-link-container">
+                  {this.props.otherForm}
+                </div>
               </div>
 
             </div>
           ) : (
             <div className="session-container">
               <div onClick={this.props.closeModal} className="modal-x">X</div>
-              {this.renderErrors()}
               <h3 className="session-header">Log in</h3>
               <div className="session-form">
                 <div className="session-form-field">
@@ -114,15 +115,19 @@ class SessionForm extends React.Component {
                 
                 <input className="session-form-submit" type="submit" value="LOG IN"/>
               </div>
+              {this.renderErrors()}
               
-              <div className="session-form-redirect">
+              {/* <div className="session-form-redirect">
                 <div>Too lazy?</div>
                 <div className="session-form-redirect-link" onClick={this.handleDemo}>Demo</div>
-              </div>
+              </div> */}
               
               <div className="session-form-redirect">
                 <div>Need an account?</div>
-                {this.props.otherForm} 
+                <div className="session-form-redirect-link-container">
+                  <div className="session-form-redirect-link" onClick={this.handleDemo}>Demo</div>
+                  {this.props.otherForm} 
+                </div>
               </div>
             </div>
           )}

@@ -11,13 +11,13 @@ class MessageIndexItem extends React.Component {
       <div className="messages-item-container">
         <div className="message-item-header">
           <h3 className="message-author-name">From: {message.authorName}</h3>
-          <div>
-            <button onClick={() => openMessageModal(['reply', message])}>
-              Reply
-            </button>
-            <button onClick={() => deleteMessage(message.receiverId, message.id)}>
-              Delete
-            </button>
+          <div className="message-buttons">
+            <div className="message-reply-delete" onClick={() => openMessageModal(['reply', message])}>
+              <i className="fa-solid fa-pen-to-square"></i>
+            </div>
+            <div className="message-reply-delete" onClick={() => deleteMessage(message.receiverId, message.id)}>
+              <i className="fa-solid fa-circle-minus"></i>
+            </div>
           </div>
         </div>
         

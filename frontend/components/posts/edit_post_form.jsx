@@ -53,13 +53,13 @@ class EditPostForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <div className="session-error-messages">
         {this.props.errors.map((error, i) => (
-          <li key={i}>
+          <div key={i}>
             {error}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     )
   }
 
@@ -73,7 +73,6 @@ class EditPostForm extends React.Component {
         
           <div className="post-form-title">Edit Post</div>
           <div onClick={this.props.closeModal} className="modal-x">X</div>
-          {this.renderErrors()}
         <div className="post-form-item">
           <div className="session-form-field">
             <label className="session-form-text">Pet's Name</label>
@@ -125,6 +124,7 @@ class EditPostForm extends React.Component {
           <div onClick={this.handleSubmit} className="post-form-submit-button">
             Edit Post
           </div>
+          {this.renderErrors()}
 
         </div>
       </div>
