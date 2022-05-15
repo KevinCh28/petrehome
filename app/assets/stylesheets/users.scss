@@ -1,15 +1,15 @@
 .user-show-container {
   padding: 20px 20px 20px 20px;
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
 }
 
 .messages-container-wrap {
-  width: 30%;
-}
-
-.messages-container {
-  padding: 5px;
+  width: 25%;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -54,7 +54,15 @@
 }
 
 .favorite-posts-container-wrap {
-  width: 70%;
+  width: 65%;
+  margin-bottom: 200px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.user-posts-container-wrap {
+  width: 65%;
+  margin-bottom: 200px;
 }
 
 .favorite-posts-container {
@@ -64,9 +72,24 @@
 }
 
 .favorite-posts-amount {
-  padding-left: 15px;
   font-size: 40px;
-  font-weight: 400;
-  font-family: Nexa Regular, Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #4d4751;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-rehome-button {
+  background-color: #6504b5;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 200px;
+  height: 30px;
+  border-radius: 25px;
+  line-height: 1.8;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }

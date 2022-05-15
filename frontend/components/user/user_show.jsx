@@ -1,5 +1,5 @@
 import React from "react";
-import FavPosts from "./favorite_index_container";
+import UserPosts from "./user_posts_container";
 import UserMessages from "./message_index_container";
 
 class UserShow extends React.Component {
@@ -17,8 +17,8 @@ class UserShow extends React.Component {
         <div className="messages-container-wrap">
           <UserMessages />
         </div>
-        <div className="favorite-posts-container-wrap">
-          <FavPosts />
+        <div className="user-posts-container-wrap">
+          <UserPosts />
         </div>
       </div>
       

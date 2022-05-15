@@ -39,21 +39,21 @@ class PostShow extends React.Component {
     if (currentUser && this.state.favorited) {
       favButton =
         <div onClick={this.handleClick} className="post-fav-button">
-          <img src={window.favURL} key={"faved"}/>
+          <i class="fa-solid fa-heart fa-2x"></i>
           <span>FAVORITE</span>
         </div>
     } else if (!currentUser) {
       favButton =
         <div onClick={() => this.props.openModal('login')} 
         className="post-fav-button">
-          <img src={window.unfavURL} key={"unfaved"}/>
+          <i class="fa-solid fa-heart fa-2x"></i>
           <span>FAVORITE</span>
         </div>
     } else {
       favButton =
-        <div onClick={this.handleClick} className="post-fav-button">
-          <img src={window.unfavURL} key={"unfaved"}/>
-          <span>FAVORITE</span>
+        <div onClick={this.handleClick} className="post-unfav-button">
+          <i class="fa-solid fa-heart fa-2x"></i>
+        <span className="post-unfav-button-text">FAVORITE</span>
         </div>
     }
     return favButton;

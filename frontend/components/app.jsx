@@ -22,6 +22,7 @@ import PostIndexContainer from "./posts/post_index_container"
 import PostShowContainer from "./posts/post_show_container";
 import PostFormContainer from "./posts/post_form_container";
 import UserShowContainer from "./user/user_show_container";
+import UserFavoriteContainer from "./user/user_favorites_container";
 
 const App = () => (
   <div>
@@ -34,6 +35,7 @@ const App = () => (
       <ProtectedRoute exact path="/posts/new" component={PostFormContainer} />
       <Route exact path="/posts/:postId" component={PostShowContainer} />
       <Route exact path="/posts" component={PostIndexContainer} />
+      <ProtectedRoute exact path="/user/favorites" component={UserFavoriteContainer} />
       <ProtectedRoute exact path="/user/profile" component={UserShowContainer} />
       <Route exact path="/dogs/dogs-nutrition" component={DogsNutrition} />
       <Route exact path="/dogs/dogs-age" component={DogsAge} />

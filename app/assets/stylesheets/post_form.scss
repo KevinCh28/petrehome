@@ -121,4 +121,22 @@
   font-weight: 600;
   color: #6504b5;
   cursor: pointer;
+  gap: 5px;
+}
+
+.post-unfav-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  gap: 5px;
+  color: rgb(77, 71, 81);
+}
+
+.post-unfav-button-text {
+  color: #6504b5;
 }

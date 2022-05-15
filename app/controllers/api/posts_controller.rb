@@ -101,4 +101,8 @@ class Api::PostsController < ApplicationController
     params[:petGender]
   end
 
+  # def users_posts
+  #   @posts = Post.where(author_id: params[:user_id])
+  # end
+
 end

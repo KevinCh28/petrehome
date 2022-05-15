@@ -11,13 +11,13 @@ const Greeting = ({logout, openModal, currentUser}) => {
       </div>
       
       <div className='nav-right'>
-        <Link to="/posts">
-          <img src={window.searchIcon} className="nav-search-icon"/>
+        <Link to="/posts" className="nav-search-icon">
+          <i className="fa-solid fa-magnifying-glass fa-2x"></i>
         </Link>
         <div className='nav-fav-button-container'>
-          <button onClick={() => openModal('login')} className='nav-fav-button'>
-            <img src={window.favURL} />
-          </button>
+          <div onClick={() => openModal('login')} className='nav-fav-button'>
+            <i className="fa-solid fa-heart fa-2x"></i>
+          </div>
         </div>
         <div>
           <button onClick={() => openModal('signup')} className='nav-signup'>
@@ -40,12 +40,15 @@ const Greeting = ({logout, openModal, currentUser}) => {
       </div>
       
       <div className='nav-right'>
-        <Link to="/posts">
-          <img src={window.searchIcon} className="nav-search-icon"/>
+        <Link to="/posts" className="nav-search-icon">
+          <i className="fa-solid fa-magnifying-glass fa-2x"></i>
+        </Link>
+        <Link to="/user/profile" className="nav-search-icon">
+          <i class="fa-solid fa-user fa-2x"></i>
         </Link>
         <div className='nav-fav-button-container'>
-          <Link to={`/user/profile`} className='nav-fav-button'>
-            <img src={window.favURL} />
+          <Link to={`/user/favorites`} className='nav-fav-button'>
+            <i className="fa-solid fa-heart fa-2x"></i>
           </Link>
         </div>
         <div>

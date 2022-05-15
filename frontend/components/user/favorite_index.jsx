@@ -30,8 +30,7 @@ class FavoriteIndex extends React.Component {
               No favorites here yet
             </p>
             <p className="no-fav-body">
-              When you find a pet you love, add it your favorites list by tapping the 
-                <img src={window.favURL} className="no-fav-hearticon"/>
+              When you find a pet you love, add it your favorites list by clicking the favorite button!
             </p>
               
             <div>

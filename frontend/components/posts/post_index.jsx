@@ -5,7 +5,6 @@ import FilterForm from "./filter_form";
 class PostIndex extends React.Component {
   constructor(props) {
     super(props)
-    // this.maxPost = 0;
     this.state = {
       show_more: true,
       maxPost: 16
@@ -16,7 +15,6 @@ class PostIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchPosts(this.props.filters);
-    // this.maxPost += 16;
   }
 
   showMore() {
@@ -46,8 +44,8 @@ class PostIndex extends React.Component {
     const currentPosts = posts.slice(0, this.state.maxPost);
 
     return (
-      <div className="user-show-container">
-        <div className="messages-container-wrap">
+      <div className="post-index-container">
+        <div className="filter-container-wrap">
           <FilterForm
             filters={this.props.filters}
             updateFilter={this.props.updateFilter}
