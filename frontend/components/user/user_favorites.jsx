@@ -12,7 +12,7 @@ class UserFavorite extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="favorite-post-container-wrap">
         <div className="favorite-post-container">
           <FavPosts />
         </div>

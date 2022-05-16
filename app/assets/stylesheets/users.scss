@@ -60,16 +60,22 @@
   margin-bottom: 200px;
 }
 
+.favorite-post-container-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .favorite-post-container {
   width: 65%;
   margin-bottom: 200px;
-  margin-left: 10%;
+  // margin-left: 10%;
 }
 
 .user-posts-container-wrap {
   width: 65%;
   margin-bottom: 200px;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .favorite-posts-container {
