@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 
 const DOGBREEDS = ['Beagle', 'Border Collie', 'Corgi', 'German Shepherd', 'Pit Bull', 'Poodle', 'Pomsky',
   'Retriever', 'Rottweiler', 'Shiba Inu', 'Yorkshire Terrier'];
@@ -43,7 +44,14 @@ class PostForm extends React.Component {
       }
     }
     this.props.createPost(post)
-      .then(this.props.closeModal)
+      // .then(this.props.history.push('/posts'))
+      .then(response => {
+        if (response.type === "RECEIVE_POST_ERRORS") {
+          return
+        }
+        this.props.closeModal()
+        return this.props.history.push('/posts')
+      })
   }
 
   handleFile(e) {

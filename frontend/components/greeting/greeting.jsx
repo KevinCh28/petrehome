@@ -44,7 +44,7 @@ const Greeting = ({logout, openModal, currentUser}) => {
           <i className="fa-solid fa-magnifying-glass fa-2x"></i>
         </Link>
         <Link to="/user/profile" className="nav-search-icon">
-          <i class="fa-solid fa-user fa-2x"></i>
+          <i className="fa-solid fa-user fa-2x"></i>
         </Link>
         <div className='nav-fav-button-container'>
           <Link to={`/user/favorites`} className='nav-fav-button'>

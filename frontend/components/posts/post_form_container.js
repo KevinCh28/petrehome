@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { createPost, removeErrors } from '../../actions/post_actions';
 import PostForm from './post_form'
 import { closeModal } from "../../actions/modal_actions";
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => {
   return {
@@ -19,4 +20,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(PostForm));
