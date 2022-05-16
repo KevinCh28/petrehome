@@ -1,3 +1,63 @@
-// Place all the styles related to the Messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.message-form-container {
+  width: 500px;
+  min-height: 300px;
+  margin: 0;
+}
+
+.message-form-header {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -25px;
+  font-size: 34px;
+  line-height: 1.2;
+  display: block;
+  color: #4d4751;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+.message-form {
+  width: 100%;
+}
+
+.message-form-field {
+  display: block;
+  position: relative;
+}
+
+.message-form-input {
+  // position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  height: 155px;
+  padding: 0px 15px 0px;
+  border: 1px solid #d2d1d3;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgb(232, 240, 254);
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.message-form-submit {
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 45px;
+  max-width: 50%;
+  margin-left: 25%;
+  border: 2px solid #6504b5;
+  border-radius: 23px;
+  background-color: #6504b5;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  display: block;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}

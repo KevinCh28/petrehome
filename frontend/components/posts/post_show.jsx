@@ -162,11 +162,22 @@ class PostShow extends React.Component {
               </div>
 
               <div className="pet-about-container">
-                About
-                <div className="pet-about">
-                  <p>Age: {post.petAge}</p>
-                  <p>Breed: {post.petBreed}</p>
-                  <p>Gender: {post.petGender}</p>
+                <div className="pet-about-text">About</div>
+                <div className="pet-about-list">
+                  <div>AGE</div>
+                  <p className="pet-about-item">{post.petAge} year</p>
+                  <div>BREED</div>
+                  <p className="pet-about-item">{post.petBreed}</p>
+                  <div>GENDER</div>
+                  <p className="pet-about-item">{post.petGender}</p>
+                  <div className="messages-item-container"></div>
+                  <div className="pet-page-reminder-container">
+                    <div className="pet-page-reminder-image">
+                      <i className="fa-solid fa-bell"></i>
+                    </div>
+                    <div className="pet-page-reminder">PetRehome recommends that you should always take reasonable security steps before making online payments.</div>
+                  </div>
+                <div className="messages-item-container"></div>
                 </div>
               </div>
 

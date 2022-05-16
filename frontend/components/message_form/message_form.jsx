@@ -59,28 +59,34 @@ class MessageForm extends React.Component {
       <div>
         {formType === 'inquiry' ? (
           <form onSubmit={this.handleInquirySubmit}>
-            <div className="session-container">
+            <div className="message-form-container">
               <div onClick={this.props.closeModal} className="modal-x">X</div>
-              <h3 className="session-header">START YOU INQUIRY</h3>
-              <div className="session-form">
-                <div className="session-form-field">
-                  <input className="session-form-input" type="text" value={this.state.body} onChange={this.update("body")} />
+              <h3 className="message-form-header">START YOUR INQUIRY</h3>
+              <div className="message-form-form">
+                <div className="message-form-field">
+                  <textarea className="message-form-input"
+                    value={this.state.body}
+                    onChange={this.update("body")}>
+                  </textarea>
                 </div>
-                <input className="session-form-submit" type="submit" value="Send" />
+                <input className="message-form-submit" type="submit" value="Send" />
                 {this.renderErrors()}
               </div>
             </div>
           </form>
         ) : (
           <form onSubmit={this.handleReplySubmit}>
-            <div className="session-container">
+            <div className="message-form-container">
               <div onClick={this.props.closeModal} className="modal-x">X</div>
-              <h3 className="session-header">REPLY</h3>
-              <div className="session-form">
-                <div className="session-form-field">
-                  <input className="session-form-input" type="text" value={this.state.body} onChange={this.update("body")} />
+                <h3 className="message-form-header">Reply to, {this.props.message.authorName}</h3>
+              <div className="message-form">
+                <div className="message-form-field">
+                  <textarea className="message-form-input" 
+                    value={this.state.body} 
+                    onChange={this.update("body")}>
+                  </textarea>
                 </div>
-                <input className="session-form-submit" type="submit" value="Send" />
+                <input className="message-form-submit" type="submit" value="Send" />
                   {this.renderErrors()}
               </div>
             </div>

@@ -25,18 +25,30 @@
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 20px;
   font-size: 40px;
-  color: #4d4751;
+  color: #6504b5;
   border-bottom: 1px solid #d2d1d3;
 
 }
 
 .pet-about-container {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
   color: #4d4751;
 }
 
-.pet-about {
+.pet-about-text {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.pet-about-list {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pet-about-item {
+  font-weight: normal;
+  margin-bottom: 20px;
   font-size: 14px;
 }
 
@@ -91,4 +103,21 @@
   margin-top: 20px;
   margin-left: 20px;
   padding: 30px 30px 20px;
+}
+
+.pet-page-reminder-container {
+  display: flex;
+}
+
+.pet-page-reminder-image {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.pet-page-reminder {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
