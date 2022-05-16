@@ -1,5 +1,7 @@
 .user-show-container {
-  padding: 20px 20px 20px 20px;
+  // padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   gap: 10px;
   width: 100%;
@@ -56,8 +58,6 @@
 .favorite-posts-container-wrap {
   width: 65%;
   margin-bottom: 200px;
-  // margin-left: 15%;
-  // margin-right: 15%;
 }
 
 .favorite-post-container {
@@ -69,6 +69,7 @@
 .user-posts-container-wrap {
   width: 65%;
   margin-bottom: 200px;
+  overflow: hidden;
 }
 
 .favorite-posts-container {
