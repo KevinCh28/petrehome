@@ -83,7 +83,8 @@
 .post-index-container {
   padding: 20px 20px 20px 20px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  gap: 10px;
 }
 
 .filter-container-wrap {

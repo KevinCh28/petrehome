@@ -13,7 +13,7 @@ class FavoriteIndex extends React.Component {
     return (
       <div>
         {favorites.length > 0 ? (
-          <div>
+          <div className="favorite-post-container">
             <p className="favorite-posts-amount">My Favorites ({favorites.length})</p>
             <div className="favorite-posts-container">
               {favorites.map(favorite =>
