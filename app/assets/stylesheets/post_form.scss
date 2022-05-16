@@ -31,12 +31,17 @@
   margin-bottom: 5px;
 }
 
+.pet-info-container-wrap {
+  height: 1100px
+}
+
 .pet-info-container {
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   display: flex;
-  align-items: flex-start;
-  align-content: flex-start;
-  justify-content: flex-start;
+  // min-height: 600px;
+  // align-items: flex-start;
+  // align-content: flex-start;
+  // justify-content: flex-start;
 }
 
 .post-form-item-options-button {

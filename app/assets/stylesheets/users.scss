@@ -1,7 +1,7 @@
 .user-show-container {
   // padding: 20px 20px 20px 20px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   display: flex;
   gap: 10px;
   width: 100%;
@@ -9,6 +9,7 @@
 
 .messages-container-wrap {
   width: 25%;
+  max-height: 700px;
   background-color: #fff;
   border-radius: 25px;
   padding: 10px;
