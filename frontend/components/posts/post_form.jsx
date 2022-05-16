@@ -44,7 +44,6 @@ class PostForm extends React.Component {
       }
     }
     this.props.createPost(post)
-      // .then(this.props.history.push('/posts'))
       .then(response => {
         if (response.type === "RECEIVE_POST_ERRORS") {
           return

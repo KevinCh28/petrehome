@@ -6,7 +6,6 @@ import { openModal } from "../../actions/modal_actions";
 const mapStateToProps = (state) => {
   const posts = Object.values(state.entities.posts) || []
   const myPosts = posts.filter(post => post.authorId === state.session.id)
-  debugger
   return {
     userId: state.session.id,
     posts: myPosts

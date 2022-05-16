@@ -27,7 +27,7 @@ post6 = Post.create({pet_name: "Wade Wilson", pet_gender: "Male", pet_breed: "Co
 post7 = Post.create({pet_name: "Ein", pet_gender: "Male", pet_breed: "Corgi", pet_age: 7, dog_or_cat: "Dog", author_id: user3.id});
 post8 = Post.create({pet_name: "Daisy", pet_gender: "Female", pet_breed: "Corgi", pet_age: 6, dog_or_cat: "Dog", author_id: user3.id});
 post9 = Post.create({pet_name: "Scooby", pet_gender: "Male", pet_breed: "Corgi", pet_age: 2, dog_or_cat: "Dog", author_id: user3.id});
-post10 = Post.create({pet_name: "Yoshi", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 6, dog_or_cat: "Dog", author_id: user1.id});
+post10 = Post.create({pet_name: "Yoshi", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 6, dog_or_cat: "Dog", author_id: demo.id});
 post11 = Post.create({pet_name: "Cooper", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 3, dog_or_cat: "Dog", author_id: user1.id});
 post12 = Post.create({pet_name: "Elon", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 2, dog_or_cat: "Dog", author_id: user1.id});
 post13 = Post.create({pet_name: "Granger", pet_gender: "Male", pet_breed: "Shiba Inu", pet_age: 1, dog_or_cat: "Dog", author_id: user1.id});
@@ -38,7 +38,7 @@ post17 = Post.create({pet_name: "Max", pet_gender: "Male", pet_breed: "Border Co
 post18 = Post.create({pet_name: "Munson", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 1, dog_or_cat: "Dog", author_id: user2.id});
 post19 = Post.create({pet_name: "Bella", pet_gender: "Female", pet_breed: "Border Collie", pet_age: 2, dog_or_cat: "Dog", author_id: user2.id});
 post20 = Post.create({pet_name: "Indy", pet_gender: "Female", pet_breed: "Border Collie", pet_age: 3, dog_or_cat: "Dog", author_id: user2.id});
-post21 = Post.create({pet_name: "Ariel", pet_gender: "Female", pet_breed: "Border Collie", pet_age: 2, dog_or_cat: "Dog", author_id: user2.id});
+post21 = Post.create({pet_name: "Ariel", pet_gender: "Female", pet_breed: "Border Collie", pet_age: 2, dog_or_cat: "Dog", author_id: demo.id});
 post22 = Post.create({pet_name: "Charles", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 3, dog_or_cat: "Dog", author_id: user2.id});
 post23 = Post.create({pet_name: "Chance", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 5, dog_or_cat: "Dog", author_id: user2.id});
 post24 = Post.create({pet_name: "Max", pet_gender: "Male", pet_breed: "Border Collie", pet_age: 10, dog_or_cat: "Dog", author_id: user2.id});
@@ -49,7 +49,7 @@ post28 = Post.create({pet_name: "Madeline", pet_gender: "Female", pet_breed: "Ge
 post29 = Post.create({pet_name: "Bebe", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 6, dog_or_cat: "Dog", author_id: user2.id});
 post30 = Post.create({pet_name: "John John", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 7, dog_or_cat: "Dog", author_id: user2.id});
 post31 = Post.create({pet_name: "Shocka", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 11, dog_or_cat: "Dog", author_id: user2.id});
-post32 = Post.create({pet_name: "Bear", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 12, dog_or_cat: "Dog", author_id: user2.id});
+post32 = Post.create({pet_name: "Bear", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 12, dog_or_cat: "Dog", author_id: demo.id});
 post33 = Post.create({pet_name: "Cowboy", pet_gender: "Male", pet_breed: "German Shepherd", pet_age: 1, dog_or_cat: "Dog", author_id: user2.id});
 post34 = Post.create({pet_name: "Nik", pet_gender: "Male", pet_breed: "American Shorthair", pet_age: 1, dog_or_cat: "Cat", author_id: user1.id});
 post35 = Post.create({pet_name: "Pumpkin", pet_gender: "Male", pet_breed: "American Shorthair", pet_age: 1, dog_or_cat: "Cat", author_id: user1.id});
@@ -61,7 +61,7 @@ post40 = Post.create({pet_name: "Earnest", pet_gender: "Male", pet_breed: "Ameri
 post41 = Post.create({pet_name: "Refrigerator", pet_gender: "Male", pet_breed: "American Shorthair", pet_age: 10, dog_or_cat: "Cat", author_id: user1.id});
 post42 = Post.create({pet_name: "Peach Fuzz", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 1, dog_or_cat: "Cat", author_id: user1.id});
 post43 = Post.create({pet_name: "Bindi", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 6, dog_or_cat: "Cat", author_id: user1.id});
-post44 = Post.create({pet_name: "Molly", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
+post44 = Post.create({pet_name: "Molly", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 2, dog_or_cat: "Cat", author_id: demo.id});
 post45 = Post.create({pet_name: "Mark", pet_gender: "Male", pet_breed: "Abyssinian", pet_age: 2, dog_or_cat: "Cat", author_id: user1.id});
 post46 = Post.create({pet_name: "Kid", pet_gender: "Female", pet_breed: "Abyssinian", pet_age: 6, dog_or_cat: "Cat", author_id: user1.id});
 post47 = Post.create({pet_name: "Iris", pet_gender: "Female", pet_breed: "British Shorthair", pet_age: 7, dog_or_cat: "Cat", author_id: user1.id});
@@ -80,8 +80,9 @@ fav2 = Favorite.create({user_id: demo.id, post_id: post2.id});
 fav3 = Favorite.create({user_id: demo.id, post_id: post3.id});
 fav4 = Favorite.create({user_id: user1.id, post_id: post4.id});
 
-msg1 = Message.create({author_id: user1.id, receiver_id: demo.id, body: "Hello, I am interested in Coyote", author_name: demo.first_name})
-msg2 = Message.create({author_id: user2.id, receiver_id: demo.id, body: "Hello, I am interested in Drogo", author_name: demo.first_name})
+msg1 = Message.create({author_id: user1.id, receiver_id: demo.id, body: "Hello, I am interested in adopting Coyote, is she still available for adoption?", author_name: user1.first_name})
+msg2 = Message.create({author_id: user2.id, receiver_id: demo.id, body: "Hello, is Ariel a pure breed border collie?", author_name: user2.first_name})
+msg3 = Message.create({author_id: user3.id, receiver_id: demo.id, body: "Molly is so cute! Does she have all her vaccinations?", author_name: user3.first_name})
 
 post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie01.png'), filename: 'yorkie01.png');
 post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie02.jpeg'), filename: 'yorkie02.jpeg');
