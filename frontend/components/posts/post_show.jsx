@@ -15,6 +15,7 @@ class PostShow extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchPost(this.props.match.params.postId)
       .then(payload => {
         if (this.props.currentUser && payload.post.favPosts) {
@@ -23,12 +24,6 @@ class PostShow extends React.Component {
       })
     if (this.props.currentUser) {
       this.props.fetchFavorites(this.props.currentUser.id)
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.match.params.postId !== prevProps.match.params.postId) {
-      this.props.fetchPost(this.props.match.params.postId)
     }
   }
 
