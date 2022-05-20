@@ -1,4 +1,4 @@
-// export const fetchPosts = () => {
+// export const fetchAllPosts = () => {
 //   return $.ajax({
 //     method: 'GET',
 //     url: '/api/posts',
