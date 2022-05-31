@@ -15,9 +15,18 @@ Welcome to Pet Rehome! Pet Rehome is a fullstack clone base on <a href="https://
 * Users can view clickable posts, index page.
 * Users can view post's show page with pet information and add post to their favorites.
 * Users can create a post to rehome a pet.
+* Users can edit their post.
 
 ### User's Favorites
-* Users can view their favorited posts, clickable.
+* Users can view list of their favorited posts.
+* Users can add/remove post from favorites list.
+
+### Messages
+* Users can view and delete messages from other users.
+* Users can reply to recieved messages.
+
+### Filter Post
+* Users can search thru posts with filter options(breed, gender, age, dog/cat)
 
 ### Technologies Implemented
 * React, Redux for frontend.
@@ -26,10 +35,8 @@ Welcome to Pet Rehome! Pet Rehome is a fullstack clone base on <a href="https://
 * Heroku for hosting.
 
 ### Planned Features
-* Users can edit their post.
-* Users can send messages to post creator.
-* Adopt function in post.
-* Filter options for post and location (Google Map).
+* User can delete their post. 
+* Filter post by distance (Google Map).
 
 ### Credits
 * Images are property of Petfinder.
