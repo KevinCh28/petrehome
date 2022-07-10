@@ -78,7 +78,7 @@ import { fetchPosts } from '../../util/post_util';
 // }
 
 const PostIndex = () => {
-  const initialFilters = {
+  let initialFilters = {
     dogOrCat: "",
     petAge: "",
     petBreed: "",
@@ -116,17 +116,17 @@ const PostIndex = () => {
   }
 
   useEffect(() => {
-    fetchPosts(initialFilters)
+    fetchPosts(filters)
       .then(response => setPosts(Object.values(response).reverse()))
     console.log(posts)
-  }, [1])
+  }, [filters])
 
   return (
     <div className="post-index-container">
       <div className="filter-container-wrap">
         <FilterForm
-          filters={filters}
-          updateFilter={updateFilter}
+          // filters={filters}
+          // updateFilter={updateFilter}
         />
       </div>
 

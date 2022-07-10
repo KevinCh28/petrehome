@@ -5,6 +5,8 @@
 //   })
 // }
 
+//please use react fetch instead of ajax
+
 export const fetchPosts = data => {
   return $.ajax({
     method: 'GET',
