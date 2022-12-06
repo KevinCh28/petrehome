@@ -177,7 +177,6 @@ const FilterForm = ({filters}) => {
   const [petGender, setPetGender] = useState("");
 
   useEffect(() => {
-    console.log(filters)
     updateFilter(filters)
   }, [filters])
 

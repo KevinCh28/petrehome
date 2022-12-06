@@ -118,7 +118,6 @@ const PostIndex = () => {
   useEffect(() => {
     fetchPosts(filters)
       .then(response => setPosts(Object.values(response).reverse()))
-    console.log(posts)
   }, [filters])
 
   return (
