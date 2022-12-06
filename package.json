@@ -27,7 +27,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "webpack --watch --mode=development",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
     "postinstall": "webpack"
   },
   "engines": {
@@ -46,3 +46,4 @@
   },
   "homepage": "https://github.com/KevinCh28/petrehome#readme"
 }
+
