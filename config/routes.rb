@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root :to => "static_pages#root"
   namespace :api, defaults: {format: :json} do
     resource :session, only: [:create, :destroy, :show]
     
@@ -11,8 +11,5 @@ Rails.application.routes.draw do
     resources :posts, only: [:show, :index, :create, :update]
   end
 
-  root to: "static_pages#root"
-  # root to: "static_pages#frontend_index"
-
-  get '*path', to: "static_pages#frontend_index"
+  # get '*path', to: "static_pages#frontend_index"
 end

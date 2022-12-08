@@ -130,8 +130,6 @@ class PostShow extends React.Component {
     if (!post) return null;
     if (!post.photoUrls) return null;
 
-    console.log(this.props)
-
     return (
       <div className="pet-info-container-wrap">
 
