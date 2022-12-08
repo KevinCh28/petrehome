@@ -173,7 +173,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install -g react-scripts && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "engines": {
     "node": "16.14.0"
