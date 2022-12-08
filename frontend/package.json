@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "petrehome.jsx",
+  "main": "petrehome.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "BUILD_PATH='../public' react-scripts build"

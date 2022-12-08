@@ -9,10 +9,10 @@ Rails.application.routes.draw do
     end
 
     resources :posts, only: [:show, :index, :create, :update]
-    get '*path', to: "static_pages#frontend_index"
   end
 
   root to: "static_pages#root"
+  # root to: "static_pages#frontend_index"
 
   # get '*path', to: "static_pages#frontend_index"
 end

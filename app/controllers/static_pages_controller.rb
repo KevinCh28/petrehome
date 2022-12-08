@@ -5,6 +5,6 @@
 
 class StaticPagesController < ApplicationController
   def frontend_index
-    render file: Rails.root.join('public', 'petrehome.jsx')
+    render file: Rails.root.join('public', 'petrehome.js')
   end
 end
