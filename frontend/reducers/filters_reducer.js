@@ -9,7 +9,6 @@ const defaultFilters = Object.freeze({
 
 const filtersReducer = (state = defaultFilters, action) => {
   Object.freeze(state);
-
   switch (action.type) {
     case UPDATE_FILTER:
       return Object.assign({}, state, action.filter);

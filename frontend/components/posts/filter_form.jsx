@@ -11,6 +11,7 @@ const DOGAGES = ['Baby', 'Young', 'Adult', 'Senior'];
 class FilterForm extends React.Component {
   constructor(props) {
     super(props)
+    console.log(props)
 
     this.state = {
       dogOrCat: "",
@@ -161,7 +162,7 @@ class FilterForm extends React.Component {
 // useEffect for componentDidMount
 
 
-// const FilterForm = ({filters}) => {
+// const FilterForm = (props) => {
 
 //   let initialFilters = {
 //     dogOrCat: "",
@@ -170,7 +171,7 @@ class FilterForm extends React.Component {
 //     petGender: "",
 //   }
 
-//   const [filters, setFilters] = useState(initialFilters);
+//   const [filters, setFilters] = useState(props.filters);
 //   const [dogOrCat, setDogOrCat] = useState("");
 //   const [petAge, setPetAge] = useState("");
 //   const [petBreed, setPetBreed] = useState("");

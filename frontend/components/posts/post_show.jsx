@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { fetchPost } from '../../util/post_util';
+// import { fetchPost } from '../../util/post_util';
 
 class PostShow extends React.Component {
   constructor(props) {
@@ -129,6 +129,8 @@ class PostShow extends React.Component {
 
     if (!post) return null;
     if (!post.photoUrls) return null;
+
+    console.log(this.props)
 
     return (
       <div className="pet-info-container-wrap">

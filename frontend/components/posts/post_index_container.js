@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import PostIndex from "./post_index";
-import { fetchPosts } from "../../actions/post_actions"
+import { fetchPosts } from "../../actions/post_actions";
 import { updateFilter } from '../../actions/filter_actions';
 
 const mapStateToProps = state => {
@@ -8,13 +8,13 @@ const mapStateToProps = state => {
     posts: Object.values(state.entities.posts).reverse(),
     filters: state.ui.filters,
   }
-}
+};
 
 const mapDispatchToProps = dispatch => {
   return {
     fetchPosts: (filter) => dispatch(fetchPosts(filter)),
     updateFilter: (filter) => dispatch(updateFilter(filter)),
   }
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostIndex);

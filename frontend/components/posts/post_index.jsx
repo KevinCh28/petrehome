@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PostIndexItem from "./post_index_item";
 import FilterForm from "./filter_form";
-import { fetchPosts } from "../../actions/post_actions";
-import { updateFilter } from '../../actions/filter_actions';
+// import { fetchPosts } from "../../actions/post_actions";
+// import { updateFilter } from '../../actions/filter_actions';
 // import { fetchPosts } from '../../util/post_util';
 
 class PostIndex extends React.Component {
@@ -43,15 +43,15 @@ class PostIndex extends React.Component {
   }
 
   render () {
-    const { posts } = this.props;
+    const { posts, filters, updateFilter } = this.props;
     const currentPosts = posts.slice(0, this.state.maxPost);
 
     return (
       <div className="post-index-container">
         <div className="filter-container-wrap">
           <FilterForm
-            filters={this.props.filters}
-            updateFilter={this.props.updateFilter}
+            filters={filters}
+            updateFilter={updateFilter}
           />
         </div>
 
