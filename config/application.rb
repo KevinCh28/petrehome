@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Petrehome
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1.7
+    config.load_defaults 5.2
 
     # Enable routes for Active Storage, Action Cable, or any other Rails engine, to escape catch-all
     config.railties_order = [:all, :main_app]
