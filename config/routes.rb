@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   end
 
   root to: "static_pages#root"
+
+  get '*path', to: "static_pages#frontend_index"
 end
