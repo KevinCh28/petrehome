@@ -84,7 +84,7 @@ msg1 = Message.create({author_id: user1.id, receiver_id: demo.id, body: "Hello, 
 msg2 = Message.create({author_id: user2.id, receiver_id: demo.id, body: "Hello, is Ariel a pure breed border collie?", author_name: user2.first_name})
 msg3 = Message.create({author_id: user3.id, receiver_id: demo.id, body: "Molly is so cute! Does she have all her vaccinations?", author_name: user3.first_name})
 
-post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie01.png'), filename: 'yorkie01.png');
+post1.photos.attach(io: File.open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie01.png'), filename: 'yorkie01.png');
 post1.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/yorkie02.jpeg'), filename: 'yorkie02.jpeg');
 
 post2.photos.attach(io: open('https://petrehome-seeds.s3.us-east-1.amazonaws.com/americanshorthair+mimi+01.jpeg'), filename: 'americanshorthair mimi 01.jpeg');
