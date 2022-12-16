@@ -5,7 +5,7 @@
 //   })
 // }
 
-import { async } from "regenerator-runtime"
+// import { async } from "regenerator-runtime"
 
 //please use react fetch instead of ajax
 
