@@ -9,18 +9,18 @@ import { async } from "regenerator-runtime"
 
 //please use react fetch instead of ajax
 
-// export const fetchPosts = data => {
-//   return $.ajax({
-//     method: 'GET',
-//     url: '/api/posts',
-//     data
-//   })
-// }
-
-export const fetchPosts = async (data) => {
-  const res = await fetch("/api/posts");
-  return (await res.json())
+export const fetchPosts = data => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/posts',
+    data
+  })
 }
+
+// export const fetchPosts = async (data) => {
+//   const res = await fetch("/api/posts");
+//   return (await res.json())
+// }
 
 export const fetchPost = postId => {
   return $.ajax({
