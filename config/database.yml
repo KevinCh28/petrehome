@@ -78,12 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-# production:
-#   <<: *default
-#   database: petrehome_production
-#   username: petrehome
-#   password: <%= ENV['PETREHOME_DATABASE_PASSWORD'] %>
-
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: petrehome_production
+  username: petrehome
+  password: <%= ENV['PETREHOME_DATABASE_PASSWORD'] %>

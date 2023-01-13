@@ -4,6 +4,7 @@ import { createMessage, removeErrors } from "../../actions/message_action";
 import MessageForm from "./message_form";
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
     formType: "inquiry",
     userId: state.session.id,
