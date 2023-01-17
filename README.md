@@ -2,31 +2,31 @@
 
 <a href="https://pet-rehome.herokuapp.com/#/">Pet Rehome Live</a>
 
-Welcome to Pet Rehome! Pet Rehome is a fullstack clone base on <a href="https://www.petfinder.com/">Petfinder</a> website with a twist where users can make a post to rehome a pet.
+Welcome to Pet Rehome! Our platform is inspired by the popular website <a href="https://www.petfinder.com/">Petfinder</a>, but with a unique feature that allows users to create posts to rehome their pets. As a fullstack clone, we provide a comprehensive and user-friendly experience for those looking to adopt or rehome a pet.
 
 ## Key Features
 
 ### User Authenication
-* Users can securely signup and login.
-* Login modal prompted when trying to view user's favorites page while logged out.
-* Login modal prompted when adding to favorites while logged out.
+* The user is able to create a secure account and log in to the system.
+* When attempting to access the user's favorites page without being logged in, a login modal will appear.
+* When attempting to add a favorite while not logged in, a login modal will appear.
 
 ### Post
-* Users can view clickable posts, index page.
-* Users can view post's show page with pet information and add post to their favorites.
-* Users can create a post to rehome a pet.
-* Users can edit their post.
+* The index page allows users to view clickable posts.
+* The show page displays pet information and allows users to add the post to their favorites.
+* Users have the ability to create a post for rehoming a pet.
+* Users have the option to edit their existing posts.
 
 ### User's Favorites
-* Users can view list of their favorited posts.
-* Users can add/remove post from favorites list.
+* Users can access and view a list of posts that they have marked as favorites.
+* Users can add or remove posts from their favorites list by clicking on the designated favorite icon associated with each post.
 
 ### Messages
-* Users can view and delete messages from other users.
-* Users can reply to recieved messages.
+* Users can access and remove messages sent by other users.
+* Users can respond to messages that have been received.
 
 ### Filter Post
-* Users can search thru posts with filter options(breed, gender, age, dog/cat)
+* Users can filter through posts using various options such as breed, gender, age, and whether the pet is a dog or cat.
 
 ### Technologies Implemented
 * React, Redux for frontend.
@@ -36,7 +36,7 @@ Welcome to Pet Rehome! Pet Rehome is a fullstack clone base on <a href="https://
 
 ### Planned Features
 * User can delete their post. 
-* Filter post by distance (Google Map).
+* Users can filter post by distance (Google Map).
 
 ### Credits
 * Images are property of Petfinder.
